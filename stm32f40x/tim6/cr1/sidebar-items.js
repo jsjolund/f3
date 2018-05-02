@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["ARPER","Value of the field"],["CENR","Value of the field"],["OPMR","Value of the field"],["R","Value read from the register"],["UDISR","Value of the field"],["URSR","Value of the field"],["W","Value to write to the register"],["_ARPEW","Proxy"],["_CENW","Proxy"],["_OPMW","Proxy"],["_UDISW","Proxy"],["_URSW","Proxy"]]});

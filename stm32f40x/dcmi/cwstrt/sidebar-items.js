@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["HOFFCNTR","Value of the field"],["R","Value read from the register"],["VSTR","Value of the field"],["W","Value to write to the register"],["_HOFFCNTW","Proxy"],["_VSTW","Proxy"]]});

@@ -1,0 +1,485 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::otg_hs_host::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.otg_hs_hcfg">otg_hs_hcfg</a><a href="#structfield.otg_hs_hfir">otg_hs_hfir</a><a href="#structfield.otg_hs_hfnum">otg_hs_hfnum</a><a href="#structfield.otg_hs_hptxsts">otg_hs_hptxsts</a><a href="#structfield.otg_hs_haint">otg_hs_haint</a><a href="#structfield.otg_hs_haintmsk">otg_hs_haintmsk</a><a href="#structfield.otg_hs_hprt">otg_hs_hprt</a><a href="#structfield.otg_hs_hcchar0">otg_hs_hcchar0</a><a href="#structfield.otg_hs_hcsplt0">otg_hs_hcsplt0</a><a href="#structfield.otg_hs_hcint0">otg_hs_hcint0</a><a href="#structfield.otg_hs_hcintmsk0">otg_hs_hcintmsk0</a><a href="#structfield.otg_hs_hctsiz0">otg_hs_hctsiz0</a><a href="#structfield.otg_hs_hcdma0">otg_hs_hcdma0</a><a href="#structfield.otg_hs_hcchar1">otg_hs_hcchar1</a><a href="#structfield.otg_hs_hcsplt1">otg_hs_hcsplt1</a><a href="#structfield.otg_hs_hcint1">otg_hs_hcint1</a><a href="#structfield.otg_hs_hcintmsk1">otg_hs_hcintmsk1</a><a href="#structfield.otg_hs_hctsiz1">otg_hs_hctsiz1</a><a href="#structfield.otg_hs_hcdma1">otg_hs_hcdma1</a><a href="#structfield.otg_hs_hcchar2">otg_hs_hcchar2</a><a href="#structfield.otg_hs_hcsplt2">otg_hs_hcsplt2</a><a href="#structfield.otg_hs_hcint2">otg_hs_hcint2</a><a href="#structfield.otg_hs_hcintmsk2">otg_hs_hcintmsk2</a><a href="#structfield.otg_hs_hctsiz2">otg_hs_hctsiz2</a><a href="#structfield.otg_hs_hcdma2">otg_hs_hcdma2</a><a href="#structfield.otg_hs_hcchar3">otg_hs_hcchar3</a><a href="#structfield.otg_hs_hcsplt3">otg_hs_hcsplt3</a><a href="#structfield.otg_hs_hcint3">otg_hs_hcint3</a><a href="#structfield.otg_hs_hcintmsk3">otg_hs_hcintmsk3</a><a href="#structfield.otg_hs_hctsiz3">otg_hs_hctsiz3</a><a href="#structfield.otg_hs_hcdma3">otg_hs_hcdma3</a><a href="#structfield.otg_hs_hcchar4">otg_hs_hcchar4</a><a href="#structfield.otg_hs_hcsplt4">otg_hs_hcsplt4</a><a href="#structfield.otg_hs_hcint4">otg_hs_hcint4</a><a href="#structfield.otg_hs_hcintmsk4">otg_hs_hcintmsk4</a><a href="#structfield.otg_hs_hctsiz4">otg_hs_hctsiz4</a><a href="#structfield.otg_hs_hcdma4">otg_hs_hcdma4</a><a href="#structfield.otg_hs_hcchar5">otg_hs_hcchar5</a><a href="#structfield.otg_hs_hcsplt5">otg_hs_hcsplt5</a><a href="#structfield.otg_hs_hcint5">otg_hs_hcint5</a><a href="#structfield.otg_hs_hcintmsk5">otg_hs_hcintmsk5</a><a href="#structfield.otg_hs_hctsiz5">otg_hs_hctsiz5</a><a href="#structfield.otg_hs_hcdma5">otg_hs_hcdma5</a><a href="#structfield.otg_hs_hcchar6">otg_hs_hcchar6</a><a href="#structfield.otg_hs_hcsplt6">otg_hs_hcsplt6</a><a href="#structfield.otg_hs_hcint6">otg_hs_hcint6</a><a href="#structfield.otg_hs_hcintmsk6">otg_hs_hcintmsk6</a><a href="#structfield.otg_hs_hctsiz6">otg_hs_hctsiz6</a><a href="#structfield.otg_hs_hcdma6">otg_hs_hcdma6</a><a href="#structfield.otg_hs_hcchar7">otg_hs_hcchar7</a><a href="#structfield.otg_hs_hcsplt7">otg_hs_hcsplt7</a><a href="#structfield.otg_hs_hcint7">otg_hs_hcint7</a><a href="#structfield.otg_hs_hcintmsk7">otg_hs_hcintmsk7</a><a href="#structfield.otg_hs_hctsiz7">otg_hs_hctsiz7</a><a href="#structfield.otg_hs_hcdma7">otg_hs_hcdma7</a><a href="#structfield.otg_hs_hcchar8">otg_hs_hcchar8</a><a href="#structfield.otg_hs_hcsplt8">otg_hs_hcsplt8</a><a href="#structfield.otg_hs_hcint8">otg_hs_hcint8</a><a href="#structfield.otg_hs_hcintmsk8">otg_hs_hcintmsk8</a><a href="#structfield.otg_hs_hctsiz8">otg_hs_hctsiz8</a><a href="#structfield.otg_hs_hcdma8">otg_hs_hcdma8</a><a href="#structfield.otg_hs_hcchar9">otg_hs_hcchar9</a><a href="#structfield.otg_hs_hcsplt9">otg_hs_hcsplt9</a><a href="#structfield.otg_hs_hcint9">otg_hs_hcint9</a><a href="#structfield.otg_hs_hcintmsk9">otg_hs_hcintmsk9</a><a href="#structfield.otg_hs_hctsiz9">otg_hs_hctsiz9</a><a href="#structfield.otg_hs_hcdma9">otg_hs_hcdma9</a><a href="#structfield.otg_hs_hcchar10">otg_hs_hcchar10</a><a href="#structfield.otg_hs_hcsplt10">otg_hs_hcsplt10</a><a href="#structfield.otg_hs_hcint10">otg_hs_hcint10</a><a href="#structfield.otg_hs_hcintmsk10">otg_hs_hcintmsk10</a><a href="#structfield.otg_hs_hctsiz10">otg_hs_hctsiz10</a><a href="#structfield.otg_hs_hcdma10">otg_hs_hcdma10</a><a href="#structfield.otg_hs_hcchar11">otg_hs_hcchar11</a><a href="#structfield.otg_hs_hcsplt11">otg_hs_hcsplt11</a><a href="#structfield.otg_hs_hcint11">otg_hs_hcint11</a><a href="#structfield.otg_hs_hcintmsk11">otg_hs_hcintmsk11</a><a href="#structfield.otg_hs_hctsiz11">otg_hs_hctsiz11</a><a href="#structfield.otg_hs_hcdma11">otg_hs_hcdma11</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>otg_hs_host</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>otg_hs_host</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#347395' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub otg_hs_hcfg: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCFG.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCFG">OTG_HS_HCFG</a>,
+    pub otg_hs_hfir: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HFIR.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HFIR">OTG_HS_HFIR</a>,
+    pub otg_hs_hfnum: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HFNUM.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HFNUM">OTG_HS_HFNUM</a>,
+    pub otg_hs_hptxsts: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HPTXSTS.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HPTXSTS">OTG_HS_HPTXSTS</a>,
+    pub otg_hs_haint: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HAINT.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HAINT">OTG_HS_HAINT</a>,
+    pub otg_hs_haintmsk: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HAINTMSK.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HAINTMSK">OTG_HS_HAINTMSK</a>,
+    pub otg_hs_hprt: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HPRT.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HPRT">OTG_HS_HPRT</a>,
+    pub otg_hs_hcchar0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR0">OTG_HS_HCCHAR0</a>,
+    pub otg_hs_hcsplt0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT0">OTG_HS_HCSPLT0</a>,
+    pub otg_hs_hcint0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT0">OTG_HS_HCINT0</a>,
+    pub otg_hs_hcintmsk0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK0">OTG_HS_HCINTMSK0</a>,
+    pub otg_hs_hctsiz0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ0">OTG_HS_HCTSIZ0</a>,
+    pub otg_hs_hcdma0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA0">OTG_HS_HCDMA0</a>,
+    pub otg_hs_hcchar1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR1">OTG_HS_HCCHAR1</a>,
+    pub otg_hs_hcsplt1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT1">OTG_HS_HCSPLT1</a>,
+    pub otg_hs_hcint1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT1">OTG_HS_HCINT1</a>,
+    pub otg_hs_hcintmsk1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK1">OTG_HS_HCINTMSK1</a>,
+    pub otg_hs_hctsiz1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ1">OTG_HS_HCTSIZ1</a>,
+    pub otg_hs_hcdma1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA1">OTG_HS_HCDMA1</a>,
+    pub otg_hs_hcchar2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR2">OTG_HS_HCCHAR2</a>,
+    pub otg_hs_hcsplt2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT2">OTG_HS_HCSPLT2</a>,
+    pub otg_hs_hcint2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT2">OTG_HS_HCINT2</a>,
+    pub otg_hs_hcintmsk2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK2">OTG_HS_HCINTMSK2</a>,
+    pub otg_hs_hctsiz2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ2">OTG_HS_HCTSIZ2</a>,
+    pub otg_hs_hcdma2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA2">OTG_HS_HCDMA2</a>,
+    pub otg_hs_hcchar3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR3">OTG_HS_HCCHAR3</a>,
+    pub otg_hs_hcsplt3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT3">OTG_HS_HCSPLT3</a>,
+    pub otg_hs_hcint3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT3">OTG_HS_HCINT3</a>,
+    pub otg_hs_hcintmsk3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK3">OTG_HS_HCINTMSK3</a>,
+    pub otg_hs_hctsiz3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ3">OTG_HS_HCTSIZ3</a>,
+    pub otg_hs_hcdma3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA3">OTG_HS_HCDMA3</a>,
+    pub otg_hs_hcchar4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR4">OTG_HS_HCCHAR4</a>,
+    pub otg_hs_hcsplt4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT4">OTG_HS_HCSPLT4</a>,
+    pub otg_hs_hcint4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT4">OTG_HS_HCINT4</a>,
+    pub otg_hs_hcintmsk4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK4">OTG_HS_HCINTMSK4</a>,
+    pub otg_hs_hctsiz4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ4">OTG_HS_HCTSIZ4</a>,
+    pub otg_hs_hcdma4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA4">OTG_HS_HCDMA4</a>,
+    pub otg_hs_hcchar5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR5">OTG_HS_HCCHAR5</a>,
+    pub otg_hs_hcsplt5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT5">OTG_HS_HCSPLT5</a>,
+    pub otg_hs_hcint5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT5">OTG_HS_HCINT5</a>,
+    pub otg_hs_hcintmsk5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK5">OTG_HS_HCINTMSK5</a>,
+    pub otg_hs_hctsiz5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ5">OTG_HS_HCTSIZ5</a>,
+    pub otg_hs_hcdma5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA5">OTG_HS_HCDMA5</a>,
+    pub otg_hs_hcchar6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR6">OTG_HS_HCCHAR6</a>,
+    pub otg_hs_hcsplt6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT6">OTG_HS_HCSPLT6</a>,
+    pub otg_hs_hcint6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT6">OTG_HS_HCINT6</a>,
+    pub otg_hs_hcintmsk6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK6">OTG_HS_HCINTMSK6</a>,
+    pub otg_hs_hctsiz6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ6">OTG_HS_HCTSIZ6</a>,
+    pub otg_hs_hcdma6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA6">OTG_HS_HCDMA6</a>,
+    pub otg_hs_hcchar7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR7">OTG_HS_HCCHAR7</a>,
+    pub otg_hs_hcsplt7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT7">OTG_HS_HCSPLT7</a>,
+    pub otg_hs_hcint7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT7">OTG_HS_HCINT7</a>,
+    pub otg_hs_hcintmsk7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK7">OTG_HS_HCINTMSK7</a>,
+    pub otg_hs_hctsiz7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ7">OTG_HS_HCTSIZ7</a>,
+    pub otg_hs_hcdma7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA7">OTG_HS_HCDMA7</a>,
+    pub otg_hs_hcchar8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR8">OTG_HS_HCCHAR8</a>,
+    pub otg_hs_hcsplt8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT8">OTG_HS_HCSPLT8</a>,
+    pub otg_hs_hcint8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT8">OTG_HS_HCINT8</a>,
+    pub otg_hs_hcintmsk8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK8">OTG_HS_HCINTMSK8</a>,
+    pub otg_hs_hctsiz8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ8">OTG_HS_HCTSIZ8</a>,
+    pub otg_hs_hcdma8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA8">OTG_HS_HCDMA8</a>,
+    pub otg_hs_hcchar9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR9">OTG_HS_HCCHAR9</a>,
+    pub otg_hs_hcsplt9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT9">OTG_HS_HCSPLT9</a>,
+    pub otg_hs_hcint9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT9">OTG_HS_HCINT9</a>,
+    pub otg_hs_hcintmsk9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK9">OTG_HS_HCINTMSK9</a>,
+    pub otg_hs_hctsiz9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ9">OTG_HS_HCTSIZ9</a>,
+    pub otg_hs_hcdma9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA9">OTG_HS_HCDMA9</a>,
+    pub otg_hs_hcchar10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR10">OTG_HS_HCCHAR10</a>,
+    pub otg_hs_hcsplt10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT10">OTG_HS_HCSPLT10</a>,
+    pub otg_hs_hcint10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT10">OTG_HS_HCINT10</a>,
+    pub otg_hs_hcintmsk10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK10">OTG_HS_HCINTMSK10</a>,
+    pub otg_hs_hctsiz10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ10">OTG_HS_HCTSIZ10</a>,
+    pub otg_hs_hcdma10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA10">OTG_HS_HCDMA10</a>,
+    pub otg_hs_hcchar11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR11">OTG_HS_HCCHAR11</a>,
+    pub otg_hs_hcsplt11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT11">OTG_HS_HCSPLT11</a>,
+    pub otg_hs_hcint11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT11">OTG_HS_HCINT11</a>,
+    pub otg_hs_hcintmsk11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK11">OTG_HS_HCINTMSK11</a>,
+    pub otg_hs_hctsiz11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ11">OTG_HS_HCTSIZ11</a>,
+    pub otg_hs_hcdma11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA11">OTG_HS_HCDMA11</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.otg_hs_hcfg" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcfg" class="anchor field"></a>
+                           <span id="otg_hs_hcfg.v" class='invisible'>
+                           <code>otg_hs_hcfg: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCFG.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCFG">OTG_HS_HCFG</a></code>
+                           </span></span><div class='docblock'><p>0x00 - OTG_HS host configuration register</p>
+</div><span id="structfield.otg_hs_hfir" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hfir" class="anchor field"></a>
+                           <span id="otg_hs_hfir.v" class='invisible'>
+                           <code>otg_hs_hfir: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HFIR.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HFIR">OTG_HS_HFIR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - OTG_HS Host frame interval register</p>
+</div><span id="structfield.otg_hs_hfnum" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hfnum" class="anchor field"></a>
+                           <span id="otg_hs_hfnum.v" class='invisible'>
+                           <code>otg_hs_hfnum: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HFNUM.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HFNUM">OTG_HS_HFNUM</a></code>
+                           </span></span><div class='docblock'><p>0x08 - OTG_HS host frame number/frame time remaining register</p>
+</div><span id="structfield.otg_hs_hptxsts" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hptxsts" class="anchor field"></a>
+                           <span id="otg_hs_hptxsts.v" class='invisible'>
+                           <code>otg_hs_hptxsts: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HPTXSTS.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HPTXSTS">OTG_HS_HPTXSTS</a></code>
+                           </span></span><div class='docblock'><p>0x10 - OTG_HS_Host periodic transmit FIFO/queue status register</p>
+</div><span id="structfield.otg_hs_haint" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_haint" class="anchor field"></a>
+                           <span id="otg_hs_haint.v" class='invisible'>
+                           <code>otg_hs_haint: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HAINT.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HAINT">OTG_HS_HAINT</a></code>
+                           </span></span><div class='docblock'><p>0x14 - OTG_HS Host all channels interrupt register</p>
+</div><span id="structfield.otg_hs_haintmsk" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_haintmsk" class="anchor field"></a>
+                           <span id="otg_hs_haintmsk.v" class='invisible'>
+                           <code>otg_hs_haintmsk: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HAINTMSK.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HAINTMSK">OTG_HS_HAINTMSK</a></code>
+                           </span></span><div class='docblock'><p>0x18 - OTG_HS host all channels interrupt mask register</p>
+</div><span id="structfield.otg_hs_hprt" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hprt" class="anchor field"></a>
+                           <span id="otg_hs_hprt.v" class='invisible'>
+                           <code>otg_hs_hprt: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HPRT.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HPRT">OTG_HS_HPRT</a></code>
+                           </span></span><div class='docblock'><p>0x40 - OTG_HS host port control and status register</p>
+</div><span id="structfield.otg_hs_hcchar0" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar0" class="anchor field"></a>
+                           <span id="otg_hs_hcchar0.v" class='invisible'>
+                           <code>otg_hs_hcchar0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR0">OTG_HS_HCCHAR0</a></code>
+                           </span></span><div class='docblock'><p>0x100 - OTG_HS host channel-0 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt0" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt0" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt0.v" class='invisible'>
+                           <code>otg_hs_hcsplt0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT0">OTG_HS_HCSPLT0</a></code>
+                           </span></span><div class='docblock'><p>0x104 - OTG_HS host channel-0 split control register</p>
+</div><span id="structfield.otg_hs_hcint0" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint0" class="anchor field"></a>
+                           <span id="otg_hs_hcint0.v" class='invisible'>
+                           <code>otg_hs_hcint0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT0">OTG_HS_HCINT0</a></code>
+                           </span></span><div class='docblock'><p>0x108 - OTG_HS host channel-11 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk0" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk0" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk0.v" class='invisible'>
+                           <code>otg_hs_hcintmsk0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK0">OTG_HS_HCINTMSK0</a></code>
+                           </span></span><div class='docblock'><p>0x10c - OTG_HS host channel-11 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz0" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz0" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz0.v" class='invisible'>
+                           <code>otg_hs_hctsiz0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ0">OTG_HS_HCTSIZ0</a></code>
+                           </span></span><div class='docblock'><p>0x110 - OTG_HS host channel-11 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma0" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma0" class="anchor field"></a>
+                           <span id="otg_hs_hcdma0.v" class='invisible'>
+                           <code>otg_hs_hcdma0: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA0.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA0">OTG_HS_HCDMA0</a></code>
+                           </span></span><div class='docblock'><p>0x114 - OTG_HS host channel-0 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar1" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar1" class="anchor field"></a>
+                           <span id="otg_hs_hcchar1.v" class='invisible'>
+                           <code>otg_hs_hcchar1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR1">OTG_HS_HCCHAR1</a></code>
+                           </span></span><div class='docblock'><p>0x120 - OTG_HS host channel-1 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt1" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt1" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt1.v" class='invisible'>
+                           <code>otg_hs_hcsplt1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT1">OTG_HS_HCSPLT1</a></code>
+                           </span></span><div class='docblock'><p>0x124 - OTG_HS host channel-1 split control register</p>
+</div><span id="structfield.otg_hs_hcint1" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint1" class="anchor field"></a>
+                           <span id="otg_hs_hcint1.v" class='invisible'>
+                           <code>otg_hs_hcint1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT1">OTG_HS_HCINT1</a></code>
+                           </span></span><div class='docblock'><p>0x128 - OTG_HS host channel-1 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk1" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk1" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk1.v" class='invisible'>
+                           <code>otg_hs_hcintmsk1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK1">OTG_HS_HCINTMSK1</a></code>
+                           </span></span><div class='docblock'><p>0x12c - OTG_HS host channel-1 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz1" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz1" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz1.v" class='invisible'>
+                           <code>otg_hs_hctsiz1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ1">OTG_HS_HCTSIZ1</a></code>
+                           </span></span><div class='docblock'><p>0x130 - OTG_HS host channel-1 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma1" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma1" class="anchor field"></a>
+                           <span id="otg_hs_hcdma1.v" class='invisible'>
+                           <code>otg_hs_hcdma1: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA1.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA1">OTG_HS_HCDMA1</a></code>
+                           </span></span><div class='docblock'><p>0x134 - OTG_HS host channel-1 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar2" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar2" class="anchor field"></a>
+                           <span id="otg_hs_hcchar2.v" class='invisible'>
+                           <code>otg_hs_hcchar2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR2">OTG_HS_HCCHAR2</a></code>
+                           </span></span><div class='docblock'><p>0x140 - OTG_HS host channel-2 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt2" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt2" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt2.v" class='invisible'>
+                           <code>otg_hs_hcsplt2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT2">OTG_HS_HCSPLT2</a></code>
+                           </span></span><div class='docblock'><p>0x144 - OTG_HS host channel-2 split control register</p>
+</div><span id="structfield.otg_hs_hcint2" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint2" class="anchor field"></a>
+                           <span id="otg_hs_hcint2.v" class='invisible'>
+                           <code>otg_hs_hcint2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT2">OTG_HS_HCINT2</a></code>
+                           </span></span><div class='docblock'><p>0x148 - OTG_HS host channel-2 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk2" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk2" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk2.v" class='invisible'>
+                           <code>otg_hs_hcintmsk2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK2">OTG_HS_HCINTMSK2</a></code>
+                           </span></span><div class='docblock'><p>0x14c - OTG_HS host channel-2 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz2" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz2" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz2.v" class='invisible'>
+                           <code>otg_hs_hctsiz2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ2">OTG_HS_HCTSIZ2</a></code>
+                           </span></span><div class='docblock'><p>0x150 - OTG_HS host channel-2 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma2" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma2" class="anchor field"></a>
+                           <span id="otg_hs_hcdma2.v" class='invisible'>
+                           <code>otg_hs_hcdma2: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA2.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA2">OTG_HS_HCDMA2</a></code>
+                           </span></span><div class='docblock'><p>0x154 - OTG_HS host channel-2 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar3" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar3" class="anchor field"></a>
+                           <span id="otg_hs_hcchar3.v" class='invisible'>
+                           <code>otg_hs_hcchar3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR3">OTG_HS_HCCHAR3</a></code>
+                           </span></span><div class='docblock'><p>0x160 - OTG_HS host channel-3 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt3" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt3" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt3.v" class='invisible'>
+                           <code>otg_hs_hcsplt3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT3">OTG_HS_HCSPLT3</a></code>
+                           </span></span><div class='docblock'><p>0x164 - OTG_HS host channel-3 split control register</p>
+</div><span id="structfield.otg_hs_hcint3" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint3" class="anchor field"></a>
+                           <span id="otg_hs_hcint3.v" class='invisible'>
+                           <code>otg_hs_hcint3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT3">OTG_HS_HCINT3</a></code>
+                           </span></span><div class='docblock'><p>0x168 - OTG_HS host channel-3 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk3" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk3" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk3.v" class='invisible'>
+                           <code>otg_hs_hcintmsk3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK3">OTG_HS_HCINTMSK3</a></code>
+                           </span></span><div class='docblock'><p>0x16c - OTG_HS host channel-3 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz3" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz3" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz3.v" class='invisible'>
+                           <code>otg_hs_hctsiz3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ3">OTG_HS_HCTSIZ3</a></code>
+                           </span></span><div class='docblock'><p>0x170 - OTG_HS host channel-3 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma3" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma3" class="anchor field"></a>
+                           <span id="otg_hs_hcdma3.v" class='invisible'>
+                           <code>otg_hs_hcdma3: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA3.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA3">OTG_HS_HCDMA3</a></code>
+                           </span></span><div class='docblock'><p>0x174 - OTG_HS host channel-3 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar4" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar4" class="anchor field"></a>
+                           <span id="otg_hs_hcchar4.v" class='invisible'>
+                           <code>otg_hs_hcchar4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR4">OTG_HS_HCCHAR4</a></code>
+                           </span></span><div class='docblock'><p>0x180 - OTG_HS host channel-4 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt4" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt4" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt4.v" class='invisible'>
+                           <code>otg_hs_hcsplt4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT4">OTG_HS_HCSPLT4</a></code>
+                           </span></span><div class='docblock'><p>0x184 - OTG_HS host channel-4 split control register</p>
+</div><span id="structfield.otg_hs_hcint4" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint4" class="anchor field"></a>
+                           <span id="otg_hs_hcint4.v" class='invisible'>
+                           <code>otg_hs_hcint4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT4">OTG_HS_HCINT4</a></code>
+                           </span></span><div class='docblock'><p>0x188 - OTG_HS host channel-4 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk4" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk4" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk4.v" class='invisible'>
+                           <code>otg_hs_hcintmsk4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK4">OTG_HS_HCINTMSK4</a></code>
+                           </span></span><div class='docblock'><p>0x18c - OTG_HS host channel-4 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz4" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz4" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz4.v" class='invisible'>
+                           <code>otg_hs_hctsiz4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ4">OTG_HS_HCTSIZ4</a></code>
+                           </span></span><div class='docblock'><p>0x190 - OTG_HS host channel-4 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma4" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma4" class="anchor field"></a>
+                           <span id="otg_hs_hcdma4.v" class='invisible'>
+                           <code>otg_hs_hcdma4: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA4.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA4">OTG_HS_HCDMA4</a></code>
+                           </span></span><div class='docblock'><p>0x194 - OTG_HS host channel-4 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar5" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar5" class="anchor field"></a>
+                           <span id="otg_hs_hcchar5.v" class='invisible'>
+                           <code>otg_hs_hcchar5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR5">OTG_HS_HCCHAR5</a></code>
+                           </span></span><div class='docblock'><p>0x1a0 - OTG_HS host channel-5 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt5" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt5" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt5.v" class='invisible'>
+                           <code>otg_hs_hcsplt5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT5">OTG_HS_HCSPLT5</a></code>
+                           </span></span><div class='docblock'><p>0x1a4 - OTG_HS host channel-5 split control register</p>
+</div><span id="structfield.otg_hs_hcint5" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint5" class="anchor field"></a>
+                           <span id="otg_hs_hcint5.v" class='invisible'>
+                           <code>otg_hs_hcint5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT5">OTG_HS_HCINT5</a></code>
+                           </span></span><div class='docblock'><p>0x1a8 - OTG_HS host channel-5 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk5" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk5" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk5.v" class='invisible'>
+                           <code>otg_hs_hcintmsk5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK5">OTG_HS_HCINTMSK5</a></code>
+                           </span></span><div class='docblock'><p>0x1ac - OTG_HS host channel-5 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz5" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz5" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz5.v" class='invisible'>
+                           <code>otg_hs_hctsiz5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ5">OTG_HS_HCTSIZ5</a></code>
+                           </span></span><div class='docblock'><p>0x1b0 - OTG_HS host channel-5 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma5" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma5" class="anchor field"></a>
+                           <span id="otg_hs_hcdma5.v" class='invisible'>
+                           <code>otg_hs_hcdma5: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA5.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA5">OTG_HS_HCDMA5</a></code>
+                           </span></span><div class='docblock'><p>0x1b4 - OTG_HS host channel-5 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar6" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar6" class="anchor field"></a>
+                           <span id="otg_hs_hcchar6.v" class='invisible'>
+                           <code>otg_hs_hcchar6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR6">OTG_HS_HCCHAR6</a></code>
+                           </span></span><div class='docblock'><p>0x1c0 - OTG_HS host channel-6 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt6" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt6" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt6.v" class='invisible'>
+                           <code>otg_hs_hcsplt6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT6">OTG_HS_HCSPLT6</a></code>
+                           </span></span><div class='docblock'><p>0x1c4 - OTG_HS host channel-6 split control register</p>
+</div><span id="structfield.otg_hs_hcint6" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint6" class="anchor field"></a>
+                           <span id="otg_hs_hcint6.v" class='invisible'>
+                           <code>otg_hs_hcint6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT6">OTG_HS_HCINT6</a></code>
+                           </span></span><div class='docblock'><p>0x1c8 - OTG_HS host channel-6 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk6" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk6" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk6.v" class='invisible'>
+                           <code>otg_hs_hcintmsk6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK6">OTG_HS_HCINTMSK6</a></code>
+                           </span></span><div class='docblock'><p>0x1cc - OTG_HS host channel-6 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz6" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz6" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz6.v" class='invisible'>
+                           <code>otg_hs_hctsiz6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ6">OTG_HS_HCTSIZ6</a></code>
+                           </span></span><div class='docblock'><p>0x1d0 - OTG_HS host channel-6 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma6" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma6" class="anchor field"></a>
+                           <span id="otg_hs_hcdma6.v" class='invisible'>
+                           <code>otg_hs_hcdma6: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA6.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA6">OTG_HS_HCDMA6</a></code>
+                           </span></span><div class='docblock'><p>0x1d4 - OTG_HS host channel-6 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar7" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar7" class="anchor field"></a>
+                           <span id="otg_hs_hcchar7.v" class='invisible'>
+                           <code>otg_hs_hcchar7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR7">OTG_HS_HCCHAR7</a></code>
+                           </span></span><div class='docblock'><p>0x1e0 - OTG_HS host channel-7 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt7" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt7" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt7.v" class='invisible'>
+                           <code>otg_hs_hcsplt7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT7">OTG_HS_HCSPLT7</a></code>
+                           </span></span><div class='docblock'><p>0x1e4 - OTG_HS host channel-7 split control register</p>
+</div><span id="structfield.otg_hs_hcint7" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint7" class="anchor field"></a>
+                           <span id="otg_hs_hcint7.v" class='invisible'>
+                           <code>otg_hs_hcint7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT7">OTG_HS_HCINT7</a></code>
+                           </span></span><div class='docblock'><p>0x1e8 - OTG_HS host channel-7 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk7" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk7" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk7.v" class='invisible'>
+                           <code>otg_hs_hcintmsk7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK7">OTG_HS_HCINTMSK7</a></code>
+                           </span></span><div class='docblock'><p>0x1ec - OTG_HS host channel-7 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz7" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz7" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz7.v" class='invisible'>
+                           <code>otg_hs_hctsiz7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ7">OTG_HS_HCTSIZ7</a></code>
+                           </span></span><div class='docblock'><p>0x1f0 - OTG_HS host channel-7 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma7" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma7" class="anchor field"></a>
+                           <span id="otg_hs_hcdma7.v" class='invisible'>
+                           <code>otg_hs_hcdma7: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA7.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA7">OTG_HS_HCDMA7</a></code>
+                           </span></span><div class='docblock'><p>0x1f4 - OTG_HS host channel-7 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar8" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar8" class="anchor field"></a>
+                           <span id="otg_hs_hcchar8.v" class='invisible'>
+                           <code>otg_hs_hcchar8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR8">OTG_HS_HCCHAR8</a></code>
+                           </span></span><div class='docblock'><p>0x200 - OTG_HS host channel-8 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt8" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt8" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt8.v" class='invisible'>
+                           <code>otg_hs_hcsplt8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT8">OTG_HS_HCSPLT8</a></code>
+                           </span></span><div class='docblock'><p>0x204 - OTG_HS host channel-8 split control register</p>
+</div><span id="structfield.otg_hs_hcint8" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint8" class="anchor field"></a>
+                           <span id="otg_hs_hcint8.v" class='invisible'>
+                           <code>otg_hs_hcint8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT8">OTG_HS_HCINT8</a></code>
+                           </span></span><div class='docblock'><p>0x208 - OTG_HS host channel-8 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk8" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk8" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk8.v" class='invisible'>
+                           <code>otg_hs_hcintmsk8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK8">OTG_HS_HCINTMSK8</a></code>
+                           </span></span><div class='docblock'><p>0x20c - OTG_HS host channel-8 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz8" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz8" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz8.v" class='invisible'>
+                           <code>otg_hs_hctsiz8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ8">OTG_HS_HCTSIZ8</a></code>
+                           </span></span><div class='docblock'><p>0x210 - OTG_HS host channel-8 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma8" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma8" class="anchor field"></a>
+                           <span id="otg_hs_hcdma8.v" class='invisible'>
+                           <code>otg_hs_hcdma8: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA8.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA8">OTG_HS_HCDMA8</a></code>
+                           </span></span><div class='docblock'><p>0x214 - OTG_HS host channel-8 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar9" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar9" class="anchor field"></a>
+                           <span id="otg_hs_hcchar9.v" class='invisible'>
+                           <code>otg_hs_hcchar9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR9">OTG_HS_HCCHAR9</a></code>
+                           </span></span><div class='docblock'><p>0x220 - OTG_HS host channel-9 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt9" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt9" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt9.v" class='invisible'>
+                           <code>otg_hs_hcsplt9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT9">OTG_HS_HCSPLT9</a></code>
+                           </span></span><div class='docblock'><p>0x224 - OTG_HS host channel-9 split control register</p>
+</div><span id="structfield.otg_hs_hcint9" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint9" class="anchor field"></a>
+                           <span id="otg_hs_hcint9.v" class='invisible'>
+                           <code>otg_hs_hcint9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT9">OTG_HS_HCINT9</a></code>
+                           </span></span><div class='docblock'><p>0x228 - OTG_HS host channel-9 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk9" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk9" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk9.v" class='invisible'>
+                           <code>otg_hs_hcintmsk9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK9">OTG_HS_HCINTMSK9</a></code>
+                           </span></span><div class='docblock'><p>0x22c - OTG_HS host channel-9 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz9" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz9" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz9.v" class='invisible'>
+                           <code>otg_hs_hctsiz9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ9">OTG_HS_HCTSIZ9</a></code>
+                           </span></span><div class='docblock'><p>0x230 - OTG_HS host channel-9 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma9" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma9" class="anchor field"></a>
+                           <span id="otg_hs_hcdma9.v" class='invisible'>
+                           <code>otg_hs_hcdma9: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA9.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA9">OTG_HS_HCDMA9</a></code>
+                           </span></span><div class='docblock'><p>0x234 - OTG_HS host channel-9 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar10" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar10" class="anchor field"></a>
+                           <span id="otg_hs_hcchar10.v" class='invisible'>
+                           <code>otg_hs_hcchar10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR10">OTG_HS_HCCHAR10</a></code>
+                           </span></span><div class='docblock'><p>0x240 - OTG_HS host channel-10 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt10" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt10" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt10.v" class='invisible'>
+                           <code>otg_hs_hcsplt10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT10">OTG_HS_HCSPLT10</a></code>
+                           </span></span><div class='docblock'><p>0x244 - OTG_HS host channel-10 split control register</p>
+</div><span id="structfield.otg_hs_hcint10" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint10" class="anchor field"></a>
+                           <span id="otg_hs_hcint10.v" class='invisible'>
+                           <code>otg_hs_hcint10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT10">OTG_HS_HCINT10</a></code>
+                           </span></span><div class='docblock'><p>0x248 - OTG_HS host channel-10 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk10" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk10" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk10.v" class='invisible'>
+                           <code>otg_hs_hcintmsk10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK10">OTG_HS_HCINTMSK10</a></code>
+                           </span></span><div class='docblock'><p>0x24c - OTG_HS host channel-10 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz10" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz10" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz10.v" class='invisible'>
+                           <code>otg_hs_hctsiz10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ10">OTG_HS_HCTSIZ10</a></code>
+                           </span></span><div class='docblock'><p>0x250 - OTG_HS host channel-10 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma10" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma10" class="anchor field"></a>
+                           <span id="otg_hs_hcdma10.v" class='invisible'>
+                           <code>otg_hs_hcdma10: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA10.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA10">OTG_HS_HCDMA10</a></code>
+                           </span></span><div class='docblock'><p>0x254 - OTG_HS host channel-10 DMA address register</p>
+</div><span id="structfield.otg_hs_hcchar11" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcchar11" class="anchor field"></a>
+                           <span id="otg_hs_hcchar11.v" class='invisible'>
+                           <code>otg_hs_hcchar11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCCHAR11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR11">OTG_HS_HCCHAR11</a></code>
+                           </span></span><div class='docblock'><p>0x260 - OTG_HS host channel-11 characteristics register</p>
+</div><span id="structfield.otg_hs_hcsplt11" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcsplt11" class="anchor field"></a>
+                           <span id="otg_hs_hcsplt11.v" class='invisible'>
+                           <code>otg_hs_hcsplt11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCSPLT11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT11">OTG_HS_HCSPLT11</a></code>
+                           </span></span><div class='docblock'><p>0x264 - OTG_HS host channel-11 split control register</p>
+</div><span id="structfield.otg_hs_hcint11" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcint11" class="anchor field"></a>
+                           <span id="otg_hs_hcint11.v" class='invisible'>
+                           <code>otg_hs_hcint11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINT11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINT11">OTG_HS_HCINT11</a></code>
+                           </span></span><div class='docblock'><p>0x268 - OTG_HS host channel-11 interrupt register</p>
+</div><span id="structfield.otg_hs_hcintmsk11" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcintmsk11" class="anchor field"></a>
+                           <span id="otg_hs_hcintmsk11.v" class='invisible'>
+                           <code>otg_hs_hcintmsk11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCINTMSK11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK11">OTG_HS_HCINTMSK11</a></code>
+                           </span></span><div class='docblock'><p>0x26c - OTG_HS host channel-11 interrupt mask register</p>
+</div><span id="structfield.otg_hs_hctsiz11" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hctsiz11" class="anchor field"></a>
+                           <span id="otg_hs_hctsiz11.v" class='invisible'>
+                           <code>otg_hs_hctsiz11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCTSIZ11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ11">OTG_HS_HCTSIZ11</a></code>
+                           </span></span><div class='docblock'><p>0x270 - OTG_HS host channel-11 transfer size register</p>
+</div><span id="structfield.otg_hs_hcdma11" class="structfield small-section-header">
+                           <a href="#structfield.otg_hs_hcdma11" class="anchor field"></a>
+                           <span id="otg_hs_hcdma11.v" class='invisible'>
+                           <code>otg_hs_hcdma11: <a class="struct" href="../../stm32f40x/otg_hs_host/struct.OTG_HS_HCDMA11.html" title="struct stm32f40x::otg_hs_host::OTG_HS_HCDMA11">OTG_HS_HCDMA11</a></code>
+                           </span></span><div class='docblock'><p>0x274 - OTG_HS host channel-11 DMA address register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/otg_hs_host/struct.RegisterBlock.html" title="struct stm32f40x::otg_hs_host::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/otg_hs_host/struct.RegisterBlock.html" title="struct stm32f40x::otg_hs_host::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

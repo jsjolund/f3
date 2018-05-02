@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["BYTE0R","Value of the field"],["BYTE1R","Value of the field"],["BYTE2R","Value of the field"],["BYTE3R","Value of the field"],["R","Value read from the register"]]});

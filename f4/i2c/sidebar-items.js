@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","I2C error"]],"struct":[["I2c","Serial Peripheral Interface"]],"type":[["Result","I2C result"]]});

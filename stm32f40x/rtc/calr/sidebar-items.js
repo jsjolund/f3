@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["CALMR","Value of the field"],["CALPR","Value of the field"],["CALW16R","Value of the field"],["CALW8R","Value of the field"],["R","Value read from the register"],["W","Value to write to the register"],["_CALMW","Proxy"],["_CALPW","Proxy"],["_CALW16W","Proxy"],["_CALW8W","Proxy"]]});

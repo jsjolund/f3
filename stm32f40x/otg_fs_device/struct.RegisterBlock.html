@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::otg_fs_device::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.fs_dcfg">fs_dcfg</a><a href="#structfield.fs_dctl">fs_dctl</a><a href="#structfield.fs_dsts">fs_dsts</a><a href="#structfield.fs_diepmsk">fs_diepmsk</a><a href="#structfield.fs_doepmsk">fs_doepmsk</a><a href="#structfield.fs_daint">fs_daint</a><a href="#structfield.fs_daintmsk">fs_daintmsk</a><a href="#structfield.dvbusdis">dvbusdis</a><a href="#structfield.dvbuspulse">dvbuspulse</a><a href="#structfield.diepempmsk">diepempmsk</a><a href="#structfield.fs_diepctl0">fs_diepctl0</a><a href="#structfield.diepint0">diepint0</a><a href="#structfield.dieptsiz0">dieptsiz0</a><a href="#structfield.dtxfsts0">dtxfsts0</a><a href="#structfield.diepctl1">diepctl1</a><a href="#structfield.diepint1">diepint1</a><a href="#structfield.dieptsiz1">dieptsiz1</a><a href="#structfield.dtxfsts1">dtxfsts1</a><a href="#structfield.diepctl2">diepctl2</a><a href="#structfield.diepint2">diepint2</a><a href="#structfield.dieptsiz2">dieptsiz2</a><a href="#structfield.dtxfsts2">dtxfsts2</a><a href="#structfield.diepctl3">diepctl3</a><a href="#structfield.diepint3">diepint3</a><a href="#structfield.dieptsiz3">dieptsiz3</a><a href="#structfield.dtxfsts3">dtxfsts3</a><a href="#structfield.doepctl0">doepctl0</a><a href="#structfield.doepint0">doepint0</a><a href="#structfield.doeptsiz0">doeptsiz0</a><a href="#structfield.doepctl1">doepctl1</a><a href="#structfield.doepint1">doepint1</a><a href="#structfield.doeptsiz1">doeptsiz1</a><a href="#structfield.doepctl2">doepctl2</a><a href="#structfield.doepint2">doepint2</a><a href="#structfield.doeptsiz2">doeptsiz2</a><a href="#structfield.doepctl3">doepctl3</a><a href="#structfield.doepint3">doepint3</a><a href="#structfield.doeptsiz3">doeptsiz3</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>otg_fs_device</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>otg_fs_device</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#191391' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub fs_dcfg: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DCFG.html" title="struct stm32f40x::otg_fs_device::FS_DCFG">FS_DCFG</a>,
+    pub fs_dctl: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DCTL.html" title="struct stm32f40x::otg_fs_device::FS_DCTL">FS_DCTL</a>,
+    pub fs_dsts: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DSTS.html" title="struct stm32f40x::otg_fs_device::FS_DSTS">FS_DSTS</a>,
+    pub fs_diepmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DIEPMSK.html" title="struct stm32f40x::otg_fs_device::FS_DIEPMSK">FS_DIEPMSK</a>,
+    pub fs_doepmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DOEPMSK.html" title="struct stm32f40x::otg_fs_device::FS_DOEPMSK">FS_DOEPMSK</a>,
+    pub fs_daint: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DAINT.html" title="struct stm32f40x::otg_fs_device::FS_DAINT">FS_DAINT</a>,
+    pub fs_daintmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DAINTMSK.html" title="struct stm32f40x::otg_fs_device::FS_DAINTMSK">FS_DAINTMSK</a>,
+    pub dvbusdis: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DVBUSDIS.html" title="struct stm32f40x::otg_fs_device::DVBUSDIS">DVBUSDIS</a>,
+    pub dvbuspulse: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DVBUSPULSE.html" title="struct stm32f40x::otg_fs_device::DVBUSPULSE">DVBUSPULSE</a>,
+    pub diepempmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPEMPMSK.html" title="struct stm32f40x::otg_fs_device::DIEPEMPMSK">DIEPEMPMSK</a>,
+    pub fs_diepctl0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DIEPCTL0.html" title="struct stm32f40x::otg_fs_device::FS_DIEPCTL0">FS_DIEPCTL0</a>,
+    pub diepint0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT0.html" title="struct stm32f40x::otg_fs_device::DIEPINT0">DIEPINT0</a>,
+    pub dieptsiz0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ0.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ0">DIEPTSIZ0</a>,
+    pub dtxfsts0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS0.html" title="struct stm32f40x::otg_fs_device::DTXFSTS0">DTXFSTS0</a>,
+    pub diepctl1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPCTL1.html" title="struct stm32f40x::otg_fs_device::DIEPCTL1">DIEPCTL1</a>,
+    pub diepint1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT1.html" title="struct stm32f40x::otg_fs_device::DIEPINT1">DIEPINT1</a>,
+    pub dieptsiz1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ1.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ1">DIEPTSIZ1</a>,
+    pub dtxfsts1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS1.html" title="struct stm32f40x::otg_fs_device::DTXFSTS1">DTXFSTS1</a>,
+    pub diepctl2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPCTL2.html" title="struct stm32f40x::otg_fs_device::DIEPCTL2">DIEPCTL2</a>,
+    pub diepint2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT2.html" title="struct stm32f40x::otg_fs_device::DIEPINT2">DIEPINT2</a>,
+    pub dieptsiz2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ2.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ2">DIEPTSIZ2</a>,
+    pub dtxfsts2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS2.html" title="struct stm32f40x::otg_fs_device::DTXFSTS2">DTXFSTS2</a>,
+    pub diepctl3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPCTL3.html" title="struct stm32f40x::otg_fs_device::DIEPCTL3">DIEPCTL3</a>,
+    pub diepint3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT3.html" title="struct stm32f40x::otg_fs_device::DIEPINT3">DIEPINT3</a>,
+    pub dieptsiz3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ3.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ3">DIEPTSIZ3</a>,
+    pub dtxfsts3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS3.html" title="struct stm32f40x::otg_fs_device::DTXFSTS3">DTXFSTS3</a>,
+    pub doepctl0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL0.html" title="struct stm32f40x::otg_fs_device::DOEPCTL0">DOEPCTL0</a>,
+    pub doepint0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT0.html" title="struct stm32f40x::otg_fs_device::DOEPINT0">DOEPINT0</a>,
+    pub doeptsiz0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ0.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ0">DOEPTSIZ0</a>,
+    pub doepctl1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL1.html" title="struct stm32f40x::otg_fs_device::DOEPCTL1">DOEPCTL1</a>,
+    pub doepint1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT1.html" title="struct stm32f40x::otg_fs_device::DOEPINT1">DOEPINT1</a>,
+    pub doeptsiz1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ1.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ1">DOEPTSIZ1</a>,
+    pub doepctl2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL2.html" title="struct stm32f40x::otg_fs_device::DOEPCTL2">DOEPCTL2</a>,
+    pub doepint2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT2.html" title="struct stm32f40x::otg_fs_device::DOEPINT2">DOEPINT2</a>,
+    pub doeptsiz2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ2.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ2">DOEPTSIZ2</a>,
+    pub doepctl3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL3.html" title="struct stm32f40x::otg_fs_device::DOEPCTL3">DOEPCTL3</a>,
+    pub doepint3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT3.html" title="struct stm32f40x::otg_fs_device::DOEPINT3">DOEPINT3</a>,
+    pub doeptsiz3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ3.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ3">DOEPTSIZ3</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.fs_dcfg" class="structfield small-section-header">
+                           <a href="#structfield.fs_dcfg" class="anchor field"></a>
+                           <span id="fs_dcfg.v" class='invisible'>
+                           <code>fs_dcfg: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DCFG.html" title="struct stm32f40x::otg_fs_device::FS_DCFG">FS_DCFG</a></code>
+                           </span></span><div class='docblock'><p>0x00 - OTG_FS device configuration register (OTG_FS_DCFG)</p>
+</div><span id="structfield.fs_dctl" class="structfield small-section-header">
+                           <a href="#structfield.fs_dctl" class="anchor field"></a>
+                           <span id="fs_dctl.v" class='invisible'>
+                           <code>fs_dctl: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DCTL.html" title="struct stm32f40x::otg_fs_device::FS_DCTL">FS_DCTL</a></code>
+                           </span></span><div class='docblock'><p>0x04 - OTG_FS device control register (OTG_FS_DCTL)</p>
+</div><span id="structfield.fs_dsts" class="structfield small-section-header">
+                           <a href="#structfield.fs_dsts" class="anchor field"></a>
+                           <span id="fs_dsts.v" class='invisible'>
+                           <code>fs_dsts: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DSTS.html" title="struct stm32f40x::otg_fs_device::FS_DSTS">FS_DSTS</a></code>
+                           </span></span><div class='docblock'><p>0x08 - OTG_FS device status register (OTG_FS_DSTS)</p>
+</div><span id="structfield.fs_diepmsk" class="structfield small-section-header">
+                           <a href="#structfield.fs_diepmsk" class="anchor field"></a>
+                           <span id="fs_diepmsk.v" class='invisible'>
+                           <code>fs_diepmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DIEPMSK.html" title="struct stm32f40x::otg_fs_device::FS_DIEPMSK">FS_DIEPMSK</a></code>
+                           </span></span><div class='docblock'><p>0x10 - OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)</p>
+</div><span id="structfield.fs_doepmsk" class="structfield small-section-header">
+                           <a href="#structfield.fs_doepmsk" class="anchor field"></a>
+                           <span id="fs_doepmsk.v" class='invisible'>
+                           <code>fs_doepmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DOEPMSK.html" title="struct stm32f40x::otg_fs_device::FS_DOEPMSK">FS_DOEPMSK</a></code>
+                           </span></span><div class='docblock'><p>0x14 - OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)</p>
+</div><span id="structfield.fs_daint" class="structfield small-section-header">
+                           <a href="#structfield.fs_daint" class="anchor field"></a>
+                           <span id="fs_daint.v" class='invisible'>
+                           <code>fs_daint: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DAINT.html" title="struct stm32f40x::otg_fs_device::FS_DAINT">FS_DAINT</a></code>
+                           </span></span><div class='docblock'><p>0x18 - OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)</p>
+</div><span id="structfield.fs_daintmsk" class="structfield small-section-header">
+                           <a href="#structfield.fs_daintmsk" class="anchor field"></a>
+                           <span id="fs_daintmsk.v" class='invisible'>
+                           <code>fs_daintmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DAINTMSK.html" title="struct stm32f40x::otg_fs_device::FS_DAINTMSK">FS_DAINTMSK</a></code>
+                           </span></span><div class='docblock'><p>0x1c - OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)</p>
+</div><span id="structfield.dvbusdis" class="structfield small-section-header">
+                           <a href="#structfield.dvbusdis" class="anchor field"></a>
+                           <span id="dvbusdis.v" class='invisible'>
+                           <code>dvbusdis: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DVBUSDIS.html" title="struct stm32f40x::otg_fs_device::DVBUSDIS">DVBUSDIS</a></code>
+                           </span></span><div class='docblock'><p>0x28 - OTG_FS device VBUS discharge time register</p>
+</div><span id="structfield.dvbuspulse" class="structfield small-section-header">
+                           <a href="#structfield.dvbuspulse" class="anchor field"></a>
+                           <span id="dvbuspulse.v" class='invisible'>
+                           <code>dvbuspulse: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DVBUSPULSE.html" title="struct stm32f40x::otg_fs_device::DVBUSPULSE">DVBUSPULSE</a></code>
+                           </span></span><div class='docblock'><p>0x2c - OTG_FS device VBUS pulsing time register</p>
+</div><span id="structfield.diepempmsk" class="structfield small-section-header">
+                           <a href="#structfield.diepempmsk" class="anchor field"></a>
+                           <span id="diepempmsk.v" class='invisible'>
+                           <code>diepempmsk: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPEMPMSK.html" title="struct stm32f40x::otg_fs_device::DIEPEMPMSK">DIEPEMPMSK</a></code>
+                           </span></span><div class='docblock'><p>0x34 - OTG_FS device IN endpoint FIFO empty interrupt mask register</p>
+</div><span id="structfield.fs_diepctl0" class="structfield small-section-header">
+                           <a href="#structfield.fs_diepctl0" class="anchor field"></a>
+                           <span id="fs_diepctl0.v" class='invisible'>
+                           <code>fs_diepctl0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.FS_DIEPCTL0.html" title="struct stm32f40x::otg_fs_device::FS_DIEPCTL0">FS_DIEPCTL0</a></code>
+                           </span></span><div class='docblock'><p>0x100 - OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)</p>
+</div><span id="structfield.diepint0" class="structfield small-section-header">
+                           <a href="#structfield.diepint0" class="anchor field"></a>
+                           <span id="diepint0.v" class='invisible'>
+                           <code>diepint0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT0.html" title="struct stm32f40x::otg_fs_device::DIEPINT0">DIEPINT0</a></code>
+                           </span></span><div class='docblock'><p>0x108 - device endpoint-x interrupt register</p>
+</div><span id="structfield.dieptsiz0" class="structfield small-section-header">
+                           <a href="#structfield.dieptsiz0" class="anchor field"></a>
+                           <span id="dieptsiz0.v" class='invisible'>
+                           <code>dieptsiz0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ0.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ0">DIEPTSIZ0</a></code>
+                           </span></span><div class='docblock'><p>0x110 - device endpoint-0 transfer size register</p>
+</div><span id="structfield.dtxfsts0" class="structfield small-section-header">
+                           <a href="#structfield.dtxfsts0" class="anchor field"></a>
+                           <span id="dtxfsts0.v" class='invisible'>
+                           <code>dtxfsts0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS0.html" title="struct stm32f40x::otg_fs_device::DTXFSTS0">DTXFSTS0</a></code>
+                           </span></span><div class='docblock'><p>0x118 - OTG_FS device IN endpoint transmit FIFO status register</p>
+</div><span id="structfield.diepctl1" class="structfield small-section-header">
+                           <a href="#structfield.diepctl1" class="anchor field"></a>
+                           <span id="diepctl1.v" class='invisible'>
+                           <code>diepctl1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPCTL1.html" title="struct stm32f40x::otg_fs_device::DIEPCTL1">DIEPCTL1</a></code>
+                           </span></span><div class='docblock'><p>0x120 - OTG device endpoint-1 control register</p>
+</div><span id="structfield.diepint1" class="structfield small-section-header">
+                           <a href="#structfield.diepint1" class="anchor field"></a>
+                           <span id="diepint1.v" class='invisible'>
+                           <code>diepint1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT1.html" title="struct stm32f40x::otg_fs_device::DIEPINT1">DIEPINT1</a></code>
+                           </span></span><div class='docblock'><p>0x128 - device endpoint-1 interrupt register</p>
+</div><span id="structfield.dieptsiz1" class="structfield small-section-header">
+                           <a href="#structfield.dieptsiz1" class="anchor field"></a>
+                           <span id="dieptsiz1.v" class='invisible'>
+                           <code>dieptsiz1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ1.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ1">DIEPTSIZ1</a></code>
+                           </span></span><div class='docblock'><p>0x130 - device endpoint-1 transfer size register</p>
+</div><span id="structfield.dtxfsts1" class="structfield small-section-header">
+                           <a href="#structfield.dtxfsts1" class="anchor field"></a>
+                           <span id="dtxfsts1.v" class='invisible'>
+                           <code>dtxfsts1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS1.html" title="struct stm32f40x::otg_fs_device::DTXFSTS1">DTXFSTS1</a></code>
+                           </span></span><div class='docblock'><p>0x138 - OTG_FS device IN endpoint transmit FIFO status register</p>
+</div><span id="structfield.diepctl2" class="structfield small-section-header">
+                           <a href="#structfield.diepctl2" class="anchor field"></a>
+                           <span id="diepctl2.v" class='invisible'>
+                           <code>diepctl2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPCTL2.html" title="struct stm32f40x::otg_fs_device::DIEPCTL2">DIEPCTL2</a></code>
+                           </span></span><div class='docblock'><p>0x140 - OTG device endpoint-2 control register</p>
+</div><span id="structfield.diepint2" class="structfield small-section-header">
+                           <a href="#structfield.diepint2" class="anchor field"></a>
+                           <span id="diepint2.v" class='invisible'>
+                           <code>diepint2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT2.html" title="struct stm32f40x::otg_fs_device::DIEPINT2">DIEPINT2</a></code>
+                           </span></span><div class='docblock'><p>0x148 - device endpoint-2 interrupt register</p>
+</div><span id="structfield.dieptsiz2" class="structfield small-section-header">
+                           <a href="#structfield.dieptsiz2" class="anchor field"></a>
+                           <span id="dieptsiz2.v" class='invisible'>
+                           <code>dieptsiz2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ2.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ2">DIEPTSIZ2</a></code>
+                           </span></span><div class='docblock'><p>0x150 - device endpoint-2 transfer size register</p>
+</div><span id="structfield.dtxfsts2" class="structfield small-section-header">
+                           <a href="#structfield.dtxfsts2" class="anchor field"></a>
+                           <span id="dtxfsts2.v" class='invisible'>
+                           <code>dtxfsts2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS2.html" title="struct stm32f40x::otg_fs_device::DTXFSTS2">DTXFSTS2</a></code>
+                           </span></span><div class='docblock'><p>0x158 - OTG_FS device IN endpoint transmit FIFO status register</p>
+</div><span id="structfield.diepctl3" class="structfield small-section-header">
+                           <a href="#structfield.diepctl3" class="anchor field"></a>
+                           <span id="diepctl3.v" class='invisible'>
+                           <code>diepctl3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPCTL3.html" title="struct stm32f40x::otg_fs_device::DIEPCTL3">DIEPCTL3</a></code>
+                           </span></span><div class='docblock'><p>0x160 - OTG device endpoint-3 control register</p>
+</div><span id="structfield.diepint3" class="structfield small-section-header">
+                           <a href="#structfield.diepint3" class="anchor field"></a>
+                           <span id="diepint3.v" class='invisible'>
+                           <code>diepint3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPINT3.html" title="struct stm32f40x::otg_fs_device::DIEPINT3">DIEPINT3</a></code>
+                           </span></span><div class='docblock'><p>0x168 - device endpoint-3 interrupt register</p>
+</div><span id="structfield.dieptsiz3" class="structfield small-section-header">
+                           <a href="#structfield.dieptsiz3" class="anchor field"></a>
+                           <span id="dieptsiz3.v" class='invisible'>
+                           <code>dieptsiz3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DIEPTSIZ3.html" title="struct stm32f40x::otg_fs_device::DIEPTSIZ3">DIEPTSIZ3</a></code>
+                           </span></span><div class='docblock'><p>0x170 - device endpoint-3 transfer size register</p>
+</div><span id="structfield.dtxfsts3" class="structfield small-section-header">
+                           <a href="#structfield.dtxfsts3" class="anchor field"></a>
+                           <span id="dtxfsts3.v" class='invisible'>
+                           <code>dtxfsts3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DTXFSTS3.html" title="struct stm32f40x::otg_fs_device::DTXFSTS3">DTXFSTS3</a></code>
+                           </span></span><div class='docblock'><p>0x178 - OTG_FS device IN endpoint transmit FIFO status register</p>
+</div><span id="structfield.doepctl0" class="structfield small-section-header">
+                           <a href="#structfield.doepctl0" class="anchor field"></a>
+                           <span id="doepctl0.v" class='invisible'>
+                           <code>doepctl0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL0.html" title="struct stm32f40x::otg_fs_device::DOEPCTL0">DOEPCTL0</a></code>
+                           </span></span><div class='docblock'><p>0x300 - device endpoint-0 control register</p>
+</div><span id="structfield.doepint0" class="structfield small-section-header">
+                           <a href="#structfield.doepint0" class="anchor field"></a>
+                           <span id="doepint0.v" class='invisible'>
+                           <code>doepint0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT0.html" title="struct stm32f40x::otg_fs_device::DOEPINT0">DOEPINT0</a></code>
+                           </span></span><div class='docblock'><p>0x308 - device endpoint-0 interrupt register</p>
+</div><span id="structfield.doeptsiz0" class="structfield small-section-header">
+                           <a href="#structfield.doeptsiz0" class="anchor field"></a>
+                           <span id="doeptsiz0.v" class='invisible'>
+                           <code>doeptsiz0: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ0.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ0">DOEPTSIZ0</a></code>
+                           </span></span><div class='docblock'><p>0x310 - device OUT endpoint-0 transfer size register</p>
+</div><span id="structfield.doepctl1" class="structfield small-section-header">
+                           <a href="#structfield.doepctl1" class="anchor field"></a>
+                           <span id="doepctl1.v" class='invisible'>
+                           <code>doepctl1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL1.html" title="struct stm32f40x::otg_fs_device::DOEPCTL1">DOEPCTL1</a></code>
+                           </span></span><div class='docblock'><p>0x320 - device endpoint-1 control register</p>
+</div><span id="structfield.doepint1" class="structfield small-section-header">
+                           <a href="#structfield.doepint1" class="anchor field"></a>
+                           <span id="doepint1.v" class='invisible'>
+                           <code>doepint1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT1.html" title="struct stm32f40x::otg_fs_device::DOEPINT1">DOEPINT1</a></code>
+                           </span></span><div class='docblock'><p>0x328 - device endpoint-1 interrupt register</p>
+</div><span id="structfield.doeptsiz1" class="structfield small-section-header">
+                           <a href="#structfield.doeptsiz1" class="anchor field"></a>
+                           <span id="doeptsiz1.v" class='invisible'>
+                           <code>doeptsiz1: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ1.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ1">DOEPTSIZ1</a></code>
+                           </span></span><div class='docblock'><p>0x330 - device OUT endpoint-1 transfer size register</p>
+</div><span id="structfield.doepctl2" class="structfield small-section-header">
+                           <a href="#structfield.doepctl2" class="anchor field"></a>
+                           <span id="doepctl2.v" class='invisible'>
+                           <code>doepctl2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL2.html" title="struct stm32f40x::otg_fs_device::DOEPCTL2">DOEPCTL2</a></code>
+                           </span></span><div class='docblock'><p>0x340 - device endpoint-2 control register</p>
+</div><span id="structfield.doepint2" class="structfield small-section-header">
+                           <a href="#structfield.doepint2" class="anchor field"></a>
+                           <span id="doepint2.v" class='invisible'>
+                           <code>doepint2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT2.html" title="struct stm32f40x::otg_fs_device::DOEPINT2">DOEPINT2</a></code>
+                           </span></span><div class='docblock'><p>0x348 - device endpoint-2 interrupt register</p>
+</div><span id="structfield.doeptsiz2" class="structfield small-section-header">
+                           <a href="#structfield.doeptsiz2" class="anchor field"></a>
+                           <span id="doeptsiz2.v" class='invisible'>
+                           <code>doeptsiz2: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ2.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ2">DOEPTSIZ2</a></code>
+                           </span></span><div class='docblock'><p>0x350 - device OUT endpoint-2 transfer size register</p>
+</div><span id="structfield.doepctl3" class="structfield small-section-header">
+                           <a href="#structfield.doepctl3" class="anchor field"></a>
+                           <span id="doepctl3.v" class='invisible'>
+                           <code>doepctl3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPCTL3.html" title="struct stm32f40x::otg_fs_device::DOEPCTL3">DOEPCTL3</a></code>
+                           </span></span><div class='docblock'><p>0x360 - device endpoint-3 control register</p>
+</div><span id="structfield.doepint3" class="structfield small-section-header">
+                           <a href="#structfield.doepint3" class="anchor field"></a>
+                           <span id="doepint3.v" class='invisible'>
+                           <code>doepint3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPINT3.html" title="struct stm32f40x::otg_fs_device::DOEPINT3">DOEPINT3</a></code>
+                           </span></span><div class='docblock'><p>0x368 - device endpoint-3 interrupt register</p>
+</div><span id="structfield.doeptsiz3" class="structfield small-section-header">
+                           <a href="#structfield.doeptsiz3" class="anchor field"></a>
+                           <span id="doeptsiz3.v" class='invisible'>
+                           <code>doeptsiz3: <a class="struct" href="../../stm32f40x/otg_fs_device/struct.DOEPTSIZ3.html" title="struct stm32f40x::otg_fs_device::DOEPTSIZ3">DOEPTSIZ3</a></code>
+                           </span></span><div class='docblock'><p>0x370 - device OUT endpoint-3 transfer size register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/otg_fs_device/struct.RegisterBlock.html" title="struct stm32f40x::otg_fs_device::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/otg_fs_device/struct.RegisterBlock.html" title="struct stm32f40x::otg_fs_device::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

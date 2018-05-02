@@ -1,0 +1,1276 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `otg_hs_host` mod in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, otg_hs_host"><title>stm32f40x::otg_hs_host - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module otg_hs_host</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'otg_hs_host', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>stm32f40x</a>::<wbr><a class="mod" href=''>otg_hs_host</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#347391-380269' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>USB on the go high speed</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_haint/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_haint'>otg_hs_haint</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS Host all channels interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_haintmsk/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_haintmsk'>otg_hs_haintmsk</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host all channels interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar0/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar0'>otg_hs_hcchar0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-0 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar1/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar1'>otg_hs_hcchar1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar2/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar2'>otg_hs_hcchar2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar3/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar3'>otg_hs_hcchar3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar4/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar4'>otg_hs_hcchar4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar5/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar5'>otg_hs_hcchar5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar6/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar6'>otg_hs_hcchar6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar7/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar7'>otg_hs_hcchar7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar8/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar8'>otg_hs_hcchar8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar9/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar9'>otg_hs_hcchar9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar10/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar10'>otg_hs_hcchar10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcchar11/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcchar11'>otg_hs_hcchar11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma0/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma0'>otg_hs_hcdma0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-0 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma1/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma1'>otg_hs_hcdma1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma2/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma2'>otg_hs_hcdma2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma3/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma3'>otg_hs_hcdma3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma4/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma4'>otg_hs_hcdma4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma5/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma5'>otg_hs_hcdma5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma6/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma6'>otg_hs_hcdma6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma7/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma7'>otg_hs_hcdma7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma8/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma8'>otg_hs_hcdma8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma9/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma9'>otg_hs_hcdma9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma10/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma10'>otg_hs_hcdma10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcdma11/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcdma11'>otg_hs_hcdma11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcfg/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcfg'>otg_hs_hcfg</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint0/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint0'>otg_hs_hcint0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint1/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint1'>otg_hs_hcint1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint2/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint2'>otg_hs_hcint2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint3/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint3'>otg_hs_hcint3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint4/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint4'>otg_hs_hcint4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint5/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint5'>otg_hs_hcint5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint6/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint6'>otg_hs_hcint6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint7/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint7'>otg_hs_hcint7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint8/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint8'>otg_hs_hcint8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint9/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint9'>otg_hs_hcint9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint10/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint10'>otg_hs_hcint10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcint11/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcint11'>otg_hs_hcint11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk0/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk0'>otg_hs_hcintmsk0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk1/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk1'>otg_hs_hcintmsk1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk2/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk2'>otg_hs_hcintmsk2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk3/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk3'>otg_hs_hcintmsk3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk4/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk4'>otg_hs_hcintmsk4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk5/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk5'>otg_hs_hcintmsk5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk6/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk6'>otg_hs_hcintmsk6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk7/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk7'>otg_hs_hcintmsk7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk8/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk8'>otg_hs_hcintmsk8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk9/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk9'>otg_hs_hcintmsk9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk10/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk10'>otg_hs_hcintmsk10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcintmsk11/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcintmsk11'>otg_hs_hcintmsk11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt0/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt0'>otg_hs_hcsplt0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-0 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt1/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt1'>otg_hs_hcsplt1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt2/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt2'>otg_hs_hcsplt2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt3/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt3'>otg_hs_hcsplt3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt4/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt4'>otg_hs_hcsplt4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt5/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt5'>otg_hs_hcsplt5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt6/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt6'>otg_hs_hcsplt6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt7/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt7'>otg_hs_hcsplt7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt8/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt8'>otg_hs_hcsplt8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt9/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt9'>otg_hs_hcsplt9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt10/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt10'>otg_hs_hcsplt10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hcsplt11/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hcsplt11'>otg_hs_hcsplt11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz0/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz0'>otg_hs_hctsiz0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz1/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz1'>otg_hs_hctsiz1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz2/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz2'>otg_hs_hctsiz2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz3/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz3'>otg_hs_hctsiz3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz4/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz4'>otg_hs_hctsiz4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz5/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz5'>otg_hs_hctsiz5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz6/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz6'>otg_hs_hctsiz6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz7/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz7'>otg_hs_hctsiz7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz8/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz8'>otg_hs_hctsiz8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz9/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz9'>otg_hs_hctsiz9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz10/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz10'>otg_hs_hctsiz10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hctsiz11/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hctsiz11'>otg_hs_hctsiz11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hfir/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hfir'>otg_hs_hfir</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS Host frame interval register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hfnum/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hfnum'>otg_hs_hfnum</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host frame number/frame time remaining register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hprt/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hprt'>otg_hs_hprt</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host port control and status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="otg_hs_hptxsts/index.html"
+                                  title='mod stm32f40x::otg_hs_host::otg_hs_hptxsts'>otg_hs_hptxsts</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS_Host periodic transmit FIFO/queue status register</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HAINT.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HAINT'>OTG_HS_HAINT</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS Host all channels interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HAINTMSK.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HAINTMSK'>OTG_HS_HAINTMSK</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host all channels interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR0.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR0'>OTG_HS_HCCHAR0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-0 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR1.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR1'>OTG_HS_HCCHAR1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR2.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR2'>OTG_HS_HCCHAR2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR3.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR3'>OTG_HS_HCCHAR3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR4.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR4'>OTG_HS_HCCHAR4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR5.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR5'>OTG_HS_HCCHAR5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR6.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR6'>OTG_HS_HCCHAR6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR7.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR7'>OTG_HS_HCCHAR7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR8.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR8'>OTG_HS_HCCHAR8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR9.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR9'>OTG_HS_HCCHAR9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR10.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR10'>OTG_HS_HCCHAR10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCCHAR11.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCCHAR11'>OTG_HS_HCCHAR11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 characteristics register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA0.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA0'>OTG_HS_HCDMA0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-0 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA1.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA1'>OTG_HS_HCDMA1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA2.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA2'>OTG_HS_HCDMA2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA3.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA3'>OTG_HS_HCDMA3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA4.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA4'>OTG_HS_HCDMA4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA5.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA5'>OTG_HS_HCDMA5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA6.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA6'>OTG_HS_HCDMA6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA7.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA7'>OTG_HS_HCDMA7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA8.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA8'>OTG_HS_HCDMA8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA9.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA9'>OTG_HS_HCDMA9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA10.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA10'>OTG_HS_HCDMA10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCDMA11.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCDMA11'>OTG_HS_HCDMA11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 DMA address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCFG.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCFG'>OTG_HS_HCFG</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT0.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT0'>OTG_HS_HCINT0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT1.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT1'>OTG_HS_HCINT1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT2.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT2'>OTG_HS_HCINT2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT3.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT3'>OTG_HS_HCINT3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT4.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT4'>OTG_HS_HCINT4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT5.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT5'>OTG_HS_HCINT5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT6.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT6'>OTG_HS_HCINT6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT7.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT7'>OTG_HS_HCINT7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT8.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT8'>OTG_HS_HCINT8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT9.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT9'>OTG_HS_HCINT9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT10.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT10'>OTG_HS_HCINT10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINT11.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINT11'>OTG_HS_HCINT11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK0.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK0'>OTG_HS_HCINTMSK0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK1.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK1'>OTG_HS_HCINTMSK1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK2.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK2'>OTG_HS_HCINTMSK2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK3.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK3'>OTG_HS_HCINTMSK3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK4.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK4'>OTG_HS_HCINTMSK4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK5.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK5'>OTG_HS_HCINTMSK5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK6.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK6'>OTG_HS_HCINTMSK6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK7.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK7'>OTG_HS_HCINTMSK7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK8.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK8'>OTG_HS_HCINTMSK8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK9.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK9'>OTG_HS_HCINTMSK9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK10.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK10'>OTG_HS_HCINTMSK10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCINTMSK11.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCINTMSK11'>OTG_HS_HCINTMSK11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT0.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT0'>OTG_HS_HCSPLT0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-0 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT1.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT1'>OTG_HS_HCSPLT1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT2.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT2'>OTG_HS_HCSPLT2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT3.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT3'>OTG_HS_HCSPLT3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT4.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT4'>OTG_HS_HCSPLT4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT5.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT5'>OTG_HS_HCSPLT5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT6.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT6'>OTG_HS_HCSPLT6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT7.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT7'>OTG_HS_HCSPLT7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT8.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT8'>OTG_HS_HCSPLT8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT9.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT9'>OTG_HS_HCSPLT9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT10.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT10'>OTG_HS_HCSPLT10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCSPLT11.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCSPLT11'>OTG_HS_HCSPLT11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 split control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ0.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ0'>OTG_HS_HCTSIZ0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ1.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ1'>OTG_HS_HCTSIZ1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-1 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ2.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ2'>OTG_HS_HCTSIZ2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-2 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ3.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ3'>OTG_HS_HCTSIZ3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-3 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ4.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ4'>OTG_HS_HCTSIZ4</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-4 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ5.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ5'>OTG_HS_HCTSIZ5</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-5 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ6.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ6'>OTG_HS_HCTSIZ6</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-6 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ7.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ7'>OTG_HS_HCTSIZ7</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-7 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ8.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ8'>OTG_HS_HCTSIZ8</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-8 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ9.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ9'>OTG_HS_HCTSIZ9</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-9 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ10.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ10'>OTG_HS_HCTSIZ10</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-10 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HCTSIZ11.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HCTSIZ11'>OTG_HS_HCTSIZ11</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host channel-11 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HFIR.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HFIR'>OTG_HS_HFIR</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS Host frame interval register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HFNUM.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HFNUM'>OTG_HS_HFNUM</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host frame number/frame time remaining register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HPRT.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HPRT'>OTG_HS_HPRT</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS host port control and status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OTG_HS_HPTXSTS.html"
+                                  title='struct stm32f40x::otg_hs_host::OTG_HS_HPTXSTS'>OTG_HS_HPTXSTS</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_HS_Host periodic transmit FIFO/queue status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterBlock.html"
+                                  title='struct stm32f40x::otg_hs_host::RegisterBlock'>RegisterBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>Register block</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

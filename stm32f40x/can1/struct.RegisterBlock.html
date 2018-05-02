@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::can1::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.mcr">mcr</a><a href="#structfield.msr">msr</a><a href="#structfield.tsr">tsr</a><a href="#structfield.rf0r">rf0r</a><a href="#structfield.rf1r">rf1r</a><a href="#structfield.ier">ier</a><a href="#structfield.esr">esr</a><a href="#structfield.btr">btr</a><a href="#structfield.ti0r">ti0r</a><a href="#structfield.tdt0r">tdt0r</a><a href="#structfield.tdl0r">tdl0r</a><a href="#structfield.tdh0r">tdh0r</a><a href="#structfield.ti1r">ti1r</a><a href="#structfield.tdt1r">tdt1r</a><a href="#structfield.tdl1r">tdl1r</a><a href="#structfield.tdh1r">tdh1r</a><a href="#structfield.ti2r">ti2r</a><a href="#structfield.tdt2r">tdt2r</a><a href="#structfield.tdl2r">tdl2r</a><a href="#structfield.tdh2r">tdh2r</a><a href="#structfield.ri0r">ri0r</a><a href="#structfield.rdt0r">rdt0r</a><a href="#structfield.rdl0r">rdl0r</a><a href="#structfield.rdh0r">rdh0r</a><a href="#structfield.ri1r">ri1r</a><a href="#structfield.rdt1r">rdt1r</a><a href="#structfield.rdl1r">rdl1r</a><a href="#structfield.rdh1r">rdh1r</a><a href="#structfield.fmr">fmr</a><a href="#structfield.fm1r">fm1r</a><a href="#structfield.fs1r">fs1r</a><a href="#structfield.ffa1r">ffa1r</a><a href="#structfield.fa1r">fa1r</a><a href="#structfield.f0r1">f0r1</a><a href="#structfield.f0r2">f0r2</a><a href="#structfield.f1r1">f1r1</a><a href="#structfield.f1r2">f1r2</a><a href="#structfield.f2r1">f2r1</a><a href="#structfield.f2r2">f2r2</a><a href="#structfield.f3r1">f3r1</a><a href="#structfield.f3r2">f3r2</a><a href="#structfield.f4r1">f4r1</a><a href="#structfield.f4r2">f4r2</a><a href="#structfield.f5r1">f5r1</a><a href="#structfield.f5r2">f5r2</a><a href="#structfield.f6r1">f6r1</a><a href="#structfield.f6r2">f6r2</a><a href="#structfield.f7r1">f7r1</a><a href="#structfield.f7r2">f7r2</a><a href="#structfield.f8r1">f8r1</a><a href="#structfield.f8r2">f8r2</a><a href="#structfield.f9r1">f9r1</a><a href="#structfield.f9r2">f9r2</a><a href="#structfield.f10r1">f10r1</a><a href="#structfield.f10r2">f10r2</a><a href="#structfield.f11r1">f11r1</a><a href="#structfield.f11r2">f11r2</a><a href="#structfield.f12r1">f12r1</a><a href="#structfield.f12r2">f12r2</a><a href="#structfield.f13r1">f13r1</a><a href="#structfield.f13r2">f13r2</a><a href="#structfield.f14r1">f14r1</a><a href="#structfield.f14r2">f14r2</a><a href="#structfield.f15r1">f15r1</a><a href="#structfield.f15r2">f15r2</a><a href="#structfield.f16r1">f16r1</a><a href="#structfield.f16r2">f16r2</a><a href="#structfield.f17r1">f17r1</a><a href="#structfield.f17r2">f17r2</a><a href="#structfield.f18r1">f18r1</a><a href="#structfield.f18r2">f18r2</a><a href="#structfield.f19r1">f19r1</a><a href="#structfield.f19r2">f19r2</a><a href="#structfield.f20r1">f20r1</a><a href="#structfield.f20r2">f20r2</a><a href="#structfield.f21r1">f21r1</a><a href="#structfield.f21r2">f21r2</a><a href="#structfield.f22r1">f22r1</a><a href="#structfield.f22r2">f22r2</a><a href="#structfield.f23r1">f23r1</a><a href="#structfield.f23r2">f23r2</a><a href="#structfield.f24r1">f24r1</a><a href="#structfield.f24r2">f24r2</a><a href="#structfield.f25r1">f25r1</a><a href="#structfield.f25r2">f25r2</a><a href="#structfield.f26r1">f26r1</a><a href="#structfield.f26r2">f26r2</a><a href="#structfield.f27r1">f27r1</a><a href="#structfield.f27r2">f27r2</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>can1</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>can1</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#203214-203315' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub mcr: <a class="struct" href="../../stm32f40x/can1/struct.MCR.html" title="struct stm32f40x::can1::MCR">MCR</a>,
+    pub msr: <a class="struct" href="../../stm32f40x/can1/struct.MSR.html" title="struct stm32f40x::can1::MSR">MSR</a>,
+    pub tsr: <a class="struct" href="../../stm32f40x/can1/struct.TSR.html" title="struct stm32f40x::can1::TSR">TSR</a>,
+    pub rf0r: <a class="struct" href="../../stm32f40x/can1/struct.RF0R.html" title="struct stm32f40x::can1::RF0R">RF0R</a>,
+    pub rf1r: <a class="struct" href="../../stm32f40x/can1/struct.RF1R.html" title="struct stm32f40x::can1::RF1R">RF1R</a>,
+    pub ier: <a class="struct" href="../../stm32f40x/can1/struct.IER.html" title="struct stm32f40x::can1::IER">IER</a>,
+    pub esr: <a class="struct" href="../../stm32f40x/can1/struct.ESR.html" title="struct stm32f40x::can1::ESR">ESR</a>,
+    pub btr: <a class="struct" href="../../stm32f40x/can1/struct.BTR.html" title="struct stm32f40x::can1::BTR">BTR</a>,
+    pub ti0r: <a class="struct" href="../../stm32f40x/can1/struct.TI0R.html" title="struct stm32f40x::can1::TI0R">TI0R</a>,
+    pub tdt0r: <a class="struct" href="../../stm32f40x/can1/struct.TDT0R.html" title="struct stm32f40x::can1::TDT0R">TDT0R</a>,
+    pub tdl0r: <a class="struct" href="../../stm32f40x/can1/struct.TDL0R.html" title="struct stm32f40x::can1::TDL0R">TDL0R</a>,
+    pub tdh0r: <a class="struct" href="../../stm32f40x/can1/struct.TDH0R.html" title="struct stm32f40x::can1::TDH0R">TDH0R</a>,
+    pub ti1r: <a class="struct" href="../../stm32f40x/can1/struct.TI1R.html" title="struct stm32f40x::can1::TI1R">TI1R</a>,
+    pub tdt1r: <a class="struct" href="../../stm32f40x/can1/struct.TDT1R.html" title="struct stm32f40x::can1::TDT1R">TDT1R</a>,
+    pub tdl1r: <a class="struct" href="../../stm32f40x/can1/struct.TDL1R.html" title="struct stm32f40x::can1::TDL1R">TDL1R</a>,
+    pub tdh1r: <a class="struct" href="../../stm32f40x/can1/struct.TDH1R.html" title="struct stm32f40x::can1::TDH1R">TDH1R</a>,
+    pub ti2r: <a class="struct" href="../../stm32f40x/can1/struct.TI2R.html" title="struct stm32f40x::can1::TI2R">TI2R</a>,
+    pub tdt2r: <a class="struct" href="../../stm32f40x/can1/struct.TDT2R.html" title="struct stm32f40x::can1::TDT2R">TDT2R</a>,
+    pub tdl2r: <a class="struct" href="../../stm32f40x/can1/struct.TDL2R.html" title="struct stm32f40x::can1::TDL2R">TDL2R</a>,
+    pub tdh2r: <a class="struct" href="../../stm32f40x/can1/struct.TDH2R.html" title="struct stm32f40x::can1::TDH2R">TDH2R</a>,
+    pub ri0r: <a class="struct" href="../../stm32f40x/can1/struct.RI0R.html" title="struct stm32f40x::can1::RI0R">RI0R</a>,
+    pub rdt0r: <a class="struct" href="../../stm32f40x/can1/struct.RDT0R.html" title="struct stm32f40x::can1::RDT0R">RDT0R</a>,
+    pub rdl0r: <a class="struct" href="../../stm32f40x/can1/struct.RDL0R.html" title="struct stm32f40x::can1::RDL0R">RDL0R</a>,
+    pub rdh0r: <a class="struct" href="../../stm32f40x/can1/struct.RDH0R.html" title="struct stm32f40x::can1::RDH0R">RDH0R</a>,
+    pub ri1r: <a class="struct" href="../../stm32f40x/can1/struct.RI1R.html" title="struct stm32f40x::can1::RI1R">RI1R</a>,
+    pub rdt1r: <a class="struct" href="../../stm32f40x/can1/struct.RDT1R.html" title="struct stm32f40x::can1::RDT1R">RDT1R</a>,
+    pub rdl1r: <a class="struct" href="../../stm32f40x/can1/struct.RDL1R.html" title="struct stm32f40x::can1::RDL1R">RDL1R</a>,
+    pub rdh1r: <a class="struct" href="../../stm32f40x/can1/struct.RDH1R.html" title="struct stm32f40x::can1::RDH1R">RDH1R</a>,
+    pub fmr: <a class="struct" href="../../stm32f40x/can1/struct.FMR.html" title="struct stm32f40x::can1::FMR">FMR</a>,
+    pub fm1r: <a class="struct" href="../../stm32f40x/can1/struct.FM1R.html" title="struct stm32f40x::can1::FM1R">FM1R</a>,
+    pub fs1r: <a class="struct" href="../../stm32f40x/can1/struct.FS1R.html" title="struct stm32f40x::can1::FS1R">FS1R</a>,
+    pub ffa1r: <a class="struct" href="../../stm32f40x/can1/struct.FFA1R.html" title="struct stm32f40x::can1::FFA1R">FFA1R</a>,
+    pub fa1r: <a class="struct" href="../../stm32f40x/can1/struct.FA1R.html" title="struct stm32f40x::can1::FA1R">FA1R</a>,
+    pub f0r1: <a class="struct" href="../../stm32f40x/can1/struct.F0R1.html" title="struct stm32f40x::can1::F0R1">F0R1</a>,
+    pub f0r2: <a class="struct" href="../../stm32f40x/can1/struct.F0R2.html" title="struct stm32f40x::can1::F0R2">F0R2</a>,
+    pub f1r1: <a class="struct" href="../../stm32f40x/can1/struct.F1R1.html" title="struct stm32f40x::can1::F1R1">F1R1</a>,
+    pub f1r2: <a class="struct" href="../../stm32f40x/can1/struct.F1R2.html" title="struct stm32f40x::can1::F1R2">F1R2</a>,
+    pub f2r1: <a class="struct" href="../../stm32f40x/can1/struct.F2R1.html" title="struct stm32f40x::can1::F2R1">F2R1</a>,
+    pub f2r2: <a class="struct" href="../../stm32f40x/can1/struct.F2R2.html" title="struct stm32f40x::can1::F2R2">F2R2</a>,
+    pub f3r1: <a class="struct" href="../../stm32f40x/can1/struct.F3R1.html" title="struct stm32f40x::can1::F3R1">F3R1</a>,
+    pub f3r2: <a class="struct" href="../../stm32f40x/can1/struct.F3R2.html" title="struct stm32f40x::can1::F3R2">F3R2</a>,
+    pub f4r1: <a class="struct" href="../../stm32f40x/can1/struct.F4R1.html" title="struct stm32f40x::can1::F4R1">F4R1</a>,
+    pub f4r2: <a class="struct" href="../../stm32f40x/can1/struct.F4R2.html" title="struct stm32f40x::can1::F4R2">F4R2</a>,
+    pub f5r1: <a class="struct" href="../../stm32f40x/can1/struct.F5R1.html" title="struct stm32f40x::can1::F5R1">F5R1</a>,
+    pub f5r2: <a class="struct" href="../../stm32f40x/can1/struct.F5R2.html" title="struct stm32f40x::can1::F5R2">F5R2</a>,
+    pub f6r1: <a class="struct" href="../../stm32f40x/can1/struct.F6R1.html" title="struct stm32f40x::can1::F6R1">F6R1</a>,
+    pub f6r2: <a class="struct" href="../../stm32f40x/can1/struct.F6R2.html" title="struct stm32f40x::can1::F6R2">F6R2</a>,
+    pub f7r1: <a class="struct" href="../../stm32f40x/can1/struct.F7R1.html" title="struct stm32f40x::can1::F7R1">F7R1</a>,
+    pub f7r2: <a class="struct" href="../../stm32f40x/can1/struct.F7R2.html" title="struct stm32f40x::can1::F7R2">F7R2</a>,
+    pub f8r1: <a class="struct" href="../../stm32f40x/can1/struct.F8R1.html" title="struct stm32f40x::can1::F8R1">F8R1</a>,
+    pub f8r2: <a class="struct" href="../../stm32f40x/can1/struct.F8R2.html" title="struct stm32f40x::can1::F8R2">F8R2</a>,
+    pub f9r1: <a class="struct" href="../../stm32f40x/can1/struct.F9R1.html" title="struct stm32f40x::can1::F9R1">F9R1</a>,
+    pub f9r2: <a class="struct" href="../../stm32f40x/can1/struct.F9R2.html" title="struct stm32f40x::can1::F9R2">F9R2</a>,
+    pub f10r1: <a class="struct" href="../../stm32f40x/can1/struct.F10R1.html" title="struct stm32f40x::can1::F10R1">F10R1</a>,
+    pub f10r2: <a class="struct" href="../../stm32f40x/can1/struct.F10R2.html" title="struct stm32f40x::can1::F10R2">F10R2</a>,
+    pub f11r1: <a class="struct" href="../../stm32f40x/can1/struct.F11R1.html" title="struct stm32f40x::can1::F11R1">F11R1</a>,
+    pub f11r2: <a class="struct" href="../../stm32f40x/can1/struct.F11R2.html" title="struct stm32f40x::can1::F11R2">F11R2</a>,
+    pub f12r1: <a class="struct" href="../../stm32f40x/can1/struct.F12R1.html" title="struct stm32f40x::can1::F12R1">F12R1</a>,
+    pub f12r2: <a class="struct" href="../../stm32f40x/can1/struct.F12R2.html" title="struct stm32f40x::can1::F12R2">F12R2</a>,
+    pub f13r1: <a class="struct" href="../../stm32f40x/can1/struct.F13R1.html" title="struct stm32f40x::can1::F13R1">F13R1</a>,
+    pub f13r2: <a class="struct" href="../../stm32f40x/can1/struct.F13R2.html" title="struct stm32f40x::can1::F13R2">F13R2</a>,
+    pub f14r1: <a class="struct" href="../../stm32f40x/can1/struct.F14R1.html" title="struct stm32f40x::can1::F14R1">F14R1</a>,
+    pub f14r2: <a class="struct" href="../../stm32f40x/can1/struct.F14R2.html" title="struct stm32f40x::can1::F14R2">F14R2</a>,
+    pub f15r1: <a class="struct" href="../../stm32f40x/can1/struct.F15R1.html" title="struct stm32f40x::can1::F15R1">F15R1</a>,
+    pub f15r2: <a class="struct" href="../../stm32f40x/can1/struct.F15R2.html" title="struct stm32f40x::can1::F15R2">F15R2</a>,
+    pub f16r1: <a class="struct" href="../../stm32f40x/can1/struct.F16R1.html" title="struct stm32f40x::can1::F16R1">F16R1</a>,
+    pub f16r2: <a class="struct" href="../../stm32f40x/can1/struct.F16R2.html" title="struct stm32f40x::can1::F16R2">F16R2</a>,
+    pub f17r1: <a class="struct" href="../../stm32f40x/can1/struct.F17R1.html" title="struct stm32f40x::can1::F17R1">F17R1</a>,
+    pub f17r2: <a class="struct" href="../../stm32f40x/can1/struct.F17R2.html" title="struct stm32f40x::can1::F17R2">F17R2</a>,
+    pub f18r1: <a class="struct" href="../../stm32f40x/can1/struct.F18R1.html" title="struct stm32f40x::can1::F18R1">F18R1</a>,
+    pub f18r2: <a class="struct" href="../../stm32f40x/can1/struct.F18R2.html" title="struct stm32f40x::can1::F18R2">F18R2</a>,
+    pub f19r1: <a class="struct" href="../../stm32f40x/can1/struct.F19R1.html" title="struct stm32f40x::can1::F19R1">F19R1</a>,
+    pub f19r2: <a class="struct" href="../../stm32f40x/can1/struct.F19R2.html" title="struct stm32f40x::can1::F19R2">F19R2</a>,
+    pub f20r1: <a class="struct" href="../../stm32f40x/can1/struct.F20R1.html" title="struct stm32f40x::can1::F20R1">F20R1</a>,
+    pub f20r2: <a class="struct" href="../../stm32f40x/can1/struct.F20R2.html" title="struct stm32f40x::can1::F20R2">F20R2</a>,
+    pub f21r1: <a class="struct" href="../../stm32f40x/can1/struct.F21R1.html" title="struct stm32f40x::can1::F21R1">F21R1</a>,
+    pub f21r2: <a class="struct" href="../../stm32f40x/can1/struct.F21R2.html" title="struct stm32f40x::can1::F21R2">F21R2</a>,
+    pub f22r1: <a class="struct" href="../../stm32f40x/can1/struct.F22R1.html" title="struct stm32f40x::can1::F22R1">F22R1</a>,
+    pub f22r2: <a class="struct" href="../../stm32f40x/can1/struct.F22R2.html" title="struct stm32f40x::can1::F22R2">F22R2</a>,
+    pub f23r1: <a class="struct" href="../../stm32f40x/can1/struct.F23R1.html" title="struct stm32f40x::can1::F23R1">F23R1</a>,
+    pub f23r2: <a class="struct" href="../../stm32f40x/can1/struct.F23R2.html" title="struct stm32f40x::can1::F23R2">F23R2</a>,
+    pub f24r1: <a class="struct" href="../../stm32f40x/can1/struct.F24R1.html" title="struct stm32f40x::can1::F24R1">F24R1</a>,
+    pub f24r2: <a class="struct" href="../../stm32f40x/can1/struct.F24R2.html" title="struct stm32f40x::can1::F24R2">F24R2</a>,
+    pub f25r1: <a class="struct" href="../../stm32f40x/can1/struct.F25R1.html" title="struct stm32f40x::can1::F25R1">F25R1</a>,
+    pub f25r2: <a class="struct" href="../../stm32f40x/can1/struct.F25R2.html" title="struct stm32f40x::can1::F25R2">F25R2</a>,
+    pub f26r1: <a class="struct" href="../../stm32f40x/can1/struct.F26R1.html" title="struct stm32f40x::can1::F26R1">F26R1</a>,
+    pub f26r2: <a class="struct" href="../../stm32f40x/can1/struct.F26R2.html" title="struct stm32f40x::can1::F26R2">F26R2</a>,
+    pub f27r1: <a class="struct" href="../../stm32f40x/can1/struct.F27R1.html" title="struct stm32f40x::can1::F27R1">F27R1</a>,
+    pub f27r2: <a class="struct" href="../../stm32f40x/can1/struct.F27R2.html" title="struct stm32f40x::can1::F27R2">F27R2</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.mcr" class="structfield small-section-header">
+                           <a href="#structfield.mcr" class="anchor field"></a>
+                           <span id="mcr.v" class='invisible'>
+                           <code>mcr: <a class="struct" href="../../stm32f40x/can1/struct.MCR.html" title="struct stm32f40x::can1::MCR">MCR</a></code>
+                           </span></span><div class='docblock'><p>0x00 - master control register</p>
+</div><span id="structfield.msr" class="structfield small-section-header">
+                           <a href="#structfield.msr" class="anchor field"></a>
+                           <span id="msr.v" class='invisible'>
+                           <code>msr: <a class="struct" href="../../stm32f40x/can1/struct.MSR.html" title="struct stm32f40x::can1::MSR">MSR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - master status register</p>
+</div><span id="structfield.tsr" class="structfield small-section-header">
+                           <a href="#structfield.tsr" class="anchor field"></a>
+                           <span id="tsr.v" class='invisible'>
+                           <code>tsr: <a class="struct" href="../../stm32f40x/can1/struct.TSR.html" title="struct stm32f40x::can1::TSR">TSR</a></code>
+                           </span></span><div class='docblock'><p>0x08 - transmit status register</p>
+</div><span id="structfield.rf0r" class="structfield small-section-header">
+                           <a href="#structfield.rf0r" class="anchor field"></a>
+                           <span id="rf0r.v" class='invisible'>
+                           <code>rf0r: <a class="struct" href="../../stm32f40x/can1/struct.RF0R.html" title="struct stm32f40x::can1::RF0R">RF0R</a></code>
+                           </span></span><div class='docblock'><p>0x0c - receive FIFO 0 register</p>
+</div><span id="structfield.rf1r" class="structfield small-section-header">
+                           <a href="#structfield.rf1r" class="anchor field"></a>
+                           <span id="rf1r.v" class='invisible'>
+                           <code>rf1r: <a class="struct" href="../../stm32f40x/can1/struct.RF1R.html" title="struct stm32f40x::can1::RF1R">RF1R</a></code>
+                           </span></span><div class='docblock'><p>0x10 - receive FIFO 1 register</p>
+</div><span id="structfield.ier" class="structfield small-section-header">
+                           <a href="#structfield.ier" class="anchor field"></a>
+                           <span id="ier.v" class='invisible'>
+                           <code>ier: <a class="struct" href="../../stm32f40x/can1/struct.IER.html" title="struct stm32f40x::can1::IER">IER</a></code>
+                           </span></span><div class='docblock'><p>0x14 - interrupt enable register</p>
+</div><span id="structfield.esr" class="structfield small-section-header">
+                           <a href="#structfield.esr" class="anchor field"></a>
+                           <span id="esr.v" class='invisible'>
+                           <code>esr: <a class="struct" href="../../stm32f40x/can1/struct.ESR.html" title="struct stm32f40x::can1::ESR">ESR</a></code>
+                           </span></span><div class='docblock'><p>0x18 - interrupt enable register</p>
+</div><span id="structfield.btr" class="structfield small-section-header">
+                           <a href="#structfield.btr" class="anchor field"></a>
+                           <span id="btr.v" class='invisible'>
+                           <code>btr: <a class="struct" href="../../stm32f40x/can1/struct.BTR.html" title="struct stm32f40x::can1::BTR">BTR</a></code>
+                           </span></span><div class='docblock'><p>0x1c - bit timing register</p>
+</div><span id="structfield.ti0r" class="structfield small-section-header">
+                           <a href="#structfield.ti0r" class="anchor field"></a>
+                           <span id="ti0r.v" class='invisible'>
+                           <code>ti0r: <a class="struct" href="../../stm32f40x/can1/struct.TI0R.html" title="struct stm32f40x::can1::TI0R">TI0R</a></code>
+                           </span></span><div class='docblock'><p>0x180 - TX mailbox identifier register</p>
+</div><span id="structfield.tdt0r" class="structfield small-section-header">
+                           <a href="#structfield.tdt0r" class="anchor field"></a>
+                           <span id="tdt0r.v" class='invisible'>
+                           <code>tdt0r: <a class="struct" href="../../stm32f40x/can1/struct.TDT0R.html" title="struct stm32f40x::can1::TDT0R">TDT0R</a></code>
+                           </span></span><div class='docblock'><p>0x184 - mailbox data length control and time stamp register</p>
+</div><span id="structfield.tdl0r" class="structfield small-section-header">
+                           <a href="#structfield.tdl0r" class="anchor field"></a>
+                           <span id="tdl0r.v" class='invisible'>
+                           <code>tdl0r: <a class="struct" href="../../stm32f40x/can1/struct.TDL0R.html" title="struct stm32f40x::can1::TDL0R">TDL0R</a></code>
+                           </span></span><div class='docblock'><p>0x188 - mailbox data low register</p>
+</div><span id="structfield.tdh0r" class="structfield small-section-header">
+                           <a href="#structfield.tdh0r" class="anchor field"></a>
+                           <span id="tdh0r.v" class='invisible'>
+                           <code>tdh0r: <a class="struct" href="../../stm32f40x/can1/struct.TDH0R.html" title="struct stm32f40x::can1::TDH0R">TDH0R</a></code>
+                           </span></span><div class='docblock'><p>0x18c - mailbox data high register</p>
+</div><span id="structfield.ti1r" class="structfield small-section-header">
+                           <a href="#structfield.ti1r" class="anchor field"></a>
+                           <span id="ti1r.v" class='invisible'>
+                           <code>ti1r: <a class="struct" href="../../stm32f40x/can1/struct.TI1R.html" title="struct stm32f40x::can1::TI1R">TI1R</a></code>
+                           </span></span><div class='docblock'><p>0x190 - mailbox identifier register</p>
+</div><span id="structfield.tdt1r" class="structfield small-section-header">
+                           <a href="#structfield.tdt1r" class="anchor field"></a>
+                           <span id="tdt1r.v" class='invisible'>
+                           <code>tdt1r: <a class="struct" href="../../stm32f40x/can1/struct.TDT1R.html" title="struct stm32f40x::can1::TDT1R">TDT1R</a></code>
+                           </span></span><div class='docblock'><p>0x194 - mailbox data length control and time stamp register</p>
+</div><span id="structfield.tdl1r" class="structfield small-section-header">
+                           <a href="#structfield.tdl1r" class="anchor field"></a>
+                           <span id="tdl1r.v" class='invisible'>
+                           <code>tdl1r: <a class="struct" href="../../stm32f40x/can1/struct.TDL1R.html" title="struct stm32f40x::can1::TDL1R">TDL1R</a></code>
+                           </span></span><div class='docblock'><p>0x198 - mailbox data low register</p>
+</div><span id="structfield.tdh1r" class="structfield small-section-header">
+                           <a href="#structfield.tdh1r" class="anchor field"></a>
+                           <span id="tdh1r.v" class='invisible'>
+                           <code>tdh1r: <a class="struct" href="../../stm32f40x/can1/struct.TDH1R.html" title="struct stm32f40x::can1::TDH1R">TDH1R</a></code>
+                           </span></span><div class='docblock'><p>0x19c - mailbox data high register</p>
+</div><span id="structfield.ti2r" class="structfield small-section-header">
+                           <a href="#structfield.ti2r" class="anchor field"></a>
+                           <span id="ti2r.v" class='invisible'>
+                           <code>ti2r: <a class="struct" href="../../stm32f40x/can1/struct.TI2R.html" title="struct stm32f40x::can1::TI2R">TI2R</a></code>
+                           </span></span><div class='docblock'><p>0x1a0 - mailbox identifier register</p>
+</div><span id="structfield.tdt2r" class="structfield small-section-header">
+                           <a href="#structfield.tdt2r" class="anchor field"></a>
+                           <span id="tdt2r.v" class='invisible'>
+                           <code>tdt2r: <a class="struct" href="../../stm32f40x/can1/struct.TDT2R.html" title="struct stm32f40x::can1::TDT2R">TDT2R</a></code>
+                           </span></span><div class='docblock'><p>0x1a4 - mailbox data length control and time stamp register</p>
+</div><span id="structfield.tdl2r" class="structfield small-section-header">
+                           <a href="#structfield.tdl2r" class="anchor field"></a>
+                           <span id="tdl2r.v" class='invisible'>
+                           <code>tdl2r: <a class="struct" href="../../stm32f40x/can1/struct.TDL2R.html" title="struct stm32f40x::can1::TDL2R">TDL2R</a></code>
+                           </span></span><div class='docblock'><p>0x1a8 - mailbox data low register</p>
+</div><span id="structfield.tdh2r" class="structfield small-section-header">
+                           <a href="#structfield.tdh2r" class="anchor field"></a>
+                           <span id="tdh2r.v" class='invisible'>
+                           <code>tdh2r: <a class="struct" href="../../stm32f40x/can1/struct.TDH2R.html" title="struct stm32f40x::can1::TDH2R">TDH2R</a></code>
+                           </span></span><div class='docblock'><p>0x1ac - mailbox data high register</p>
+</div><span id="structfield.ri0r" class="structfield small-section-header">
+                           <a href="#structfield.ri0r" class="anchor field"></a>
+                           <span id="ri0r.v" class='invisible'>
+                           <code>ri0r: <a class="struct" href="../../stm32f40x/can1/struct.RI0R.html" title="struct stm32f40x::can1::RI0R">RI0R</a></code>
+                           </span></span><div class='docblock'><p>0x1b0 - receive FIFO mailbox identifier register</p>
+</div><span id="structfield.rdt0r" class="structfield small-section-header">
+                           <a href="#structfield.rdt0r" class="anchor field"></a>
+                           <span id="rdt0r.v" class='invisible'>
+                           <code>rdt0r: <a class="struct" href="../../stm32f40x/can1/struct.RDT0R.html" title="struct stm32f40x::can1::RDT0R">RDT0R</a></code>
+                           </span></span><div class='docblock'><p>0x1b4 - mailbox data high register</p>
+</div><span id="structfield.rdl0r" class="structfield small-section-header">
+                           <a href="#structfield.rdl0r" class="anchor field"></a>
+                           <span id="rdl0r.v" class='invisible'>
+                           <code>rdl0r: <a class="struct" href="../../stm32f40x/can1/struct.RDL0R.html" title="struct stm32f40x::can1::RDL0R">RDL0R</a></code>
+                           </span></span><div class='docblock'><p>0x1b8 - mailbox data high register</p>
+</div><span id="structfield.rdh0r" class="structfield small-section-header">
+                           <a href="#structfield.rdh0r" class="anchor field"></a>
+                           <span id="rdh0r.v" class='invisible'>
+                           <code>rdh0r: <a class="struct" href="../../stm32f40x/can1/struct.RDH0R.html" title="struct stm32f40x::can1::RDH0R">RDH0R</a></code>
+                           </span></span><div class='docblock'><p>0x1bc - receive FIFO mailbox data high register</p>
+</div><span id="structfield.ri1r" class="structfield small-section-header">
+                           <a href="#structfield.ri1r" class="anchor field"></a>
+                           <span id="ri1r.v" class='invisible'>
+                           <code>ri1r: <a class="struct" href="../../stm32f40x/can1/struct.RI1R.html" title="struct stm32f40x::can1::RI1R">RI1R</a></code>
+                           </span></span><div class='docblock'><p>0x1c0 - mailbox data high register</p>
+</div><span id="structfield.rdt1r" class="structfield small-section-header">
+                           <a href="#structfield.rdt1r" class="anchor field"></a>
+                           <span id="rdt1r.v" class='invisible'>
+                           <code>rdt1r: <a class="struct" href="../../stm32f40x/can1/struct.RDT1R.html" title="struct stm32f40x::can1::RDT1R">RDT1R</a></code>
+                           </span></span><div class='docblock'><p>0x1c4 - mailbox data high register</p>
+</div><span id="structfield.rdl1r" class="structfield small-section-header">
+                           <a href="#structfield.rdl1r" class="anchor field"></a>
+                           <span id="rdl1r.v" class='invisible'>
+                           <code>rdl1r: <a class="struct" href="../../stm32f40x/can1/struct.RDL1R.html" title="struct stm32f40x::can1::RDL1R">RDL1R</a></code>
+                           </span></span><div class='docblock'><p>0x1c8 - mailbox data high register</p>
+</div><span id="structfield.rdh1r" class="structfield small-section-header">
+                           <a href="#structfield.rdh1r" class="anchor field"></a>
+                           <span id="rdh1r.v" class='invisible'>
+                           <code>rdh1r: <a class="struct" href="../../stm32f40x/can1/struct.RDH1R.html" title="struct stm32f40x::can1::RDH1R">RDH1R</a></code>
+                           </span></span><div class='docblock'><p>0x1cc - mailbox data high register</p>
+</div><span id="structfield.fmr" class="structfield small-section-header">
+                           <a href="#structfield.fmr" class="anchor field"></a>
+                           <span id="fmr.v" class='invisible'>
+                           <code>fmr: <a class="struct" href="../../stm32f40x/can1/struct.FMR.html" title="struct stm32f40x::can1::FMR">FMR</a></code>
+                           </span></span><div class='docblock'><p>0x200 - filter master register</p>
+</div><span id="structfield.fm1r" class="structfield small-section-header">
+                           <a href="#structfield.fm1r" class="anchor field"></a>
+                           <span id="fm1r.v" class='invisible'>
+                           <code>fm1r: <a class="struct" href="../../stm32f40x/can1/struct.FM1R.html" title="struct stm32f40x::can1::FM1R">FM1R</a></code>
+                           </span></span><div class='docblock'><p>0x204 - filter mode register</p>
+</div><span id="structfield.fs1r" class="structfield small-section-header">
+                           <a href="#structfield.fs1r" class="anchor field"></a>
+                           <span id="fs1r.v" class='invisible'>
+                           <code>fs1r: <a class="struct" href="../../stm32f40x/can1/struct.FS1R.html" title="struct stm32f40x::can1::FS1R">FS1R</a></code>
+                           </span></span><div class='docblock'><p>0x20c - filter scale register</p>
+</div><span id="structfield.ffa1r" class="structfield small-section-header">
+                           <a href="#structfield.ffa1r" class="anchor field"></a>
+                           <span id="ffa1r.v" class='invisible'>
+                           <code>ffa1r: <a class="struct" href="../../stm32f40x/can1/struct.FFA1R.html" title="struct stm32f40x::can1::FFA1R">FFA1R</a></code>
+                           </span></span><div class='docblock'><p>0x214 - filter FIFO assignment register</p>
+</div><span id="structfield.fa1r" class="structfield small-section-header">
+                           <a href="#structfield.fa1r" class="anchor field"></a>
+                           <span id="fa1r.v" class='invisible'>
+                           <code>fa1r: <a class="struct" href="../../stm32f40x/can1/struct.FA1R.html" title="struct stm32f40x::can1::FA1R">FA1R</a></code>
+                           </span></span><div class='docblock'><p>0x21c - filter activation register</p>
+</div><span id="structfield.f0r1" class="structfield small-section-header">
+                           <a href="#structfield.f0r1" class="anchor field"></a>
+                           <span id="f0r1.v" class='invisible'>
+                           <code>f0r1: <a class="struct" href="../../stm32f40x/can1/struct.F0R1.html" title="struct stm32f40x::can1::F0R1">F0R1</a></code>
+                           </span></span><div class='docblock'><p>0x240 - Filter bank 0 register 1</p>
+</div><span id="structfield.f0r2" class="structfield small-section-header">
+                           <a href="#structfield.f0r2" class="anchor field"></a>
+                           <span id="f0r2.v" class='invisible'>
+                           <code>f0r2: <a class="struct" href="../../stm32f40x/can1/struct.F0R2.html" title="struct stm32f40x::can1::F0R2">F0R2</a></code>
+                           </span></span><div class='docblock'><p>0x244 - Filter bank 0 register 2</p>
+</div><span id="structfield.f1r1" class="structfield small-section-header">
+                           <a href="#structfield.f1r1" class="anchor field"></a>
+                           <span id="f1r1.v" class='invisible'>
+                           <code>f1r1: <a class="struct" href="../../stm32f40x/can1/struct.F1R1.html" title="struct stm32f40x::can1::F1R1">F1R1</a></code>
+                           </span></span><div class='docblock'><p>0x248 - Filter bank 1 register 1</p>
+</div><span id="structfield.f1r2" class="structfield small-section-header">
+                           <a href="#structfield.f1r2" class="anchor field"></a>
+                           <span id="f1r2.v" class='invisible'>
+                           <code>f1r2: <a class="struct" href="../../stm32f40x/can1/struct.F1R2.html" title="struct stm32f40x::can1::F1R2">F1R2</a></code>
+                           </span></span><div class='docblock'><p>0x24c - Filter bank 1 register 2</p>
+</div><span id="structfield.f2r1" class="structfield small-section-header">
+                           <a href="#structfield.f2r1" class="anchor field"></a>
+                           <span id="f2r1.v" class='invisible'>
+                           <code>f2r1: <a class="struct" href="../../stm32f40x/can1/struct.F2R1.html" title="struct stm32f40x::can1::F2R1">F2R1</a></code>
+                           </span></span><div class='docblock'><p>0x250 - Filter bank 2 register 1</p>
+</div><span id="structfield.f2r2" class="structfield small-section-header">
+                           <a href="#structfield.f2r2" class="anchor field"></a>
+                           <span id="f2r2.v" class='invisible'>
+                           <code>f2r2: <a class="struct" href="../../stm32f40x/can1/struct.F2R2.html" title="struct stm32f40x::can1::F2R2">F2R2</a></code>
+                           </span></span><div class='docblock'><p>0x254 - Filter bank 2 register 2</p>
+</div><span id="structfield.f3r1" class="structfield small-section-header">
+                           <a href="#structfield.f3r1" class="anchor field"></a>
+                           <span id="f3r1.v" class='invisible'>
+                           <code>f3r1: <a class="struct" href="../../stm32f40x/can1/struct.F3R1.html" title="struct stm32f40x::can1::F3R1">F3R1</a></code>
+                           </span></span><div class='docblock'><p>0x258 - Filter bank 3 register 1</p>
+</div><span id="structfield.f3r2" class="structfield small-section-header">
+                           <a href="#structfield.f3r2" class="anchor field"></a>
+                           <span id="f3r2.v" class='invisible'>
+                           <code>f3r2: <a class="struct" href="../../stm32f40x/can1/struct.F3R2.html" title="struct stm32f40x::can1::F3R2">F3R2</a></code>
+                           </span></span><div class='docblock'><p>0x25c - Filter bank 3 register 2</p>
+</div><span id="structfield.f4r1" class="structfield small-section-header">
+                           <a href="#structfield.f4r1" class="anchor field"></a>
+                           <span id="f4r1.v" class='invisible'>
+                           <code>f4r1: <a class="struct" href="../../stm32f40x/can1/struct.F4R1.html" title="struct stm32f40x::can1::F4R1">F4R1</a></code>
+                           </span></span><div class='docblock'><p>0x260 - Filter bank 4 register 1</p>
+</div><span id="structfield.f4r2" class="structfield small-section-header">
+                           <a href="#structfield.f4r2" class="anchor field"></a>
+                           <span id="f4r2.v" class='invisible'>
+                           <code>f4r2: <a class="struct" href="../../stm32f40x/can1/struct.F4R2.html" title="struct stm32f40x::can1::F4R2">F4R2</a></code>
+                           </span></span><div class='docblock'><p>0x264 - Filter bank 4 register 2</p>
+</div><span id="structfield.f5r1" class="structfield small-section-header">
+                           <a href="#structfield.f5r1" class="anchor field"></a>
+                           <span id="f5r1.v" class='invisible'>
+                           <code>f5r1: <a class="struct" href="../../stm32f40x/can1/struct.F5R1.html" title="struct stm32f40x::can1::F5R1">F5R1</a></code>
+                           </span></span><div class='docblock'><p>0x268 - Filter bank 5 register 1</p>
+</div><span id="structfield.f5r2" class="structfield small-section-header">
+                           <a href="#structfield.f5r2" class="anchor field"></a>
+                           <span id="f5r2.v" class='invisible'>
+                           <code>f5r2: <a class="struct" href="../../stm32f40x/can1/struct.F5R2.html" title="struct stm32f40x::can1::F5R2">F5R2</a></code>
+                           </span></span><div class='docblock'><p>0x26c - Filter bank 5 register 2</p>
+</div><span id="structfield.f6r1" class="structfield small-section-header">
+                           <a href="#structfield.f6r1" class="anchor field"></a>
+                           <span id="f6r1.v" class='invisible'>
+                           <code>f6r1: <a class="struct" href="../../stm32f40x/can1/struct.F6R1.html" title="struct stm32f40x::can1::F6R1">F6R1</a></code>
+                           </span></span><div class='docblock'><p>0x270 - Filter bank 6 register 1</p>
+</div><span id="structfield.f6r2" class="structfield small-section-header">
+                           <a href="#structfield.f6r2" class="anchor field"></a>
+                           <span id="f6r2.v" class='invisible'>
+                           <code>f6r2: <a class="struct" href="../../stm32f40x/can1/struct.F6R2.html" title="struct stm32f40x::can1::F6R2">F6R2</a></code>
+                           </span></span><div class='docblock'><p>0x274 - Filter bank 6 register 2</p>
+</div><span id="structfield.f7r1" class="structfield small-section-header">
+                           <a href="#structfield.f7r1" class="anchor field"></a>
+                           <span id="f7r1.v" class='invisible'>
+                           <code>f7r1: <a class="struct" href="../../stm32f40x/can1/struct.F7R1.html" title="struct stm32f40x::can1::F7R1">F7R1</a></code>
+                           </span></span><div class='docblock'><p>0x278 - Filter bank 7 register 1</p>
+</div><span id="structfield.f7r2" class="structfield small-section-header">
+                           <a href="#structfield.f7r2" class="anchor field"></a>
+                           <span id="f7r2.v" class='invisible'>
+                           <code>f7r2: <a class="struct" href="../../stm32f40x/can1/struct.F7R2.html" title="struct stm32f40x::can1::F7R2">F7R2</a></code>
+                           </span></span><div class='docblock'><p>0x27c - Filter bank 7 register 2</p>
+</div><span id="structfield.f8r1" class="structfield small-section-header">
+                           <a href="#structfield.f8r1" class="anchor field"></a>
+                           <span id="f8r1.v" class='invisible'>
+                           <code>f8r1: <a class="struct" href="../../stm32f40x/can1/struct.F8R1.html" title="struct stm32f40x::can1::F8R1">F8R1</a></code>
+                           </span></span><div class='docblock'><p>0x280 - Filter bank 8 register 1</p>
+</div><span id="structfield.f8r2" class="structfield small-section-header">
+                           <a href="#structfield.f8r2" class="anchor field"></a>
+                           <span id="f8r2.v" class='invisible'>
+                           <code>f8r2: <a class="struct" href="../../stm32f40x/can1/struct.F8R2.html" title="struct stm32f40x::can1::F8R2">F8R2</a></code>
+                           </span></span><div class='docblock'><p>0x284 - Filter bank 8 register 2</p>
+</div><span id="structfield.f9r1" class="structfield small-section-header">
+                           <a href="#structfield.f9r1" class="anchor field"></a>
+                           <span id="f9r1.v" class='invisible'>
+                           <code>f9r1: <a class="struct" href="../../stm32f40x/can1/struct.F9R1.html" title="struct stm32f40x::can1::F9R1">F9R1</a></code>
+                           </span></span><div class='docblock'><p>0x288 - Filter bank 9 register 1</p>
+</div><span id="structfield.f9r2" class="structfield small-section-header">
+                           <a href="#structfield.f9r2" class="anchor field"></a>
+                           <span id="f9r2.v" class='invisible'>
+                           <code>f9r2: <a class="struct" href="../../stm32f40x/can1/struct.F9R2.html" title="struct stm32f40x::can1::F9R2">F9R2</a></code>
+                           </span></span><div class='docblock'><p>0x28c - Filter bank 9 register 2</p>
+</div><span id="structfield.f10r1" class="structfield small-section-header">
+                           <a href="#structfield.f10r1" class="anchor field"></a>
+                           <span id="f10r1.v" class='invisible'>
+                           <code>f10r1: <a class="struct" href="../../stm32f40x/can1/struct.F10R1.html" title="struct stm32f40x::can1::F10R1">F10R1</a></code>
+                           </span></span><div class='docblock'><p>0x290 - Filter bank 10 register 1</p>
+</div><span id="structfield.f10r2" class="structfield small-section-header">
+                           <a href="#structfield.f10r2" class="anchor field"></a>
+                           <span id="f10r2.v" class='invisible'>
+                           <code>f10r2: <a class="struct" href="../../stm32f40x/can1/struct.F10R2.html" title="struct stm32f40x::can1::F10R2">F10R2</a></code>
+                           </span></span><div class='docblock'><p>0x294 - Filter bank 10 register 2</p>
+</div><span id="structfield.f11r1" class="structfield small-section-header">
+                           <a href="#structfield.f11r1" class="anchor field"></a>
+                           <span id="f11r1.v" class='invisible'>
+                           <code>f11r1: <a class="struct" href="../../stm32f40x/can1/struct.F11R1.html" title="struct stm32f40x::can1::F11R1">F11R1</a></code>
+                           </span></span><div class='docblock'><p>0x298 - Filter bank 11 register 1</p>
+</div><span id="structfield.f11r2" class="structfield small-section-header">
+                           <a href="#structfield.f11r2" class="anchor field"></a>
+                           <span id="f11r2.v" class='invisible'>
+                           <code>f11r2: <a class="struct" href="../../stm32f40x/can1/struct.F11R2.html" title="struct stm32f40x::can1::F11R2">F11R2</a></code>
+                           </span></span><div class='docblock'><p>0x29c - Filter bank 11 register 2</p>
+</div><span id="structfield.f12r1" class="structfield small-section-header">
+                           <a href="#structfield.f12r1" class="anchor field"></a>
+                           <span id="f12r1.v" class='invisible'>
+                           <code>f12r1: <a class="struct" href="../../stm32f40x/can1/struct.F12R1.html" title="struct stm32f40x::can1::F12R1">F12R1</a></code>
+                           </span></span><div class='docblock'><p>0x2a0 - Filter bank 4 register 1</p>
+</div><span id="structfield.f12r2" class="structfield small-section-header">
+                           <a href="#structfield.f12r2" class="anchor field"></a>
+                           <span id="f12r2.v" class='invisible'>
+                           <code>f12r2: <a class="struct" href="../../stm32f40x/can1/struct.F12R2.html" title="struct stm32f40x::can1::F12R2">F12R2</a></code>
+                           </span></span><div class='docblock'><p>0x2a4 - Filter bank 12 register 2</p>
+</div><span id="structfield.f13r1" class="structfield small-section-header">
+                           <a href="#structfield.f13r1" class="anchor field"></a>
+                           <span id="f13r1.v" class='invisible'>
+                           <code>f13r1: <a class="struct" href="../../stm32f40x/can1/struct.F13R1.html" title="struct stm32f40x::can1::F13R1">F13R1</a></code>
+                           </span></span><div class='docblock'><p>0x2a8 - Filter bank 13 register 1</p>
+</div><span id="structfield.f13r2" class="structfield small-section-header">
+                           <a href="#structfield.f13r2" class="anchor field"></a>
+                           <span id="f13r2.v" class='invisible'>
+                           <code>f13r2: <a class="struct" href="../../stm32f40x/can1/struct.F13R2.html" title="struct stm32f40x::can1::F13R2">F13R2</a></code>
+                           </span></span><div class='docblock'><p>0x2ac - Filter bank 13 register 2</p>
+</div><span id="structfield.f14r1" class="structfield small-section-header">
+                           <a href="#structfield.f14r1" class="anchor field"></a>
+                           <span id="f14r1.v" class='invisible'>
+                           <code>f14r1: <a class="struct" href="../../stm32f40x/can1/struct.F14R1.html" title="struct stm32f40x::can1::F14R1">F14R1</a></code>
+                           </span></span><div class='docblock'><p>0x2b0 - Filter bank 14 register 1</p>
+</div><span id="structfield.f14r2" class="structfield small-section-header">
+                           <a href="#structfield.f14r2" class="anchor field"></a>
+                           <span id="f14r2.v" class='invisible'>
+                           <code>f14r2: <a class="struct" href="../../stm32f40x/can1/struct.F14R2.html" title="struct stm32f40x::can1::F14R2">F14R2</a></code>
+                           </span></span><div class='docblock'><p>0x2b4 - Filter bank 14 register 2</p>
+</div><span id="structfield.f15r1" class="structfield small-section-header">
+                           <a href="#structfield.f15r1" class="anchor field"></a>
+                           <span id="f15r1.v" class='invisible'>
+                           <code>f15r1: <a class="struct" href="../../stm32f40x/can1/struct.F15R1.html" title="struct stm32f40x::can1::F15R1">F15R1</a></code>
+                           </span></span><div class='docblock'><p>0x2b8 - Filter bank 15 register 1</p>
+</div><span id="structfield.f15r2" class="structfield small-section-header">
+                           <a href="#structfield.f15r2" class="anchor field"></a>
+                           <span id="f15r2.v" class='invisible'>
+                           <code>f15r2: <a class="struct" href="../../stm32f40x/can1/struct.F15R2.html" title="struct stm32f40x::can1::F15R2">F15R2</a></code>
+                           </span></span><div class='docblock'><p>0x2bc - Filter bank 15 register 2</p>
+</div><span id="structfield.f16r1" class="structfield small-section-header">
+                           <a href="#structfield.f16r1" class="anchor field"></a>
+                           <span id="f16r1.v" class='invisible'>
+                           <code>f16r1: <a class="struct" href="../../stm32f40x/can1/struct.F16R1.html" title="struct stm32f40x::can1::F16R1">F16R1</a></code>
+                           </span></span><div class='docblock'><p>0x2c0 - Filter bank 16 register 1</p>
+</div><span id="structfield.f16r2" class="structfield small-section-header">
+                           <a href="#structfield.f16r2" class="anchor field"></a>
+                           <span id="f16r2.v" class='invisible'>
+                           <code>f16r2: <a class="struct" href="../../stm32f40x/can1/struct.F16R2.html" title="struct stm32f40x::can1::F16R2">F16R2</a></code>
+                           </span></span><div class='docblock'><p>0x2c4 - Filter bank 16 register 2</p>
+</div><span id="structfield.f17r1" class="structfield small-section-header">
+                           <a href="#structfield.f17r1" class="anchor field"></a>
+                           <span id="f17r1.v" class='invisible'>
+                           <code>f17r1: <a class="struct" href="../../stm32f40x/can1/struct.F17R1.html" title="struct stm32f40x::can1::F17R1">F17R1</a></code>
+                           </span></span><div class='docblock'><p>0x2c8 - Filter bank 17 register 1</p>
+</div><span id="structfield.f17r2" class="structfield small-section-header">
+                           <a href="#structfield.f17r2" class="anchor field"></a>
+                           <span id="f17r2.v" class='invisible'>
+                           <code>f17r2: <a class="struct" href="../../stm32f40x/can1/struct.F17R2.html" title="struct stm32f40x::can1::F17R2">F17R2</a></code>
+                           </span></span><div class='docblock'><p>0x2cc - Filter bank 17 register 2</p>
+</div><span id="structfield.f18r1" class="structfield small-section-header">
+                           <a href="#structfield.f18r1" class="anchor field"></a>
+                           <span id="f18r1.v" class='invisible'>
+                           <code>f18r1: <a class="struct" href="../../stm32f40x/can1/struct.F18R1.html" title="struct stm32f40x::can1::F18R1">F18R1</a></code>
+                           </span></span><div class='docblock'><p>0x2d0 - Filter bank 18 register 1</p>
+</div><span id="structfield.f18r2" class="structfield small-section-header">
+                           <a href="#structfield.f18r2" class="anchor field"></a>
+                           <span id="f18r2.v" class='invisible'>
+                           <code>f18r2: <a class="struct" href="../../stm32f40x/can1/struct.F18R2.html" title="struct stm32f40x::can1::F18R2">F18R2</a></code>
+                           </span></span><div class='docblock'><p>0x2d4 - Filter bank 18 register 2</p>
+</div><span id="structfield.f19r1" class="structfield small-section-header">
+                           <a href="#structfield.f19r1" class="anchor field"></a>
+                           <span id="f19r1.v" class='invisible'>
+                           <code>f19r1: <a class="struct" href="../../stm32f40x/can1/struct.F19R1.html" title="struct stm32f40x::can1::F19R1">F19R1</a></code>
+                           </span></span><div class='docblock'><p>0x2d8 - Filter bank 19 register 1</p>
+</div><span id="structfield.f19r2" class="structfield small-section-header">
+                           <a href="#structfield.f19r2" class="anchor field"></a>
+                           <span id="f19r2.v" class='invisible'>
+                           <code>f19r2: <a class="struct" href="../../stm32f40x/can1/struct.F19R2.html" title="struct stm32f40x::can1::F19R2">F19R2</a></code>
+                           </span></span><div class='docblock'><p>0x2dc - Filter bank 19 register 2</p>
+</div><span id="structfield.f20r1" class="structfield small-section-header">
+                           <a href="#structfield.f20r1" class="anchor field"></a>
+                           <span id="f20r1.v" class='invisible'>
+                           <code>f20r1: <a class="struct" href="../../stm32f40x/can1/struct.F20R1.html" title="struct stm32f40x::can1::F20R1">F20R1</a></code>
+                           </span></span><div class='docblock'><p>0x2e0 - Filter bank 20 register 1</p>
+</div><span id="structfield.f20r2" class="structfield small-section-header">
+                           <a href="#structfield.f20r2" class="anchor field"></a>
+                           <span id="f20r2.v" class='invisible'>
+                           <code>f20r2: <a class="struct" href="../../stm32f40x/can1/struct.F20R2.html" title="struct stm32f40x::can1::F20R2">F20R2</a></code>
+                           </span></span><div class='docblock'><p>0x2e4 - Filter bank 20 register 2</p>
+</div><span id="structfield.f21r1" class="structfield small-section-header">
+                           <a href="#structfield.f21r1" class="anchor field"></a>
+                           <span id="f21r1.v" class='invisible'>
+                           <code>f21r1: <a class="struct" href="../../stm32f40x/can1/struct.F21R1.html" title="struct stm32f40x::can1::F21R1">F21R1</a></code>
+                           </span></span><div class='docblock'><p>0x2e8 - Filter bank 21 register 1</p>
+</div><span id="structfield.f21r2" class="structfield small-section-header">
+                           <a href="#structfield.f21r2" class="anchor field"></a>
+                           <span id="f21r2.v" class='invisible'>
+                           <code>f21r2: <a class="struct" href="../../stm32f40x/can1/struct.F21R2.html" title="struct stm32f40x::can1::F21R2">F21R2</a></code>
+                           </span></span><div class='docblock'><p>0x2ec - Filter bank 21 register 2</p>
+</div><span id="structfield.f22r1" class="structfield small-section-header">
+                           <a href="#structfield.f22r1" class="anchor field"></a>
+                           <span id="f22r1.v" class='invisible'>
+                           <code>f22r1: <a class="struct" href="../../stm32f40x/can1/struct.F22R1.html" title="struct stm32f40x::can1::F22R1">F22R1</a></code>
+                           </span></span><div class='docblock'><p>0x2f0 - Filter bank 22 register 1</p>
+</div><span id="structfield.f22r2" class="structfield small-section-header">
+                           <a href="#structfield.f22r2" class="anchor field"></a>
+                           <span id="f22r2.v" class='invisible'>
+                           <code>f22r2: <a class="struct" href="../../stm32f40x/can1/struct.F22R2.html" title="struct stm32f40x::can1::F22R2">F22R2</a></code>
+                           </span></span><div class='docblock'><p>0x2f4 - Filter bank 22 register 2</p>
+</div><span id="structfield.f23r1" class="structfield small-section-header">
+                           <a href="#structfield.f23r1" class="anchor field"></a>
+                           <span id="f23r1.v" class='invisible'>
+                           <code>f23r1: <a class="struct" href="../../stm32f40x/can1/struct.F23R1.html" title="struct stm32f40x::can1::F23R1">F23R1</a></code>
+                           </span></span><div class='docblock'><p>0x2f8 - Filter bank 23 register 1</p>
+</div><span id="structfield.f23r2" class="structfield small-section-header">
+                           <a href="#structfield.f23r2" class="anchor field"></a>
+                           <span id="f23r2.v" class='invisible'>
+                           <code>f23r2: <a class="struct" href="../../stm32f40x/can1/struct.F23R2.html" title="struct stm32f40x::can1::F23R2">F23R2</a></code>
+                           </span></span><div class='docblock'><p>0x2fc - Filter bank 23 register 2</p>
+</div><span id="structfield.f24r1" class="structfield small-section-header">
+                           <a href="#structfield.f24r1" class="anchor field"></a>
+                           <span id="f24r1.v" class='invisible'>
+                           <code>f24r1: <a class="struct" href="../../stm32f40x/can1/struct.F24R1.html" title="struct stm32f40x::can1::F24R1">F24R1</a></code>
+                           </span></span><div class='docblock'><p>0x300 - Filter bank 24 register 1</p>
+</div><span id="structfield.f24r2" class="structfield small-section-header">
+                           <a href="#structfield.f24r2" class="anchor field"></a>
+                           <span id="f24r2.v" class='invisible'>
+                           <code>f24r2: <a class="struct" href="../../stm32f40x/can1/struct.F24R2.html" title="struct stm32f40x::can1::F24R2">F24R2</a></code>
+                           </span></span><div class='docblock'><p>0x304 - Filter bank 24 register 2</p>
+</div><span id="structfield.f25r1" class="structfield small-section-header">
+                           <a href="#structfield.f25r1" class="anchor field"></a>
+                           <span id="f25r1.v" class='invisible'>
+                           <code>f25r1: <a class="struct" href="../../stm32f40x/can1/struct.F25R1.html" title="struct stm32f40x::can1::F25R1">F25R1</a></code>
+                           </span></span><div class='docblock'><p>0x308 - Filter bank 25 register 1</p>
+</div><span id="structfield.f25r2" class="structfield small-section-header">
+                           <a href="#structfield.f25r2" class="anchor field"></a>
+                           <span id="f25r2.v" class='invisible'>
+                           <code>f25r2: <a class="struct" href="../../stm32f40x/can1/struct.F25R2.html" title="struct stm32f40x::can1::F25R2">F25R2</a></code>
+                           </span></span><div class='docblock'><p>0x30c - Filter bank 25 register 2</p>
+</div><span id="structfield.f26r1" class="structfield small-section-header">
+                           <a href="#structfield.f26r1" class="anchor field"></a>
+                           <span id="f26r1.v" class='invisible'>
+                           <code>f26r1: <a class="struct" href="../../stm32f40x/can1/struct.F26R1.html" title="struct stm32f40x::can1::F26R1">F26R1</a></code>
+                           </span></span><div class='docblock'><p>0x310 - Filter bank 26 register 1</p>
+</div><span id="structfield.f26r2" class="structfield small-section-header">
+                           <a href="#structfield.f26r2" class="anchor field"></a>
+                           <span id="f26r2.v" class='invisible'>
+                           <code>f26r2: <a class="struct" href="../../stm32f40x/can1/struct.F26R2.html" title="struct stm32f40x::can1::F26R2">F26R2</a></code>
+                           </span></span><div class='docblock'><p>0x314 - Filter bank 26 register 2</p>
+</div><span id="structfield.f27r1" class="structfield small-section-header">
+                           <a href="#structfield.f27r1" class="anchor field"></a>
+                           <span id="f27r1.v" class='invisible'>
+                           <code>f27r1: <a class="struct" href="../../stm32f40x/can1/struct.F27R1.html" title="struct stm32f40x::can1::F27R1">F27R1</a></code>
+                           </span></span><div class='docblock'><p>0x318 - Filter bank 27 register 1</p>
+</div><span id="structfield.f27r2" class="structfield small-section-header">
+                           <a href="#structfield.f27r2" class="anchor field"></a>
+                           <span id="f27r2.v" class='invisible'>
+                           <code>f27r2: <a class="struct" href="../../stm32f40x/can1/struct.F27R2.html" title="struct stm32f40x::can1::F27R2">F27R2</a></code>
+                           </span></span><div class='docblock'><p>0x31c - Filter bank 27 register 2</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/can1/struct.RegisterBlock.html" title="struct stm32f40x::can1::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/can1/struct.RegisterBlock.html" title="struct stm32f40x::can1::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["PTXFSIZR","Value of the field"],["PTXSAR","Value of the field"],["R","Value read from the register"],["W","Value to write to the register"],["_PTXFSIZW","Proxy"],["_PTXSAW","Proxy"]]});

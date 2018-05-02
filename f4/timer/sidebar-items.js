@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Channel","Channel associated to a timer"]],"struct":[["Timer","`hal::Timer` implementation"]]});

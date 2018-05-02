@@ -1,0 +1,512 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `Peripherals` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, Peripherals"><title>stm32f40x::Peripherals - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct Peripherals</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.CPUID">CPUID</a><a href="#structfield.DCB">DCB</a><a href="#structfield.DWT">DWT</a><a href="#structfield.FPB">FPB</a><a href="#structfield.FPU">FPU</a><a href="#structfield.ITM">ITM</a><a href="#structfield.MPU">MPU</a><a href="#structfield.NVIC">NVIC</a><a href="#structfield.SCB">SCB</a><a href="#structfield.SYST">SYST</a><a href="#structfield.TPIU">TPIU</a><a href="#structfield.RNG">RNG</a><a href="#structfield.DCMI">DCMI</a><a href="#structfield.FSMC">FSMC</a><a href="#structfield.DBG">DBG</a><a href="#structfield.DMA2">DMA2</a><a href="#structfield.DMA1">DMA1</a><a href="#structfield.RCC">RCC</a><a href="#structfield.GPIOI">GPIOI</a><a href="#structfield.GPIOH">GPIOH</a><a href="#structfield.GPIOG">GPIOG</a><a href="#structfield.GPIOF">GPIOF</a><a href="#structfield.GPIOE">GPIOE</a><a href="#structfield.GPIOD">GPIOD</a><a href="#structfield.GPIOC">GPIOC</a><a href="#structfield.GPIOB">GPIOB</a><a href="#structfield.GPIOA">GPIOA</a><a href="#structfield.SYSCFG">SYSCFG</a><a href="#structfield.SPI1">SPI1</a><a href="#structfield.SPI2">SPI2</a><a href="#structfield.SPI3">SPI3</a><a href="#structfield.I2S2EXT">I2S2EXT</a><a href="#structfield.I2S3EXT">I2S3EXT</a><a href="#structfield.SDIO">SDIO</a><a href="#structfield.ADC1">ADC1</a><a href="#structfield.ADC2">ADC2</a><a href="#structfield.ADC3">ADC3</a><a href="#structfield.USART6">USART6</a><a href="#structfield.USART1">USART1</a><a href="#structfield.USART2">USART2</a><a href="#structfield.USART3">USART3</a><a href="#structfield.DAC">DAC</a><a href="#structfield.PWR">PWR</a><a href="#structfield.I2C3">I2C3</a><a href="#structfield.I2C2">I2C2</a><a href="#structfield.I2C1">I2C1</a><a href="#structfield.IWDG">IWDG</a><a href="#structfield.WWDG">WWDG</a><a href="#structfield.RTC">RTC</a><a href="#structfield.UART4">UART4</a><a href="#structfield.UART5">UART5</a><a href="#structfield.C_ADC">C_ADC</a><a href="#structfield.TIM1">TIM1</a><a href="#structfield.TIM8">TIM8</a><a href="#structfield.TIM2">TIM2</a><a href="#structfield.TIM3">TIM3</a><a href="#structfield.TIM4">TIM4</a><a href="#structfield.TIM5">TIM5</a><a href="#structfield.TIM9">TIM9</a><a href="#structfield.TIM12">TIM12</a><a href="#structfield.TIM10">TIM10</a><a href="#structfield.TIM13">TIM13</a><a href="#structfield.TIM14">TIM14</a><a href="#structfield.TIM11">TIM11</a><a href="#structfield.TIM6">TIM6</a><a href="#structfield.TIM7">TIM7</a><a href="#structfield.ETHERNET_MAC">ETHERNET_MAC</a><a href="#structfield.ETHERNET_MMC">ETHERNET_MMC</a><a href="#structfield.ETHERNET_PTP">ETHERNET_PTP</a><a href="#structfield.ETHERNET_DMA">ETHERNET_DMA</a><a href="#structfield.CRC">CRC</a><a href="#structfield.OTG_FS_GLOBAL">OTG_FS_GLOBAL</a><a href="#structfield.OTG_FS_HOST">OTG_FS_HOST</a><a href="#structfield.OTG_FS_DEVICE">OTG_FS_DEVICE</a><a href="#structfield.OTG_FS_PWRCLK">OTG_FS_PWRCLK</a><a href="#structfield.CAN1">CAN1</a><a href="#structfield.CAN2">CAN2</a><a href="#structfield.FLASH">FLASH</a><a href="#structfield.EXTI">EXTI</a><a href="#structfield.OTG_HS_GLOBAL">OTG_HS_GLOBAL</a><a href="#structfield.OTG_HS_HOST">OTG_HS_HOST</a><a href="#structfield.OTG_HS_DEVICE">OTG_HS_DEVICE</a><a href="#structfield.OTG_HS_PWRCLK">OTG_HS_PWRCLK</a></div><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.all">all</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">!Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'Peripherals', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>stm32f40x</a>::<wbr><a class="struct" href=''>Peripherals</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/stm32f40x/lib.rs.html#404136-404220' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'>pub struct Peripherals&lt;'a&gt; {
+    pub CPUID: &amp;'a <a class="struct" href="../stm32f40x/struct.CPUID.html" title="struct stm32f40x::CPUID">CPUID</a>,
+    pub DCB: &amp;'a <a class="struct" href="../stm32f40x/struct.DCB.html" title="struct stm32f40x::DCB">DCB</a>,
+    pub DWT: &amp;'a <a class="struct" href="../stm32f40x/struct.DWT.html" title="struct stm32f40x::DWT">DWT</a>,
+    pub FPB: &amp;'a <a class="struct" href="../stm32f40x/struct.FPB.html" title="struct stm32f40x::FPB">FPB</a>,
+    pub FPU: &amp;'a <a class="struct" href="../stm32f40x/struct.FPU.html" title="struct stm32f40x::FPU">FPU</a>,
+    pub ITM: &amp;'a <a class="struct" href="../stm32f40x/struct.ITM.html" title="struct stm32f40x::ITM">ITM</a>,
+    pub MPU: &amp;'a <a class="struct" href="../stm32f40x/struct.MPU.html" title="struct stm32f40x::MPU">MPU</a>,
+    pub NVIC: &amp;'a <a class="struct" href="../stm32f40x/struct.NVIC.html" title="struct stm32f40x::NVIC">NVIC</a>,
+    pub SCB: &amp;'a <a class="struct" href="../stm32f40x/struct.SCB.html" title="struct stm32f40x::SCB">SCB</a>,
+    pub SYST: &amp;'a <a class="struct" href="../stm32f40x/struct.SYST.html" title="struct stm32f40x::SYST">SYST</a>,
+    pub TPIU: &amp;'a <a class="struct" href="../stm32f40x/struct.TPIU.html" title="struct stm32f40x::TPIU">TPIU</a>,
+    pub RNG: &amp;'a <a class="struct" href="../stm32f40x/struct.RNG.html" title="struct stm32f40x::RNG">RNG</a>,
+    pub DCMI: &amp;'a <a class="struct" href="../stm32f40x/struct.DCMI.html" title="struct stm32f40x::DCMI">DCMI</a>,
+    pub FSMC: &amp;'a <a class="struct" href="../stm32f40x/struct.FSMC.html" title="struct stm32f40x::FSMC">FSMC</a>,
+    pub DBG: &amp;'a <a class="struct" href="../stm32f40x/struct.DBG.html" title="struct stm32f40x::DBG">DBG</a>,
+    pub DMA2: &amp;'a <a class="struct" href="../stm32f40x/struct.DMA2.html" title="struct stm32f40x::DMA2">DMA2</a>,
+    pub DMA1: &amp;'a <a class="struct" href="../stm32f40x/struct.DMA1.html" title="struct stm32f40x::DMA1">DMA1</a>,
+    pub RCC: &amp;'a <a class="struct" href="../stm32f40x/struct.RCC.html" title="struct stm32f40x::RCC">RCC</a>,
+    pub GPIOI: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOI.html" title="struct stm32f40x::GPIOI">GPIOI</a>,
+    pub GPIOH: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOH.html" title="struct stm32f40x::GPIOH">GPIOH</a>,
+    pub GPIOG: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOG.html" title="struct stm32f40x::GPIOG">GPIOG</a>,
+    pub GPIOF: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOF.html" title="struct stm32f40x::GPIOF">GPIOF</a>,
+    pub GPIOE: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOE.html" title="struct stm32f40x::GPIOE">GPIOE</a>,
+    pub GPIOD: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOD.html" title="struct stm32f40x::GPIOD">GPIOD</a>,
+    pub GPIOC: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOC.html" title="struct stm32f40x::GPIOC">GPIOC</a>,
+    pub GPIOB: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOB.html" title="struct stm32f40x::GPIOB">GPIOB</a>,
+    pub GPIOA: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOA.html" title="struct stm32f40x::GPIOA">GPIOA</a>,
+    pub SYSCFG: &amp;'a <a class="struct" href="../stm32f40x/struct.SYSCFG.html" title="struct stm32f40x::SYSCFG">SYSCFG</a>,
+    pub SPI1: &amp;'a <a class="struct" href="../stm32f40x/struct.SPI1.html" title="struct stm32f40x::SPI1">SPI1</a>,
+    pub SPI2: &amp;'a <a class="struct" href="../stm32f40x/struct.SPI2.html" title="struct stm32f40x::SPI2">SPI2</a>,
+    pub SPI3: &amp;'a <a class="struct" href="../stm32f40x/struct.SPI3.html" title="struct stm32f40x::SPI3">SPI3</a>,
+    pub I2S2EXT: &amp;'a <a class="struct" href="../stm32f40x/struct.I2S2EXT.html" title="struct stm32f40x::I2S2EXT">I2S2EXT</a>,
+    pub I2S3EXT: &amp;'a <a class="struct" href="../stm32f40x/struct.I2S3EXT.html" title="struct stm32f40x::I2S3EXT">I2S3EXT</a>,
+    pub SDIO: &amp;'a <a class="struct" href="../stm32f40x/struct.SDIO.html" title="struct stm32f40x::SDIO">SDIO</a>,
+    pub ADC1: &amp;'a <a class="struct" href="../stm32f40x/struct.ADC1.html" title="struct stm32f40x::ADC1">ADC1</a>,
+    pub ADC2: &amp;'a <a class="struct" href="../stm32f40x/struct.ADC2.html" title="struct stm32f40x::ADC2">ADC2</a>,
+    pub ADC3: &amp;'a <a class="struct" href="../stm32f40x/struct.ADC3.html" title="struct stm32f40x::ADC3">ADC3</a>,
+    pub USART6: &amp;'a <a class="struct" href="../stm32f40x/struct.USART6.html" title="struct stm32f40x::USART6">USART6</a>,
+    pub USART1: &amp;'a <a class="struct" href="../stm32f40x/struct.USART1.html" title="struct stm32f40x::USART1">USART1</a>,
+    pub USART2: &amp;'a <a class="struct" href="../stm32f40x/struct.USART2.html" title="struct stm32f40x::USART2">USART2</a>,
+    pub USART3: &amp;'a <a class="struct" href="../stm32f40x/struct.USART3.html" title="struct stm32f40x::USART3">USART3</a>,
+    pub DAC: &amp;'a <a class="struct" href="../stm32f40x/struct.DAC.html" title="struct stm32f40x::DAC">DAC</a>,
+    pub PWR: &amp;'a <a class="struct" href="../stm32f40x/struct.PWR.html" title="struct stm32f40x::PWR">PWR</a>,
+    pub I2C3: &amp;'a <a class="struct" href="../stm32f40x/struct.I2C3.html" title="struct stm32f40x::I2C3">I2C3</a>,
+    pub I2C2: &amp;'a <a class="struct" href="../stm32f40x/struct.I2C2.html" title="struct stm32f40x::I2C2">I2C2</a>,
+    pub I2C1: &amp;'a <a class="struct" href="../stm32f40x/struct.I2C1.html" title="struct stm32f40x::I2C1">I2C1</a>,
+    pub IWDG: &amp;'a <a class="struct" href="../stm32f40x/struct.IWDG.html" title="struct stm32f40x::IWDG">IWDG</a>,
+    pub WWDG: &amp;'a <a class="struct" href="../stm32f40x/struct.WWDG.html" title="struct stm32f40x::WWDG">WWDG</a>,
+    pub RTC: &amp;'a <a class="struct" href="../stm32f40x/struct.RTC.html" title="struct stm32f40x::RTC">RTC</a>,
+    pub UART4: &amp;'a <a class="struct" href="../stm32f40x/struct.UART4.html" title="struct stm32f40x::UART4">UART4</a>,
+    pub UART5: &amp;'a <a class="struct" href="../stm32f40x/struct.UART5.html" title="struct stm32f40x::UART5">UART5</a>,
+    pub C_ADC: &amp;'a <a class="struct" href="../stm32f40x/struct.C_ADC.html" title="struct stm32f40x::C_ADC">C_ADC</a>,
+    pub TIM1: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM1.html" title="struct stm32f40x::TIM1">TIM1</a>,
+    pub TIM8: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM8.html" title="struct stm32f40x::TIM8">TIM8</a>,
+    pub TIM2: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM2.html" title="struct stm32f40x::TIM2">TIM2</a>,
+    pub TIM3: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM3.html" title="struct stm32f40x::TIM3">TIM3</a>,
+    pub TIM4: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM4.html" title="struct stm32f40x::TIM4">TIM4</a>,
+    pub TIM5: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM5.html" title="struct stm32f40x::TIM5">TIM5</a>,
+    pub TIM9: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM9.html" title="struct stm32f40x::TIM9">TIM9</a>,
+    pub TIM12: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM12.html" title="struct stm32f40x::TIM12">TIM12</a>,
+    pub TIM10: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM10.html" title="struct stm32f40x::TIM10">TIM10</a>,
+    pub TIM13: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM13.html" title="struct stm32f40x::TIM13">TIM13</a>,
+    pub TIM14: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM14.html" title="struct stm32f40x::TIM14">TIM14</a>,
+    pub TIM11: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM11.html" title="struct stm32f40x::TIM11">TIM11</a>,
+    pub TIM6: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM6.html" title="struct stm32f40x::TIM6">TIM6</a>,
+    pub TIM7: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM7.html" title="struct stm32f40x::TIM7">TIM7</a>,
+    pub ETHERNET_MAC: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_MAC.html" title="struct stm32f40x::ETHERNET_MAC">ETHERNET_MAC</a>,
+    pub ETHERNET_MMC: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_MMC.html" title="struct stm32f40x::ETHERNET_MMC">ETHERNET_MMC</a>,
+    pub ETHERNET_PTP: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_PTP.html" title="struct stm32f40x::ETHERNET_PTP">ETHERNET_PTP</a>,
+    pub ETHERNET_DMA: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_DMA.html" title="struct stm32f40x::ETHERNET_DMA">ETHERNET_DMA</a>,
+    pub CRC: &amp;'a <a class="struct" href="../stm32f40x/struct.CRC.html" title="struct stm32f40x::CRC">CRC</a>,
+    pub OTG_FS_GLOBAL: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_GLOBAL.html" title="struct stm32f40x::OTG_FS_GLOBAL">OTG_FS_GLOBAL</a>,
+    pub OTG_FS_HOST: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_HOST.html" title="struct stm32f40x::OTG_FS_HOST">OTG_FS_HOST</a>,
+    pub OTG_FS_DEVICE: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_DEVICE.html" title="struct stm32f40x::OTG_FS_DEVICE">OTG_FS_DEVICE</a>,
+    pub OTG_FS_PWRCLK: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_PWRCLK.html" title="struct stm32f40x::OTG_FS_PWRCLK">OTG_FS_PWRCLK</a>,
+    pub CAN1: &amp;'a <a class="struct" href="../stm32f40x/struct.CAN1.html" title="struct stm32f40x::CAN1">CAN1</a>,
+    pub CAN2: &amp;'a <a class="struct" href="../stm32f40x/struct.CAN2.html" title="struct stm32f40x::CAN2">CAN2</a>,
+    pub FLASH: &amp;'a <a class="struct" href="../stm32f40x/struct.FLASH.html" title="struct stm32f40x::FLASH">FLASH</a>,
+    pub EXTI: &amp;'a <a class="struct" href="../stm32f40x/struct.EXTI.html" title="struct stm32f40x::EXTI">EXTI</a>,
+    pub OTG_HS_GLOBAL: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_GLOBAL.html" title="struct stm32f40x::OTG_HS_GLOBAL">OTG_HS_GLOBAL</a>,
+    pub OTG_HS_HOST: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_HOST.html" title="struct stm32f40x::OTG_HS_HOST">OTG_HS_HOST</a>,
+    pub OTG_HS_DEVICE: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_DEVICE.html" title="struct stm32f40x::OTG_HS_DEVICE">OTG_HS_DEVICE</a>,
+    pub OTG_HS_PWRCLK: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_PWRCLK.html" title="struct stm32f40x::OTG_HS_PWRCLK">OTG_HS_PWRCLK</a>,
+}</pre></div><div class='docblock'><p>All the peripherals</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.CPUID" class="structfield small-section-header">
+                           <a href="#structfield.CPUID" class="anchor field"></a>
+                           <span id="CPUID.v" class='invisible'>
+                           <code>CPUID: &amp;'a <a class="struct" href="../stm32f40x/struct.CPUID.html" title="struct stm32f40x::CPUID">CPUID</a></code>
+                           </span></span><div class='docblock'><p>CPUID</p>
+</div><span id="structfield.DCB" class="structfield small-section-header">
+                           <a href="#structfield.DCB" class="anchor field"></a>
+                           <span id="DCB.v" class='invisible'>
+                           <code>DCB: &amp;'a <a class="struct" href="../stm32f40x/struct.DCB.html" title="struct stm32f40x::DCB">DCB</a></code>
+                           </span></span><div class='docblock'><p>DCB</p>
+</div><span id="structfield.DWT" class="structfield small-section-header">
+                           <a href="#structfield.DWT" class="anchor field"></a>
+                           <span id="DWT.v" class='invisible'>
+                           <code>DWT: &amp;'a <a class="struct" href="../stm32f40x/struct.DWT.html" title="struct stm32f40x::DWT">DWT</a></code>
+                           </span></span><div class='docblock'><p>DWT</p>
+</div><span id="structfield.FPB" class="structfield small-section-header">
+                           <a href="#structfield.FPB" class="anchor field"></a>
+                           <span id="FPB.v" class='invisible'>
+                           <code>FPB: &amp;'a <a class="struct" href="../stm32f40x/struct.FPB.html" title="struct stm32f40x::FPB">FPB</a></code>
+                           </span></span><div class='docblock'><p>FPB</p>
+</div><span id="structfield.FPU" class="structfield small-section-header">
+                           <a href="#structfield.FPU" class="anchor field"></a>
+                           <span id="FPU.v" class='invisible'>
+                           <code>FPU: &amp;'a <a class="struct" href="../stm32f40x/struct.FPU.html" title="struct stm32f40x::FPU">FPU</a></code>
+                           </span></span><div class='docblock'><p>FPU</p>
+</div><span id="structfield.ITM" class="structfield small-section-header">
+                           <a href="#structfield.ITM" class="anchor field"></a>
+                           <span id="ITM.v" class='invisible'>
+                           <code>ITM: &amp;'a <a class="struct" href="../stm32f40x/struct.ITM.html" title="struct stm32f40x::ITM">ITM</a></code>
+                           </span></span><div class='docblock'><p>ITM</p>
+</div><span id="structfield.MPU" class="structfield small-section-header">
+                           <a href="#structfield.MPU" class="anchor field"></a>
+                           <span id="MPU.v" class='invisible'>
+                           <code>MPU: &amp;'a <a class="struct" href="../stm32f40x/struct.MPU.html" title="struct stm32f40x::MPU">MPU</a></code>
+                           </span></span><div class='docblock'><p>MPU</p>
+</div><span id="structfield.NVIC" class="structfield small-section-header">
+                           <a href="#structfield.NVIC" class="anchor field"></a>
+                           <span id="NVIC.v" class='invisible'>
+                           <code>NVIC: &amp;'a <a class="struct" href="../stm32f40x/struct.NVIC.html" title="struct stm32f40x::NVIC">NVIC</a></code>
+                           </span></span><div class='docblock'><p>NVIC</p>
+</div><span id="structfield.SCB" class="structfield small-section-header">
+                           <a href="#structfield.SCB" class="anchor field"></a>
+                           <span id="SCB.v" class='invisible'>
+                           <code>SCB: &amp;'a <a class="struct" href="../stm32f40x/struct.SCB.html" title="struct stm32f40x::SCB">SCB</a></code>
+                           </span></span><div class='docblock'><p>SCB</p>
+</div><span id="structfield.SYST" class="structfield small-section-header">
+                           <a href="#structfield.SYST" class="anchor field"></a>
+                           <span id="SYST.v" class='invisible'>
+                           <code>SYST: &amp;'a <a class="struct" href="../stm32f40x/struct.SYST.html" title="struct stm32f40x::SYST">SYST</a></code>
+                           </span></span><div class='docblock'><p>SYST</p>
+</div><span id="structfield.TPIU" class="structfield small-section-header">
+                           <a href="#structfield.TPIU" class="anchor field"></a>
+                           <span id="TPIU.v" class='invisible'>
+                           <code>TPIU: &amp;'a <a class="struct" href="../stm32f40x/struct.TPIU.html" title="struct stm32f40x::TPIU">TPIU</a></code>
+                           </span></span><div class='docblock'><p>TPIU</p>
+</div><span id="structfield.RNG" class="structfield small-section-header">
+                           <a href="#structfield.RNG" class="anchor field"></a>
+                           <span id="RNG.v" class='invisible'>
+                           <code>RNG: &amp;'a <a class="struct" href="../stm32f40x/struct.RNG.html" title="struct stm32f40x::RNG">RNG</a></code>
+                           </span></span><div class='docblock'><p>RNG</p>
+</div><span id="structfield.DCMI" class="structfield small-section-header">
+                           <a href="#structfield.DCMI" class="anchor field"></a>
+                           <span id="DCMI.v" class='invisible'>
+                           <code>DCMI: &amp;'a <a class="struct" href="../stm32f40x/struct.DCMI.html" title="struct stm32f40x::DCMI">DCMI</a></code>
+                           </span></span><div class='docblock'><p>DCMI</p>
+</div><span id="structfield.FSMC" class="structfield small-section-header">
+                           <a href="#structfield.FSMC" class="anchor field"></a>
+                           <span id="FSMC.v" class='invisible'>
+                           <code>FSMC: &amp;'a <a class="struct" href="../stm32f40x/struct.FSMC.html" title="struct stm32f40x::FSMC">FSMC</a></code>
+                           </span></span><div class='docblock'><p>FSMC</p>
+</div><span id="structfield.DBG" class="structfield small-section-header">
+                           <a href="#structfield.DBG" class="anchor field"></a>
+                           <span id="DBG.v" class='invisible'>
+                           <code>DBG: &amp;'a <a class="struct" href="../stm32f40x/struct.DBG.html" title="struct stm32f40x::DBG">DBG</a></code>
+                           </span></span><div class='docblock'><p>DBG</p>
+</div><span id="structfield.DMA2" class="structfield small-section-header">
+                           <a href="#structfield.DMA2" class="anchor field"></a>
+                           <span id="DMA2.v" class='invisible'>
+                           <code>DMA2: &amp;'a <a class="struct" href="../stm32f40x/struct.DMA2.html" title="struct stm32f40x::DMA2">DMA2</a></code>
+                           </span></span><div class='docblock'><p>DMA2</p>
+</div><span id="structfield.DMA1" class="structfield small-section-header">
+                           <a href="#structfield.DMA1" class="anchor field"></a>
+                           <span id="DMA1.v" class='invisible'>
+                           <code>DMA1: &amp;'a <a class="struct" href="../stm32f40x/struct.DMA1.html" title="struct stm32f40x::DMA1">DMA1</a></code>
+                           </span></span><div class='docblock'><p>DMA1</p>
+</div><span id="structfield.RCC" class="structfield small-section-header">
+                           <a href="#structfield.RCC" class="anchor field"></a>
+                           <span id="RCC.v" class='invisible'>
+                           <code>RCC: &amp;'a <a class="struct" href="../stm32f40x/struct.RCC.html" title="struct stm32f40x::RCC">RCC</a></code>
+                           </span></span><div class='docblock'><p>RCC</p>
+</div><span id="structfield.GPIOI" class="structfield small-section-header">
+                           <a href="#structfield.GPIOI" class="anchor field"></a>
+                           <span id="GPIOI.v" class='invisible'>
+                           <code>GPIOI: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOI.html" title="struct stm32f40x::GPIOI">GPIOI</a></code>
+                           </span></span><div class='docblock'><p>GPIOI</p>
+</div><span id="structfield.GPIOH" class="structfield small-section-header">
+                           <a href="#structfield.GPIOH" class="anchor field"></a>
+                           <span id="GPIOH.v" class='invisible'>
+                           <code>GPIOH: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOH.html" title="struct stm32f40x::GPIOH">GPIOH</a></code>
+                           </span></span><div class='docblock'><p>GPIOH</p>
+</div><span id="structfield.GPIOG" class="structfield small-section-header">
+                           <a href="#structfield.GPIOG" class="anchor field"></a>
+                           <span id="GPIOG.v" class='invisible'>
+                           <code>GPIOG: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOG.html" title="struct stm32f40x::GPIOG">GPIOG</a></code>
+                           </span></span><div class='docblock'><p>GPIOG</p>
+</div><span id="structfield.GPIOF" class="structfield small-section-header">
+                           <a href="#structfield.GPIOF" class="anchor field"></a>
+                           <span id="GPIOF.v" class='invisible'>
+                           <code>GPIOF: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOF.html" title="struct stm32f40x::GPIOF">GPIOF</a></code>
+                           </span></span><div class='docblock'><p>GPIOF</p>
+</div><span id="structfield.GPIOE" class="structfield small-section-header">
+                           <a href="#structfield.GPIOE" class="anchor field"></a>
+                           <span id="GPIOE.v" class='invisible'>
+                           <code>GPIOE: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOE.html" title="struct stm32f40x::GPIOE">GPIOE</a></code>
+                           </span></span><div class='docblock'><p>GPIOE</p>
+</div><span id="structfield.GPIOD" class="structfield small-section-header">
+                           <a href="#structfield.GPIOD" class="anchor field"></a>
+                           <span id="GPIOD.v" class='invisible'>
+                           <code>GPIOD: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOD.html" title="struct stm32f40x::GPIOD">GPIOD</a></code>
+                           </span></span><div class='docblock'><p>GPIOD</p>
+</div><span id="structfield.GPIOC" class="structfield small-section-header">
+                           <a href="#structfield.GPIOC" class="anchor field"></a>
+                           <span id="GPIOC.v" class='invisible'>
+                           <code>GPIOC: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOC.html" title="struct stm32f40x::GPIOC">GPIOC</a></code>
+                           </span></span><div class='docblock'><p>GPIOC</p>
+</div><span id="structfield.GPIOB" class="structfield small-section-header">
+                           <a href="#structfield.GPIOB" class="anchor field"></a>
+                           <span id="GPIOB.v" class='invisible'>
+                           <code>GPIOB: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOB.html" title="struct stm32f40x::GPIOB">GPIOB</a></code>
+                           </span></span><div class='docblock'><p>GPIOB</p>
+</div><span id="structfield.GPIOA" class="structfield small-section-header">
+                           <a href="#structfield.GPIOA" class="anchor field"></a>
+                           <span id="GPIOA.v" class='invisible'>
+                           <code>GPIOA: &amp;'a <a class="struct" href="../stm32f40x/struct.GPIOA.html" title="struct stm32f40x::GPIOA">GPIOA</a></code>
+                           </span></span><div class='docblock'><p>GPIOA</p>
+</div><span id="structfield.SYSCFG" class="structfield small-section-header">
+                           <a href="#structfield.SYSCFG" class="anchor field"></a>
+                           <span id="SYSCFG.v" class='invisible'>
+                           <code>SYSCFG: &amp;'a <a class="struct" href="../stm32f40x/struct.SYSCFG.html" title="struct stm32f40x::SYSCFG">SYSCFG</a></code>
+                           </span></span><div class='docblock'><p>SYSCFG</p>
+</div><span id="structfield.SPI1" class="structfield small-section-header">
+                           <a href="#structfield.SPI1" class="anchor field"></a>
+                           <span id="SPI1.v" class='invisible'>
+                           <code>SPI1: &amp;'a <a class="struct" href="../stm32f40x/struct.SPI1.html" title="struct stm32f40x::SPI1">SPI1</a></code>
+                           </span></span><div class='docblock'><p>SPI1</p>
+</div><span id="structfield.SPI2" class="structfield small-section-header">
+                           <a href="#structfield.SPI2" class="anchor field"></a>
+                           <span id="SPI2.v" class='invisible'>
+                           <code>SPI2: &amp;'a <a class="struct" href="../stm32f40x/struct.SPI2.html" title="struct stm32f40x::SPI2">SPI2</a></code>
+                           </span></span><div class='docblock'><p>SPI2</p>
+</div><span id="structfield.SPI3" class="structfield small-section-header">
+                           <a href="#structfield.SPI3" class="anchor field"></a>
+                           <span id="SPI3.v" class='invisible'>
+                           <code>SPI3: &amp;'a <a class="struct" href="../stm32f40x/struct.SPI3.html" title="struct stm32f40x::SPI3">SPI3</a></code>
+                           </span></span><div class='docblock'><p>SPI3</p>
+</div><span id="structfield.I2S2EXT" class="structfield small-section-header">
+                           <a href="#structfield.I2S2EXT" class="anchor field"></a>
+                           <span id="I2S2EXT.v" class='invisible'>
+                           <code>I2S2EXT: &amp;'a <a class="struct" href="../stm32f40x/struct.I2S2EXT.html" title="struct stm32f40x::I2S2EXT">I2S2EXT</a></code>
+                           </span></span><div class='docblock'><p>I2S2EXT</p>
+</div><span id="structfield.I2S3EXT" class="structfield small-section-header">
+                           <a href="#structfield.I2S3EXT" class="anchor field"></a>
+                           <span id="I2S3EXT.v" class='invisible'>
+                           <code>I2S3EXT: &amp;'a <a class="struct" href="../stm32f40x/struct.I2S3EXT.html" title="struct stm32f40x::I2S3EXT">I2S3EXT</a></code>
+                           </span></span><div class='docblock'><p>I2S3EXT</p>
+</div><span id="structfield.SDIO" class="structfield small-section-header">
+                           <a href="#structfield.SDIO" class="anchor field"></a>
+                           <span id="SDIO.v" class='invisible'>
+                           <code>SDIO: &amp;'a <a class="struct" href="../stm32f40x/struct.SDIO.html" title="struct stm32f40x::SDIO">SDIO</a></code>
+                           </span></span><div class='docblock'><p>SDIO</p>
+</div><span id="structfield.ADC1" class="structfield small-section-header">
+                           <a href="#structfield.ADC1" class="anchor field"></a>
+                           <span id="ADC1.v" class='invisible'>
+                           <code>ADC1: &amp;'a <a class="struct" href="../stm32f40x/struct.ADC1.html" title="struct stm32f40x::ADC1">ADC1</a></code>
+                           </span></span><div class='docblock'><p>ADC1</p>
+</div><span id="structfield.ADC2" class="structfield small-section-header">
+                           <a href="#structfield.ADC2" class="anchor field"></a>
+                           <span id="ADC2.v" class='invisible'>
+                           <code>ADC2: &amp;'a <a class="struct" href="../stm32f40x/struct.ADC2.html" title="struct stm32f40x::ADC2">ADC2</a></code>
+                           </span></span><div class='docblock'><p>ADC2</p>
+</div><span id="structfield.ADC3" class="structfield small-section-header">
+                           <a href="#structfield.ADC3" class="anchor field"></a>
+                           <span id="ADC3.v" class='invisible'>
+                           <code>ADC3: &amp;'a <a class="struct" href="../stm32f40x/struct.ADC3.html" title="struct stm32f40x::ADC3">ADC3</a></code>
+                           </span></span><div class='docblock'><p>ADC3</p>
+</div><span id="structfield.USART6" class="structfield small-section-header">
+                           <a href="#structfield.USART6" class="anchor field"></a>
+                           <span id="USART6.v" class='invisible'>
+                           <code>USART6: &amp;'a <a class="struct" href="../stm32f40x/struct.USART6.html" title="struct stm32f40x::USART6">USART6</a></code>
+                           </span></span><div class='docblock'><p>USART6</p>
+</div><span id="structfield.USART1" class="structfield small-section-header">
+                           <a href="#structfield.USART1" class="anchor field"></a>
+                           <span id="USART1.v" class='invisible'>
+                           <code>USART1: &amp;'a <a class="struct" href="../stm32f40x/struct.USART1.html" title="struct stm32f40x::USART1">USART1</a></code>
+                           </span></span><div class='docblock'><p>USART1</p>
+</div><span id="structfield.USART2" class="structfield small-section-header">
+                           <a href="#structfield.USART2" class="anchor field"></a>
+                           <span id="USART2.v" class='invisible'>
+                           <code>USART2: &amp;'a <a class="struct" href="../stm32f40x/struct.USART2.html" title="struct stm32f40x::USART2">USART2</a></code>
+                           </span></span><div class='docblock'><p>USART2</p>
+</div><span id="structfield.USART3" class="structfield small-section-header">
+                           <a href="#structfield.USART3" class="anchor field"></a>
+                           <span id="USART3.v" class='invisible'>
+                           <code>USART3: &amp;'a <a class="struct" href="../stm32f40x/struct.USART3.html" title="struct stm32f40x::USART3">USART3</a></code>
+                           </span></span><div class='docblock'><p>USART3</p>
+</div><span id="structfield.DAC" class="structfield small-section-header">
+                           <a href="#structfield.DAC" class="anchor field"></a>
+                           <span id="DAC.v" class='invisible'>
+                           <code>DAC: &amp;'a <a class="struct" href="../stm32f40x/struct.DAC.html" title="struct stm32f40x::DAC">DAC</a></code>
+                           </span></span><div class='docblock'><p>DAC</p>
+</div><span id="structfield.PWR" class="structfield small-section-header">
+                           <a href="#structfield.PWR" class="anchor field"></a>
+                           <span id="PWR.v" class='invisible'>
+                           <code>PWR: &amp;'a <a class="struct" href="../stm32f40x/struct.PWR.html" title="struct stm32f40x::PWR">PWR</a></code>
+                           </span></span><div class='docblock'><p>PWR</p>
+</div><span id="structfield.I2C3" class="structfield small-section-header">
+                           <a href="#structfield.I2C3" class="anchor field"></a>
+                           <span id="I2C3.v" class='invisible'>
+                           <code>I2C3: &amp;'a <a class="struct" href="../stm32f40x/struct.I2C3.html" title="struct stm32f40x::I2C3">I2C3</a></code>
+                           </span></span><div class='docblock'><p>I2C3</p>
+</div><span id="structfield.I2C2" class="structfield small-section-header">
+                           <a href="#structfield.I2C2" class="anchor field"></a>
+                           <span id="I2C2.v" class='invisible'>
+                           <code>I2C2: &amp;'a <a class="struct" href="../stm32f40x/struct.I2C2.html" title="struct stm32f40x::I2C2">I2C2</a></code>
+                           </span></span><div class='docblock'><p>I2C2</p>
+</div><span id="structfield.I2C1" class="structfield small-section-header">
+                           <a href="#structfield.I2C1" class="anchor field"></a>
+                           <span id="I2C1.v" class='invisible'>
+                           <code>I2C1: &amp;'a <a class="struct" href="../stm32f40x/struct.I2C1.html" title="struct stm32f40x::I2C1">I2C1</a></code>
+                           </span></span><div class='docblock'><p>I2C1</p>
+</div><span id="structfield.IWDG" class="structfield small-section-header">
+                           <a href="#structfield.IWDG" class="anchor field"></a>
+                           <span id="IWDG.v" class='invisible'>
+                           <code>IWDG: &amp;'a <a class="struct" href="../stm32f40x/struct.IWDG.html" title="struct stm32f40x::IWDG">IWDG</a></code>
+                           </span></span><div class='docblock'><p>IWDG</p>
+</div><span id="structfield.WWDG" class="structfield small-section-header">
+                           <a href="#structfield.WWDG" class="anchor field"></a>
+                           <span id="WWDG.v" class='invisible'>
+                           <code>WWDG: &amp;'a <a class="struct" href="../stm32f40x/struct.WWDG.html" title="struct stm32f40x::WWDG">WWDG</a></code>
+                           </span></span><div class='docblock'><p>WWDG</p>
+</div><span id="structfield.RTC" class="structfield small-section-header">
+                           <a href="#structfield.RTC" class="anchor field"></a>
+                           <span id="RTC.v" class='invisible'>
+                           <code>RTC: &amp;'a <a class="struct" href="../stm32f40x/struct.RTC.html" title="struct stm32f40x::RTC">RTC</a></code>
+                           </span></span><div class='docblock'><p>RTC</p>
+</div><span id="structfield.UART4" class="structfield small-section-header">
+                           <a href="#structfield.UART4" class="anchor field"></a>
+                           <span id="UART4.v" class='invisible'>
+                           <code>UART4: &amp;'a <a class="struct" href="../stm32f40x/struct.UART4.html" title="struct stm32f40x::UART4">UART4</a></code>
+                           </span></span><div class='docblock'><p>UART4</p>
+</div><span id="structfield.UART5" class="structfield small-section-header">
+                           <a href="#structfield.UART5" class="anchor field"></a>
+                           <span id="UART5.v" class='invisible'>
+                           <code>UART5: &amp;'a <a class="struct" href="../stm32f40x/struct.UART5.html" title="struct stm32f40x::UART5">UART5</a></code>
+                           </span></span><div class='docblock'><p>UART5</p>
+</div><span id="structfield.C_ADC" class="structfield small-section-header">
+                           <a href="#structfield.C_ADC" class="anchor field"></a>
+                           <span id="C_ADC.v" class='invisible'>
+                           <code>C_ADC: &amp;'a <a class="struct" href="../stm32f40x/struct.C_ADC.html" title="struct stm32f40x::C_ADC">C_ADC</a></code>
+                           </span></span><div class='docblock'><p>C_ADC</p>
+</div><span id="structfield.TIM1" class="structfield small-section-header">
+                           <a href="#structfield.TIM1" class="anchor field"></a>
+                           <span id="TIM1.v" class='invisible'>
+                           <code>TIM1: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM1.html" title="struct stm32f40x::TIM1">TIM1</a></code>
+                           </span></span><div class='docblock'><p>TIM1</p>
+</div><span id="structfield.TIM8" class="structfield small-section-header">
+                           <a href="#structfield.TIM8" class="anchor field"></a>
+                           <span id="TIM8.v" class='invisible'>
+                           <code>TIM8: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM8.html" title="struct stm32f40x::TIM8">TIM8</a></code>
+                           </span></span><div class='docblock'><p>TIM8</p>
+</div><span id="structfield.TIM2" class="structfield small-section-header">
+                           <a href="#structfield.TIM2" class="anchor field"></a>
+                           <span id="TIM2.v" class='invisible'>
+                           <code>TIM2: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM2.html" title="struct stm32f40x::TIM2">TIM2</a></code>
+                           </span></span><div class='docblock'><p>TIM2</p>
+</div><span id="structfield.TIM3" class="structfield small-section-header">
+                           <a href="#structfield.TIM3" class="anchor field"></a>
+                           <span id="TIM3.v" class='invisible'>
+                           <code>TIM3: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM3.html" title="struct stm32f40x::TIM3">TIM3</a></code>
+                           </span></span><div class='docblock'><p>TIM3</p>
+</div><span id="structfield.TIM4" class="structfield small-section-header">
+                           <a href="#structfield.TIM4" class="anchor field"></a>
+                           <span id="TIM4.v" class='invisible'>
+                           <code>TIM4: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM4.html" title="struct stm32f40x::TIM4">TIM4</a></code>
+                           </span></span><div class='docblock'><p>TIM4</p>
+</div><span id="structfield.TIM5" class="structfield small-section-header">
+                           <a href="#structfield.TIM5" class="anchor field"></a>
+                           <span id="TIM5.v" class='invisible'>
+                           <code>TIM5: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM5.html" title="struct stm32f40x::TIM5">TIM5</a></code>
+                           </span></span><div class='docblock'><p>TIM5</p>
+</div><span id="structfield.TIM9" class="structfield small-section-header">
+                           <a href="#structfield.TIM9" class="anchor field"></a>
+                           <span id="TIM9.v" class='invisible'>
+                           <code>TIM9: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM9.html" title="struct stm32f40x::TIM9">TIM9</a></code>
+                           </span></span><div class='docblock'><p>TIM9</p>
+</div><span id="structfield.TIM12" class="structfield small-section-header">
+                           <a href="#structfield.TIM12" class="anchor field"></a>
+                           <span id="TIM12.v" class='invisible'>
+                           <code>TIM12: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM12.html" title="struct stm32f40x::TIM12">TIM12</a></code>
+                           </span></span><div class='docblock'><p>TIM12</p>
+</div><span id="structfield.TIM10" class="structfield small-section-header">
+                           <a href="#structfield.TIM10" class="anchor field"></a>
+                           <span id="TIM10.v" class='invisible'>
+                           <code>TIM10: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM10.html" title="struct stm32f40x::TIM10">TIM10</a></code>
+                           </span></span><div class='docblock'><p>TIM10</p>
+</div><span id="structfield.TIM13" class="structfield small-section-header">
+                           <a href="#structfield.TIM13" class="anchor field"></a>
+                           <span id="TIM13.v" class='invisible'>
+                           <code>TIM13: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM13.html" title="struct stm32f40x::TIM13">TIM13</a></code>
+                           </span></span><div class='docblock'><p>TIM13</p>
+</div><span id="structfield.TIM14" class="structfield small-section-header">
+                           <a href="#structfield.TIM14" class="anchor field"></a>
+                           <span id="TIM14.v" class='invisible'>
+                           <code>TIM14: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM14.html" title="struct stm32f40x::TIM14">TIM14</a></code>
+                           </span></span><div class='docblock'><p>TIM14</p>
+</div><span id="structfield.TIM11" class="structfield small-section-header">
+                           <a href="#structfield.TIM11" class="anchor field"></a>
+                           <span id="TIM11.v" class='invisible'>
+                           <code>TIM11: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM11.html" title="struct stm32f40x::TIM11">TIM11</a></code>
+                           </span></span><div class='docblock'><p>TIM11</p>
+</div><span id="structfield.TIM6" class="structfield small-section-header">
+                           <a href="#structfield.TIM6" class="anchor field"></a>
+                           <span id="TIM6.v" class='invisible'>
+                           <code>TIM6: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM6.html" title="struct stm32f40x::TIM6">TIM6</a></code>
+                           </span></span><div class='docblock'><p>TIM6</p>
+</div><span id="structfield.TIM7" class="structfield small-section-header">
+                           <a href="#structfield.TIM7" class="anchor field"></a>
+                           <span id="TIM7.v" class='invisible'>
+                           <code>TIM7: &amp;'a <a class="struct" href="../stm32f40x/struct.TIM7.html" title="struct stm32f40x::TIM7">TIM7</a></code>
+                           </span></span><div class='docblock'><p>TIM7</p>
+</div><span id="structfield.ETHERNET_MAC" class="structfield small-section-header">
+                           <a href="#structfield.ETHERNET_MAC" class="anchor field"></a>
+                           <span id="ETHERNET_MAC.v" class='invisible'>
+                           <code>ETHERNET_MAC: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_MAC.html" title="struct stm32f40x::ETHERNET_MAC">ETHERNET_MAC</a></code>
+                           </span></span><div class='docblock'><p>ETHERNET_MAC</p>
+</div><span id="structfield.ETHERNET_MMC" class="structfield small-section-header">
+                           <a href="#structfield.ETHERNET_MMC" class="anchor field"></a>
+                           <span id="ETHERNET_MMC.v" class='invisible'>
+                           <code>ETHERNET_MMC: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_MMC.html" title="struct stm32f40x::ETHERNET_MMC">ETHERNET_MMC</a></code>
+                           </span></span><div class='docblock'><p>ETHERNET_MMC</p>
+</div><span id="structfield.ETHERNET_PTP" class="structfield small-section-header">
+                           <a href="#structfield.ETHERNET_PTP" class="anchor field"></a>
+                           <span id="ETHERNET_PTP.v" class='invisible'>
+                           <code>ETHERNET_PTP: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_PTP.html" title="struct stm32f40x::ETHERNET_PTP">ETHERNET_PTP</a></code>
+                           </span></span><div class='docblock'><p>ETHERNET_PTP</p>
+</div><span id="structfield.ETHERNET_DMA" class="structfield small-section-header">
+                           <a href="#structfield.ETHERNET_DMA" class="anchor field"></a>
+                           <span id="ETHERNET_DMA.v" class='invisible'>
+                           <code>ETHERNET_DMA: &amp;'a <a class="struct" href="../stm32f40x/struct.ETHERNET_DMA.html" title="struct stm32f40x::ETHERNET_DMA">ETHERNET_DMA</a></code>
+                           </span></span><div class='docblock'><p>ETHERNET_DMA</p>
+</div><span id="structfield.CRC" class="structfield small-section-header">
+                           <a href="#structfield.CRC" class="anchor field"></a>
+                           <span id="CRC.v" class='invisible'>
+                           <code>CRC: &amp;'a <a class="struct" href="../stm32f40x/struct.CRC.html" title="struct stm32f40x::CRC">CRC</a></code>
+                           </span></span><div class='docblock'><p>CRC</p>
+</div><span id="structfield.OTG_FS_GLOBAL" class="structfield small-section-header">
+                           <a href="#structfield.OTG_FS_GLOBAL" class="anchor field"></a>
+                           <span id="OTG_FS_GLOBAL.v" class='invisible'>
+                           <code>OTG_FS_GLOBAL: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_GLOBAL.html" title="struct stm32f40x::OTG_FS_GLOBAL">OTG_FS_GLOBAL</a></code>
+                           </span></span><div class='docblock'><p>OTG_FS_GLOBAL</p>
+</div><span id="structfield.OTG_FS_HOST" class="structfield small-section-header">
+                           <a href="#structfield.OTG_FS_HOST" class="anchor field"></a>
+                           <span id="OTG_FS_HOST.v" class='invisible'>
+                           <code>OTG_FS_HOST: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_HOST.html" title="struct stm32f40x::OTG_FS_HOST">OTG_FS_HOST</a></code>
+                           </span></span><div class='docblock'><p>OTG_FS_HOST</p>
+</div><span id="structfield.OTG_FS_DEVICE" class="structfield small-section-header">
+                           <a href="#structfield.OTG_FS_DEVICE" class="anchor field"></a>
+                           <span id="OTG_FS_DEVICE.v" class='invisible'>
+                           <code>OTG_FS_DEVICE: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_DEVICE.html" title="struct stm32f40x::OTG_FS_DEVICE">OTG_FS_DEVICE</a></code>
+                           </span></span><div class='docblock'><p>OTG_FS_DEVICE</p>
+</div><span id="structfield.OTG_FS_PWRCLK" class="structfield small-section-header">
+                           <a href="#structfield.OTG_FS_PWRCLK" class="anchor field"></a>
+                           <span id="OTG_FS_PWRCLK.v" class='invisible'>
+                           <code>OTG_FS_PWRCLK: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_FS_PWRCLK.html" title="struct stm32f40x::OTG_FS_PWRCLK">OTG_FS_PWRCLK</a></code>
+                           </span></span><div class='docblock'><p>OTG_FS_PWRCLK</p>
+</div><span id="structfield.CAN1" class="structfield small-section-header">
+                           <a href="#structfield.CAN1" class="anchor field"></a>
+                           <span id="CAN1.v" class='invisible'>
+                           <code>CAN1: &amp;'a <a class="struct" href="../stm32f40x/struct.CAN1.html" title="struct stm32f40x::CAN1">CAN1</a></code>
+                           </span></span><div class='docblock'><p>CAN1</p>
+</div><span id="structfield.CAN2" class="structfield small-section-header">
+                           <a href="#structfield.CAN2" class="anchor field"></a>
+                           <span id="CAN2.v" class='invisible'>
+                           <code>CAN2: &amp;'a <a class="struct" href="../stm32f40x/struct.CAN2.html" title="struct stm32f40x::CAN2">CAN2</a></code>
+                           </span></span><div class='docblock'><p>CAN2</p>
+</div><span id="structfield.FLASH" class="structfield small-section-header">
+                           <a href="#structfield.FLASH" class="anchor field"></a>
+                           <span id="FLASH.v" class='invisible'>
+                           <code>FLASH: &amp;'a <a class="struct" href="../stm32f40x/struct.FLASH.html" title="struct stm32f40x::FLASH">FLASH</a></code>
+                           </span></span><div class='docblock'><p>FLASH</p>
+</div><span id="structfield.EXTI" class="structfield small-section-header">
+                           <a href="#structfield.EXTI" class="anchor field"></a>
+                           <span id="EXTI.v" class='invisible'>
+                           <code>EXTI: &amp;'a <a class="struct" href="../stm32f40x/struct.EXTI.html" title="struct stm32f40x::EXTI">EXTI</a></code>
+                           </span></span><div class='docblock'><p>EXTI</p>
+</div><span id="structfield.OTG_HS_GLOBAL" class="structfield small-section-header">
+                           <a href="#structfield.OTG_HS_GLOBAL" class="anchor field"></a>
+                           <span id="OTG_HS_GLOBAL.v" class='invisible'>
+                           <code>OTG_HS_GLOBAL: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_GLOBAL.html" title="struct stm32f40x::OTG_HS_GLOBAL">OTG_HS_GLOBAL</a></code>
+                           </span></span><div class='docblock'><p>OTG_HS_GLOBAL</p>
+</div><span id="structfield.OTG_HS_HOST" class="structfield small-section-header">
+                           <a href="#structfield.OTG_HS_HOST" class="anchor field"></a>
+                           <span id="OTG_HS_HOST.v" class='invisible'>
+                           <code>OTG_HS_HOST: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_HOST.html" title="struct stm32f40x::OTG_HS_HOST">OTG_HS_HOST</a></code>
+                           </span></span><div class='docblock'><p>OTG_HS_HOST</p>
+</div><span id="structfield.OTG_HS_DEVICE" class="structfield small-section-header">
+                           <a href="#structfield.OTG_HS_DEVICE" class="anchor field"></a>
+                           <span id="OTG_HS_DEVICE.v" class='invisible'>
+                           <code>OTG_HS_DEVICE: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_DEVICE.html" title="struct stm32f40x::OTG_HS_DEVICE">OTG_HS_DEVICE</a></code>
+                           </span></span><div class='docblock'><p>OTG_HS_DEVICE</p>
+</div><span id="structfield.OTG_HS_PWRCLK" class="structfield small-section-header">
+                           <a href="#structfield.OTG_HS_PWRCLK" class="anchor field"></a>
+                           <span id="OTG_HS_PWRCLK.v" class='invisible'>
+                           <code>OTG_HS_PWRCLK: &amp;'a <a class="struct" href="../stm32f40x/struct.OTG_HS_PWRCLK.html" title="struct stm32f40x::OTG_HS_PWRCLK">OTG_HS_PWRCLK</a></code>
+                           </span></span><div class='docblock'><p>OTG_HS_PWRCLK</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;'a&gt; <a class="struct" href="../stm32f40x/struct.Peripherals.html" title="struct stm32f40x::Peripherals">Peripherals</a>&lt;'a&gt;</code><a href='#impl' class='anchor'></a></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/stm32f40x/lib.rs.html#404221-404310' title='goto source code'>[src]</a></span></td></tr></tbody></table></h3><div class='impl-items'><h4 id='method.all' class="method"><span id='all.v' class='invisible'><table class='table-display'><tbody><tr><td><code>pub unsafe fn <a href='#method.all' class='fnname'>all</a>() -&gt; Self</code></span></td><td><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/stm32f40x/lib.rs.html#404223-404309' title='goto source code'>[src]</a></td></tr></tbody></table></span></h4><div class='docblock'><p>Grants access to all the peripherals</p>
+</div></div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;'a&gt; !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../stm32f40x/struct.Peripherals.html" title="struct stm32f40x::Peripherals">Peripherals</a>&lt;'a&gt;</code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl&lt;'a&gt; !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../stm32f40x/struct.Peripherals.html" title="struct stm32f40x::Peripherals">Peripherals</a>&lt;'a&gt;</code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "stm32f40x";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

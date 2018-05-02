@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `ethernet_ptp` mod in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, ethernet_ptp"><title>stm32f40x::ethernet_ptp - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module ethernet_ptp</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'ethernet_ptp', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>stm32f40x</a>::<wbr><a class="mod" href=''>ethernet_ptp</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#160242-162280' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Ethernet: Precision time protocol</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptpppscr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptpppscr'>ptpppscr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP PPS control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptpssir/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptpssir'>ptpssir</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP subsecond increment register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptsar/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptsar'>ptptsar</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp addend register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptscr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptscr'>ptptscr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptshr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptshr'>ptptshr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptshur/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptshur'>ptptshur</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp high update register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptslr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptslr'>ptptslr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptslur/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptslur'>ptptslur</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp low update register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptssr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptssr'>ptptssr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptptthr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptptthr'>ptptthr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP target time high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ptpttlr/index.html"
+                                  title='mod stm32f40x::ethernet_ptp::ptpttlr'>ptpttlr</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP target time low register</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPPPSCR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPPPSCR'>PTPPPSCR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP PPS control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPSSIR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPSSIR'>PTPSSIR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP subsecond increment register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSAR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSAR'>PTPTSAR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp addend register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSCR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSCR'>PTPTSCR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSHR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSHR'>PTPTSHR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSHUR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSHUR'>PTPTSHUR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp high update register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSLR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSLR'>PTPTSLR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSLUR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSLUR'>PTPTSLUR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp low update register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTSSR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTSSR'>PTPTSSR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP time stamp status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTTHR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTTHR'>PTPTTHR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP target time high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PTPTTLR.html"
+                                  title='struct stm32f40x::ethernet_ptp::PTPTTLR'>PTPTTLR</a></td>
+                           <td class='docblock-short'>
+                                <p>Ethernet PTP target time low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterBlock.html"
+                                  title='struct stm32f40x::ethernet_ptp::RegisterBlock'>RegisterBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>Register block</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `dma2` mod in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, dma2"><title>stm32f40x::dma2 - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module dma2</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'dma2', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>stm32f40x</a>::<wbr><a class="mod" href=''>dma2</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#16289-34569' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>DMA controller</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="hifcr/index.html"
+                                  title='mod stm32f40x::dma2::hifcr'>hifcr</a></td>
+                           <td class='docblock-short'>
+                                <p>high interrupt flag clear register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="hisr/index.html"
+                                  title='mod stm32f40x::dma2::hisr'>hisr</a></td>
+                           <td class='docblock-short'>
+                                <p>high interrupt status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="lifcr/index.html"
+                                  title='mod stm32f40x::dma2::lifcr'>lifcr</a></td>
+                           <td class='docblock-short'>
+                                <p>low interrupt flag clear register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="lisr/index.html"
+                                  title='mod stm32f40x::dma2::lisr'>lisr</a></td>
+                           <td class='docblock-short'>
+                                <p>low interrupt status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s0cr/index.html"
+                                  title='mod stm32f40x::dma2::s0cr'>s0cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s0fcr/index.html"
+                                  title='mod stm32f40x::dma2::s0fcr'>s0fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s0m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s0m0ar'>s0m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s0m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s0m1ar'>s0m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s0ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s0ndtr'>s0ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s0par/index.html"
+                                  title='mod stm32f40x::dma2::s0par'>s0par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s1cr/index.html"
+                                  title='mod stm32f40x::dma2::s1cr'>s1cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s1fcr/index.html"
+                                  title='mod stm32f40x::dma2::s1fcr'>s1fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s1m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s1m0ar'>s1m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s1m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s1m1ar'>s1m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s1ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s1ndtr'>s1ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s1par/index.html"
+                                  title='mod stm32f40x::dma2::s1par'>s1par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s2cr/index.html"
+                                  title='mod stm32f40x::dma2::s2cr'>s2cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s2fcr/index.html"
+                                  title='mod stm32f40x::dma2::s2fcr'>s2fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s2m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s2m0ar'>s2m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s2m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s2m1ar'>s2m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s2ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s2ndtr'>s2ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s2par/index.html"
+                                  title='mod stm32f40x::dma2::s2par'>s2par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s3cr/index.html"
+                                  title='mod stm32f40x::dma2::s3cr'>s3cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s3fcr/index.html"
+                                  title='mod stm32f40x::dma2::s3fcr'>s3fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s3m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s3m0ar'>s3m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s3m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s3m1ar'>s3m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s3ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s3ndtr'>s3ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s3par/index.html"
+                                  title='mod stm32f40x::dma2::s3par'>s3par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s4cr/index.html"
+                                  title='mod stm32f40x::dma2::s4cr'>s4cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s4fcr/index.html"
+                                  title='mod stm32f40x::dma2::s4fcr'>s4fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s4m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s4m0ar'>s4m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s4m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s4m1ar'>s4m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s4ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s4ndtr'>s4ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s4par/index.html"
+                                  title='mod stm32f40x::dma2::s4par'>s4par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s5cr/index.html"
+                                  title='mod stm32f40x::dma2::s5cr'>s5cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s5fcr/index.html"
+                                  title='mod stm32f40x::dma2::s5fcr'>s5fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s5m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s5m0ar'>s5m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s5m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s5m1ar'>s5m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s5ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s5ndtr'>s5ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s5par/index.html"
+                                  title='mod stm32f40x::dma2::s5par'>s5par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s6cr/index.html"
+                                  title='mod stm32f40x::dma2::s6cr'>s6cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s6fcr/index.html"
+                                  title='mod stm32f40x::dma2::s6fcr'>s6fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s6m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s6m0ar'>s6m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s6m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s6m1ar'>s6m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s6ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s6ndtr'>s6ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s6par/index.html"
+                                  title='mod stm32f40x::dma2::s6par'>s6par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s7cr/index.html"
+                                  title='mod stm32f40x::dma2::s7cr'>s7cr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s7fcr/index.html"
+                                  title='mod stm32f40x::dma2::s7fcr'>s7fcr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s7m0ar/index.html"
+                                  title='mod stm32f40x::dma2::s7m0ar'>s7m0ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s7m1ar/index.html"
+                                  title='mod stm32f40x::dma2::s7m1ar'>s7m1ar</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s7ndtr/index.html"
+                                  title='mod stm32f40x::dma2::s7ndtr'>s7ndtr</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="s7par/index.html"
+                                  title='mod stm32f40x::dma2::s7par'>s7par</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HIFCR.html"
+                                  title='struct stm32f40x::dma2::HIFCR'>HIFCR</a></td>
+                           <td class='docblock-short'>
+                                <p>high interrupt flag clear register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HISR.html"
+                                  title='struct stm32f40x::dma2::HISR'>HISR</a></td>
+                           <td class='docblock-short'>
+                                <p>high interrupt status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LIFCR.html"
+                                  title='struct stm32f40x::dma2::LIFCR'>LIFCR</a></td>
+                           <td class='docblock-short'>
+                                <p>low interrupt flag clear register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.LISR.html"
+                                  title='struct stm32f40x::dma2::LISR'>LISR</a></td>
+                           <td class='docblock-short'>
+                                <p>low interrupt status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterBlock.html"
+                                  title='struct stm32f40x::dma2::RegisterBlock'>RegisterBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>Register block</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S0CR.html"
+                                  title='struct stm32f40x::dma2::S0CR'>S0CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S0FCR.html"
+                                  title='struct stm32f40x::dma2::S0FCR'>S0FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S0M0AR.html"
+                                  title='struct stm32f40x::dma2::S0M0AR'>S0M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S0M1AR.html"
+                                  title='struct stm32f40x::dma2::S0M1AR'>S0M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S0NDTR.html"
+                                  title='struct stm32f40x::dma2::S0NDTR'>S0NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S0PAR.html"
+                                  title='struct stm32f40x::dma2::S0PAR'>S0PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S1CR.html"
+                                  title='struct stm32f40x::dma2::S1CR'>S1CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S1FCR.html"
+                                  title='struct stm32f40x::dma2::S1FCR'>S1FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S1M0AR.html"
+                                  title='struct stm32f40x::dma2::S1M0AR'>S1M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S1M1AR.html"
+                                  title='struct stm32f40x::dma2::S1M1AR'>S1M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S1NDTR.html"
+                                  title='struct stm32f40x::dma2::S1NDTR'>S1NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S1PAR.html"
+                                  title='struct stm32f40x::dma2::S1PAR'>S1PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S2CR.html"
+                                  title='struct stm32f40x::dma2::S2CR'>S2CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S2FCR.html"
+                                  title='struct stm32f40x::dma2::S2FCR'>S2FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S2M0AR.html"
+                                  title='struct stm32f40x::dma2::S2M0AR'>S2M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S2M1AR.html"
+                                  title='struct stm32f40x::dma2::S2M1AR'>S2M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S2NDTR.html"
+                                  title='struct stm32f40x::dma2::S2NDTR'>S2NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S2PAR.html"
+                                  title='struct stm32f40x::dma2::S2PAR'>S2PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3CR.html"
+                                  title='struct stm32f40x::dma2::S3CR'>S3CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3FCR.html"
+                                  title='struct stm32f40x::dma2::S3FCR'>S3FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3M0AR.html"
+                                  title='struct stm32f40x::dma2::S3M0AR'>S3M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3M1AR.html"
+                                  title='struct stm32f40x::dma2::S3M1AR'>S3M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3NDTR.html"
+                                  title='struct stm32f40x::dma2::S3NDTR'>S3NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3PAR.html"
+                                  title='struct stm32f40x::dma2::S3PAR'>S3PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S4CR.html"
+                                  title='struct stm32f40x::dma2::S4CR'>S4CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S4FCR.html"
+                                  title='struct stm32f40x::dma2::S4FCR'>S4FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S4M0AR.html"
+                                  title='struct stm32f40x::dma2::S4M0AR'>S4M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S4M1AR.html"
+                                  title='struct stm32f40x::dma2::S4M1AR'>S4M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S4NDTR.html"
+                                  title='struct stm32f40x::dma2::S4NDTR'>S4NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S4PAR.html"
+                                  title='struct stm32f40x::dma2::S4PAR'>S4PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S5CR.html"
+                                  title='struct stm32f40x::dma2::S5CR'>S5CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S5FCR.html"
+                                  title='struct stm32f40x::dma2::S5FCR'>S5FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S5M0AR.html"
+                                  title='struct stm32f40x::dma2::S5M0AR'>S5M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S5M1AR.html"
+                                  title='struct stm32f40x::dma2::S5M1AR'>S5M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S5NDTR.html"
+                                  title='struct stm32f40x::dma2::S5NDTR'>S5NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S5PAR.html"
+                                  title='struct stm32f40x::dma2::S5PAR'>S5PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S6CR.html"
+                                  title='struct stm32f40x::dma2::S6CR'>S6CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S6FCR.html"
+                                  title='struct stm32f40x::dma2::S6FCR'>S6FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S6M0AR.html"
+                                  title='struct stm32f40x::dma2::S6M0AR'>S6M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S6M1AR.html"
+                                  title='struct stm32f40x::dma2::S6M1AR'>S6M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S6NDTR.html"
+                                  title='struct stm32f40x::dma2::S6NDTR'>S6NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S6PAR.html"
+                                  title='struct stm32f40x::dma2::S6PAR'>S6PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S7CR.html"
+                                  title='struct stm32f40x::dma2::S7CR'>S7CR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S7FCR.html"
+                                  title='struct stm32f40x::dma2::S7FCR'>S7FCR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x FIFO control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S7M0AR.html"
+                                  title='struct stm32f40x::dma2::S7M0AR'>S7M0AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 0 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S7M1AR.html"
+                                  title='struct stm32f40x::dma2::S7M1AR'>S7M1AR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x memory 1 address register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S7NDTR.html"
+                                  title='struct stm32f40x::dma2::S7NDTR'>S7NDTR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x number of data register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S7PAR.html"
+                                  title='struct stm32f40x::dma2::S7PAR'>S7PAR</a></td>
+                           <td class='docblock-short'>
+                                <p>stream x peripheral address register</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

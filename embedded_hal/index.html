@@ -1,0 +1,577 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `embedded_hal` crate."><meta name="keywords" content="rust, rustlang, rust-lang, embedded_hal"><title>embedded_hal - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Crate embedded_hal</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'embedded_hal', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>embedded_hal</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/embedded_hal/lib.rs.html#1-814' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>A minimal Hardware Abstraction Layer (HAL) for embedded systems</p>
+<p><strong>NOTE</strong> The HAL is in design phase. Expect the API to change in non
+backward compatible ways without previous notice.</p>
+<h1 id="design-goals" class="section-header"><a href="#design-goals">Design goals</a></h1>
+<p>The HAL</p>
+<ul>
+<li>
+<p>Must <em>erase</em> device specific details. Neither register, register blocks or
+magic values should appear in the API.</p>
+</li>
+<li>
+<p>Must be generic <em>within</em> a device and <em>across</em> devices. The API to use a
+serial interface must be the same regardless of whether the
+implementation uses the USART1 or UART4 peripheral of a device or the
+UART0 peripheral of another device.</p>
+</li>
+<li>
+<p>Must <em>not</em> be tied to a specific asynchronous model. The API should be
+usable in blocking mode, with the <code>futures</code> model, with an async/await
+model or with a callback model.</p>
+</li>
+<li>
+<p>Must be minimal, and thus easy to implement and zero cost, yet highly
+composable. People that want higher level abstraction should <em>prefer
+to use this HAL</em> rather than <em>re-implement</em> register manipulation code.</p>
+</li>
+</ul>
+<h1 id="out-of-scope" class="section-header"><a href="#out-of-scope">Out of scope</a></h1>
+<ul>
+<li>Initialization and configuration stuff like &quot;ensure this serial interface
+and that SPI interface are not using the same pins&quot;. The HAL will focus on
+<em>doing I/O.</em></li>
+</ul>
+<h1 id="reference-implementation" class="section-header"><a href="#reference-implementation">Reference implementation</a></h1>
+<p>The <a href="https://github.com/japaric/blue-pill"><code>blue-pill</code></a> crate contains a reference implementation of this HAL.</p>
+<h1 id="detailed-design" class="section-header"><a href="#detailed-design">Detailed design</a></h1><h2 id="traits" class="section-header"><a href="#traits">Traits</a></h2>
+<p>The HAL is specified using traits to allow generic programming. These traits
+traits will make use of the <a href="https://github.com/japaric/nb"><code>nb</code></a> <a href="https://japaric.github.io/nb/nb/">crate</a> (<em>please go read that crate
+documentation before continuing</em>) to abstract over the asynchronous model
+and to also provide a blocking operation mode.</p>
+<p>Here's how a HAL trait may look like:</p>
+
+<pre class="rust rust-example-rendered">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">nb</span>;
+
+<span class="doccomment">/// A serial interface</span>
+<span class="kw">pub</span> <span class="kw">trait</span> <span class="ident">Serial</span> {
+    <span class="doccomment">/// Error type associated to this serial interface</span>
+    <span class="kw">type</span> <span class="ident">Error</span>;
+
+    <span class="doccomment">/// Reads a single byte</span>
+    <span class="kw">fn</span> <span class="ident">read</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">nb</span>::<span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">u8</span>, <span class="self">Self</span>::<span class="ident">Error</span><span class="op">&gt;</span>;
+
+    <span class="doccomment">/// Writes a single byte</span>
+    <span class="kw">fn</span> <span class="ident">write</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">byte</span>: <span class="ident">u8</span>) <span class="op">-&gt;</span> <span class="ident">nb</span>::<span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="self">Self</span>::<span class="ident">Error</span><span class="op">&gt;</span>;
+}</pre>
+<p>The <code>nb::Result</code> enum is used to add a <a href="https://japaric.github.io/nb/nb/enum.Error.html"><code>WouldBlock</code></a> variant to the errors
+of the serial interface. As we'll see below this extra error variant lets
+this single API operate in a blocking manner, or in a non-blocking manner
+compatible with <code>futures</code> and with the <code>await</code> operator.</p>
+<p>Some traits, like the one shown below, may expose possibly blocking APIs
+that can't fail. In those cases <code>nb::Result&lt;_, !&gt;</code> should be used.</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="doccomment">/// A timer used for timeouts</span>
+<span class="kw">pub</span> <span class="kw">trait</span> <span class="ident">Timer</span> {
+    <span class="doccomment">/// A time unit that can be convert to a human time unit</span>
+    <span class="kw">type</span> <span class="ident">Time</span>;
+
+    <span class="doccomment">/// Gets the current timer timeout</span>
+    <span class="kw">fn</span> <span class="ident">get_timeout</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="self">Self</span>::<span class="ident">Time</span>;
+
+    <span class="doccomment">/// Pauses the timer</span>
+    <span class="kw">fn</span> <span class="ident">pause</span>(<span class="kw-2">&amp;</span><span class="self">self</span>);
+
+    <span class="doccomment">/// Restarts the timer count</span>
+    <span class="kw">fn</span> <span class="ident">restart</span>(<span class="kw-2">&amp;</span><span class="self">self</span>);
+
+    <span class="doccomment">/// Resumes the timer count</span>
+    <span class="kw">fn</span> <span class="ident">resume</span>(<span class="kw-2">&amp;</span><span class="self">self</span>);
+
+    <span class="doccomment">/// Sets a new timeout</span>
+    <span class="kw">fn</span> <span class="ident">set_timeout</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">ticks</span>: <span class="ident">T</span>) <span class="kw">where</span> <span class="ident">T</span>: <span class="ident">Into</span><span class="op">&lt;</span><span class="self">Self</span>::<span class="ident">Time</span><span class="op">&gt;</span>;
+
+    <span class="doccomment">/// &quot;waits&quot; until the timer times out</span>
+    <span class="kw">fn</span> <span class="ident">wait</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">nb</span>::<span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="op">!</span><span class="op">&gt;</span>;
+}</pre>
+<h2 id="implementation" class="section-header"><a href="#implementation">Implementation</a></h2>
+<p>The HAL traits should be implemented for device crates generated via
+<a href="https://crates.io/crates/svd2rust"><code>svd2rust</code></a> to maximize code reuse.</p>
+<p>Shown below is an implementation of the HAL traits for the <a href="https://crates.io/crates/stm32f103xx"><code>stm32f103xx</code></a>
+crate. This single implementation will work for <em>any</em> microcontroller in the
+STM32F103 family.</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="doccomment">//! An implementation of the `embedded-hal` for STM32F103xx microcontrollers</span>
+
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">nb</span>;
+
+<span class="comment">// device crate</span>
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">stm32f103xx</span>;
+
+<span class="kw">use</span> <span class="ident">core</span>::<span class="ident">ops</span>::<span class="ident">Deref</span>;
+
+<span class="doccomment">/// A serial interface</span>
+<span class="comment">// NOTE generic over the USART peripheral. This works with USART1, USART2</span>
+<span class="comment">// and USART3</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Serial</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">U</span><span class="op">&gt;</span>(<span class="kw">pub</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">U</span>)
+<span class="kw">where</span>
+    <span class="ident">U</span>: <span class="ident">Deref</span><span class="op">&lt;</span><span class="ident">stm32f103xx</span>::<span class="ident">usart1</span>::<span class="ident">RegisterBlock</span><span class="op">&gt;</span> <span class="op">+</span> <span class="lifetime">&#39;static</span>;
+
+<span class="doccomment">/// Serial interface error</span>
+<span class="kw">pub</span> <span class="kw">enum</span> <span class="ident">Error</span> {
+    <span class="doccomment">/// Buffer overrun</span>
+    <span class="ident">Overrun</span>,
+    ..
+}
+
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">U</span><span class="op">&gt;</span> <span class="ident">hal</span>::<span class="ident">Serial</span> <span class="kw">for</span> <span class="ident">Serial</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">U</span><span class="op">&gt;</span> {
+    <span class="kw">type</span> <span class="ident">Error</span> <span class="op">=</span> <span class="ident">Error</span>;
+
+    <span class="kw">fn</span> <span class="ident">read</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">nb</span>::<span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">u8</span>, <span class="ident">Error</span><span class="op">&gt;</span> {
+        <span class="comment">// read the status register</span>
+        <span class="kw">let</span> <span class="ident">sr</span> <span class="op">=</span> <span class="self">self</span>.<span class="ident">sr</span>.<span class="ident">read</span>();
+
+        <span class="kw">if</span> <span class="ident">sr</span>.<span class="ident">ovr</span>().<span class="ident">bit_is_set</span>() {
+            <span class="comment">// Error: Buffer overrun</span>
+            <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">Other</span>(<span class="ident">Error</span>::<span class="ident">Overrun</span>))
+        } <span class="kw">else</span> <span class="kw">if</span> .. {
+            <span class="comment">// Other error conditions</span>
+            ..
+        } <span class="kw">else</span> <span class="kw">if</span> <span class="ident">sr</span>.<span class="ident">rxne</span>().<span class="ident">bit_is_set</span>() {
+            <span class="comment">// Data available: read the data register</span>
+            <span class="prelude-val">Ok</span>(<span class="self">self</span>.<span class="ident">dr</span>.<span class="ident">read</span>())
+        } <span class="kw">else</span> {
+            <span class="comment">// No data available yet</span>
+            <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">WouldBlock</span>)
+        }
+    }
+
+    <span class="kw">fn</span> <span class="ident">write</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">byte</span>: <span class="ident">u8</span>) <span class="op">-&gt;</span> <span class="ident">nb</span>::<span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">Error</span><span class="op">&gt;</span> {
+        <span class="comment">// Very similar to the above implementation</span>
+        ..
+    }
+}</pre>
+<p>Furthermore the above implementation of <code>hal::Serial</code> is generic over the
+USART peripheral instance and will work with peripherals USART1, USART2,
+USART3, etc.</p>
+<p>Note that the above implementation uses a newtype over a <em>reference</em> to the
+USART register block. This pushes the concern of synchronization to the user
+of the <code>Serial</code> abstraction. However it's also possible to <em>erase</em> that
+reference by handling the synchronization within the <code>hal::Serial</code>
+implementation:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="doccomment">/// A synchronized serial interface</span>
+<span class="comment">// NOTE This is a global singleton</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Serial1</span>;
+
+<span class="comment">// NOTE private</span>
+<span class="kw">static</span> <span class="ident">USART1</span>: <span class="ident">Mutex</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">Mutex</span>::<span class="ident">new</span>(..);
+
+<span class="kw">impl</span> <span class="ident">hal</span>::<span class="ident">Serial</span> <span class="kw">for</span> <span class="ident">Serial</span> {
+    <span class="kw">fn</span> <span class="ident">read</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">u8</span>, <span class="ident">nb</span>::<span class="ident">Error</span><span class="op">&lt;</span><span class="ident">Error</span><span class="op">&gt;&gt;</span> {
+        <span class="ident">hal</span>::<span class="ident">Serial</span>::<span class="ident">read</span>(<span class="kw-2">&amp;</span><span class="ident">Serial</span>(<span class="ident">USART1</span>.<span class="ident">lock</span>()))
+    }
+}</pre>
+<h2 id="intended-usage" class="section-header"><a href="#intended-usage">Intended usage</a></h2>
+<p>Thanks to the <a href="https://github.com/japaric/nb"><code>nb</code></a> crate the HAL API can be used in a blocking manner,
+with <code>futures</code> or with the <code>await</code> operator using the <a href="https://japaric.github.io/nb/nb/macro.block.html"><code>block!</code></a>,
+<a href="https://japaric.github.io/nb/nb/macro.try_nb.html"><code>try_nb!</code></a> and <a href="https://japaric.github.io/nb/nb/macro.await.html"><code>await!</code></a> macros respectively.</p>
+<h3 id="blocking-mode" class="section-header"><a href="#blocking-mode">Blocking mode</a></h3>
+<p>An example of sending a string over the serial interface in a blocking
+fashion:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+
+<span class="attribute">#[<span class="ident">macro_use</span>]</span>
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">nb</span>;
+
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">stm32f103xx_hal_impl</span>;
+
+<span class="kw">use</span> <span class="ident">stm32f103xx_hal_impl</span>::<span class="ident">Serial</span>;
+
+<span class="kw">let</span> <span class="ident">serial</span> <span class="op">=</span> <span class="ident">Serial</span>(<span class="ident">usart1</span>);
+
+<span class="kw">for</span> <span class="ident">byte</span> <span class="kw">in</span> <span class="string">b&quot;Hello, world!&quot;</span> {
+    <span class="comment">// NOTE `block!` blocks until `serial.write()` completes and returns</span>
+    <span class="comment">// `Result&lt;(), Error&gt;`</span>
+    <span class="macro">block</span><span class="macro">!</span>(<span class="ident">serial</span>.<span class="ident">write</span>()).<span class="ident">unwrap</span>();
+}</pre>
+<h3 id="futures" class="section-header"><a href="#futures"><code>futures</code></a></h3>
+<p>An example of running two tasks concurrently. First task: blink an LED every
+second. Second task: loop back data over the serial interface.</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">futures</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">stm32f103xx_hal_impl</span>;
+
+<span class="attribute">#[<span class="ident">macro_use</span>]</span>
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">nb</span>;
+
+<span class="kw">use</span> <span class="ident">hal</span>::<span class="ident">prelude</span>::<span class="kw-2">*</span>;
+<span class="kw">use</span> <span class="ident">stm32f103xx_hal_impl</span>::{<span class="ident">Serial</span>, <span class="ident">Timer</span>};
+
+<span class="doccomment">/// `futures` version of `Timer.wait`</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// This returns a future that must be polled to completion</span>
+<span class="kw">fn</span> <span class="ident">wait</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span>(<span class="ident">timer</span>: <span class="kw-2">&amp;</span><span class="ident">T</span>) <span class="op">-&gt;</span> <span class="kw">impl</span> <span class="ident">Future</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> (), <span class="ident">Error</span> <span class="op">=</span> <span class="op">!</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">T</span>: <span class="ident">hal</span>::<span class="ident">Timer</span>,
+{
+    <span class="ident">future</span>::<span class="ident">poll_fn</span>(<span class="op">||</span> {
+        <span class="prelude-val">Ok</span>(<span class="ident">Async</span>::<span class="ident">Ready</span>(<span class="macro">try_nb</span><span class="macro">!</span>(<span class="ident">timer</span>.<span class="ident">wait</span>())))
+    })
+}
+
+<span class="doccomment">/// `futures` version of `Serial.read`</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// This returns a future that must be polled to completion</span>
+<span class="kw">fn</span> <span class="ident">read</span><span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>(<span class="ident">serial</span>: <span class="kw-2">&amp;</span><span class="ident">S</span>) <span class="op">-&gt;</span> <span class="kw">impl</span> <span class="ident">Future</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> <span class="ident">u8</span>, <span class="ident">Error</span> <span class="op">=</span> <span class="ident">Error</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">hal</span>::<span class="ident">Serial</span>,
+{
+    <span class="ident">future</span>::<span class="ident">poll_fn</span>(<span class="op">||</span> {
+        <span class="prelude-val">Ok</span>(<span class="ident">Async</span>::<span class="ident">Ready</span>(<span class="macro">try_nb</span><span class="macro">!</span>(<span class="ident">serial</span>.<span class="ident">read</span>())))
+    })
+}
+
+<span class="doccomment">/// `futures` version of `Serial.write`</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// This returns a future that must be polled to completion</span>
+<span class="kw">fn</span> <span class="ident">write</span><span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>(<span class="ident">byte</span>: <span class="ident">u8</span>) <span class="op">-&gt;</span> <span class="kw">impl</span> <span class="ident">Future</span><span class="op">&lt;</span><span class="ident">Item</span> <span class="op">=</span> (), <span class="ident">Error</span> <span class="op">=</span> <span class="ident">Error</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">hal</span>::<span class="ident">Serial</span>,
+{
+    <span class="ident">future</span>::<span class="ident">poll_fn</span>(<span class="op">||</span> {
+        <span class="prelude-val">Ok</span>(<span class="ident">Async</span>::<span class="ident">Ready</span>(<span class="macro">try_nb</span><span class="macro">!</span>(<span class="ident">serial</span>.<span class="ident">write</span>(<span class="ident">byte</span>))))
+    })
+}
+
+<span class="comment">// HAL implementers</span>
+<span class="kw">let</span> <span class="ident">timer</span> <span class="op">=</span> <span class="ident">Timer</span>(<span class="ident">tim3</span>);
+<span class="kw">let</span> <span class="ident">serial</span> <span class="op">=</span> <span class="ident">Serial</span>(<span class="ident">usart1</span>);
+
+<span class="comment">// Tasks</span>
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">blinky</span> <span class="op">=</span> <span class="ident">future</span>::<span class="ident">loop_fn</span>(<span class="bool-val">true</span>, <span class="op">|</span><span class="kw">_</span><span class="op">|</span> {
+    <span class="ident">wait</span>(<span class="ident">timer</span>).<span class="ident">map</span>(<span class="op">|</span><span class="kw">_</span><span class="op">|</span> {
+        <span class="kw">if</span> <span class="ident">state</span> {
+            <span class="ident">Led</span>.<span class="ident">on</span>();
+        } <span class="kw">else</span> {
+            <span class="ident">Led</span>.<span class="ident">off</span>();
+        }
+
+        <span class="ident">Loop</span>::<span class="ident">Continue</span>(<span class="op">!</span><span class="ident">state</span>)
+    });
+});
+
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">loopback</span> <span class="op">=</span> <span class="ident">future</span>::<span class="ident">loop_fn</span>((), <span class="op">|</span><span class="kw">_</span><span class="op">|</span> {
+    <span class="ident">read</span>(<span class="ident">serial</span>).<span class="ident">and_then</span>(<span class="op">|</span><span class="ident">byte</span><span class="op">|</span> {
+        <span class="ident">write</span>(<span class="ident">serial</span>, <span class="ident">byte</span>)
+    }).<span class="ident">map</span>(<span class="op">|</span><span class="kw">_</span><span class="op">|</span> {
+        <span class="ident">Loop</span>::<span class="ident">Continue</span>(())
+    });
+});
+
+<span class="comment">// Event loop</span>
+<span class="kw">loop</span> {
+    <span class="ident">blinky</span>().<span class="ident">poll</span>().<span class="ident">unwrap</span>(); <span class="comment">// NOTE(unwrap) E = !</span>
+    <span class="ident">loopback</span>().<span class="ident">poll</span>().<span class="ident">unwrap</span>();
+}</pre>
+<h3 id="await" class="section-header"><a href="#await"><code>await</code></a></h3>
+<p>Same example as above but using <code>await!</code> instead of <code>futures</code>.</p>
+<p><strong>NOTE</strong> The <code>await!</code> macro requires language support for generators, which
+is not yet in the compiler.</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">stm32f103xx_hal_impl</span>;
+
+<span class="attribute">#[<span class="ident">macro_use</span>]</span>
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">nb</span>;
+
+<span class="kw">use</span> <span class="ident">hal</span>::<span class="ident">prelude</span>::<span class="kw-2">*</span>;
+<span class="kw">use</span> <span class="ident">stm32f103xx_hal_impl</span>::{<span class="ident">Serial</span>, <span class="ident">Timer</span>};
+
+<span class="comment">// HAL implementers</span>
+<span class="kw">let</span> <span class="ident">timer</span> <span class="op">=</span> <span class="ident">Timer</span>(<span class="ident">tim3</span>);
+<span class="kw">let</span> <span class="ident">serial</span> <span class="op">=</span> <span class="ident">Serial</span>(<span class="ident">usart1</span>);
+
+<span class="comment">// Tasks</span>
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">blinky</span> <span class="op">=</span> (<span class="op">||</span> {
+    <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">state</span> <span class="op">=</span> <span class="bool-val">false</span>;
+    <span class="kw">loop</span> {
+        <span class="comment">// `await!` means &quot;suspend / yield here&quot; instead of &quot;block until</span>
+        <span class="comment">// completion&quot;</span>
+        <span class="macro">await</span><span class="macro">!</span>(<span class="ident">timer</span>.<span class="ident">wait</span>()).<span class="ident">unwrap</span>(); <span class="comment">// NOTE(unwrap) E = !</span>
+
+        <span class="ident">state</span> <span class="op">=</span> <span class="op">!</span><span class="ident">state</span>;
+
+        <span class="kw">if</span> <span class="ident">state</span> {
+             <span class="ident">Led</span>.<span class="ident">on</span>();
+        } <span class="kw">else</span> {
+             <span class="ident">Led</span>.<span class="ident">off</span>();
+        }
+    }
+})();
+
+<span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">loopback</span> <span class="op">=</span> (<span class="op">||</span> {
+    <span class="kw">loop</span> {
+        <span class="kw">let</span> <span class="ident">byte</span> <span class="op">=</span> <span class="macro">await</span><span class="macro">!</span>(<span class="ident">serial</span>.<span class="ident">read</span>()).<span class="ident">unwrap</span>();
+        <span class="macro">await</span><span class="macro">!</span>(<span class="ident">serial</span>.<span class="ident">write</span>(<span class="ident">byte</span>)).<span class="ident">unwrap</span>();
+    }
+})();
+
+<span class="comment">// Event loop</span>
+<span class="kw">loop</span> {
+    <span class="ident">blinky</span>.<span class="ident">resume</span>();
+    <span class="ident">serial</span>.<span class="ident">resume</span>();
+}</pre>
+<h2 id="generic-programming-and-higher-level-abstractions" class="section-header"><a href="#generic-programming-and-higher-level-abstractions">Generic programming and higher level abstractions</a></h2>
+<p>The HAL has been kept minimal on purpose to encourage building <strong>generic</strong>
+higher level abstractions on top of it.</p>
+<p>Some examples:</p>
+<p><strong>NOTE</strong> All the functions shown below could have been written as trait
+methods with default implementation to allow specialization, but they have
+been written as functions to keep things simple.</p>
+<ul>
+<li>Write a whole buffer in blocking fashion.</li>
+</ul>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+
+<span class="kw">use</span> <span class="ident">hal</span>::<span class="ident">prelude</span>::<span class="kw-2">*</span>;
+
+<span class="kw">fn</span> <span class="ident">write_all</span><span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>(<span class="ident">serial</span>: <span class="kw-2">&amp;</span><span class="ident">S</span>, <span class="ident">buffer</span>: <span class="kw-2">&amp;</span>[<span class="ident">u8</span>]) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">S</span>::<span class="ident">Error</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">hal</span>::<span class="ident">Serial</span>
+{
+    <span class="kw">for</span> <span class="ident">byte</span> <span class="kw">in</span> <span class="ident">buffer</span> {
+        <span class="macro">block</span><span class="macro">!</span>(<span class="ident">serial</span>.<span class="ident">write</span>(<span class="ident">byte</span>))<span class="question-mark">?</span>;
+    }
+
+    <span class="prelude-val">Ok</span>(())
+}</pre>
+<ul>
+<li>Blocking read with timeout</li>
+</ul>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+
+<span class="kw">use</span> <span class="ident">hal</span>::<span class="ident">prelude</span>::<span class="kw-2">*</span>;
+
+<span class="kw">enum</span> <span class="ident">Error</span><span class="op">&lt;</span><span class="ident">E</span><span class="op">&gt;</span> {
+    <span class="doccomment">/// Serial interface error</span>
+    <span class="ident">Serial</span>(<span class="ident">E</span>)
+    <span class="ident">TimedOut</span>,
+}
+
+<span class="kw">fn</span> <span class="ident">read_with_timeout</span>(
+    <span class="ident">serial</span>: <span class="kw-2">&amp;</span><span class="ident">S</span>,
+    <span class="ident">timer</span>: <span class="kw-2">&amp;</span><span class="ident">T</span>,
+    <span class="ident">timeout</span>: <span class="ident">T</span>::<span class="ident">Ticks</span>,
+) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">u8</span>, <span class="ident">Error</span><span class="op">&lt;</span><span class="ident">S</span>::<span class="ident">Error</span><span class="op">&gt;&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">T</span>: <span class="ident">hal</span>::<span class="ident">Timer</span>,
+    <span class="ident">S</span>: <span class="ident">hal</span>::<span class="ident">Serial</span>,
+{
+    <span class="ident">timer</span>.<span class="ident">pause</span>();
+    <span class="ident">timer</span>.<span class="ident">restart</span>();
+    <span class="ident">timer</span>.<span class="ident">set_timeout</span>(<span class="ident">timeout</span>);
+    <span class="ident">timer</span>.<span class="ident">resume</span>();
+
+    <span class="kw">loop</span> {
+        <span class="kw">match</span> <span class="ident">serial</span>.<span class="ident">read</span>() {
+            <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">Other</span>(<span class="ident">e</span>)) <span class="op">=&gt;</span> <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">Error</span>::<span class="ident">Serial</span>(<span class="ident">e</span>)),
+            <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">WouldBlock</span>) <span class="op">=&gt;</span> {
+                <span class="comment">// no data available, check the timer below</span>
+            },
+            <span class="prelude-val">Ok</span>(<span class="ident">byte</span>) <span class="op">=&gt;</span> <span class="kw">return</span> <span class="prelude-val">Ok</span>(<span class="ident">byte</span>),
+        }
+
+        <span class="kw">match</span> <span class="ident">timer</span>.<span class="ident">wait</span>() {
+            <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">WouldBlock</span>) <span class="op">=&gt;</span> <span class="kw">continue</span>,
+            <span class="prelude-val">Ok</span>(()) <span class="op">=&gt;</span> {
+                <span class="ident">timer</span>.<span class="ident">pause</span>();
+                <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">Error</span>::<span class="ident">TimedOut</span>);
+            },
+        }
+    }
+}</pre>
+<ul>
+<li>Asynchronous SPI transfer</li>
+</ul>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+
+<span class="doccomment">/// Transfers a byte buffer of size N</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// Returns the same byte buffer but filled with the data received from the</span>
+<span class="doccomment">/// slave device</span>
+<span class="attribute">#[<span class="ident">async</span>]</span>
+<span class="kw">fn</span> <span class="ident">transfer</span><span class="op">&lt;</span><span class="kw">const</span> <span class="ident">N</span>: <span class="ident">usize</span>, <span class="ident">S</span><span class="op">&gt;</span>(
+    <span class="ident">spi</span>: <span class="kw-2">&amp;</span><span class="ident">S</span>,
+    <span class="kw-2">mut</span> <span class="ident">buffer</span>: [<span class="ident">u8</span>; <span class="ident">N</span>],
+) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>[<span class="ident">u8</span>; <span class="ident">N</span>], <span class="ident">S</span>::<span class="ident">Error</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">hal</span>::<span class="ident">Spi</span>,
+{
+    <span class="kw">for</span> <span class="ident">byte</span> <span class="kw">in</span> <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">buffer</span> {
+        <span class="macro">await</span><span class="macro">!</span>(<span class="ident">spi</span>.<span class="ident">send</span>(<span class="ident">byte</span>))<span class="question-mark">?</span>;
+        <span class="kw-2">*</span><span class="ident">byte</span> <span class="op">=</span> <span class="macro">await</span><span class="macro">!</span>(<span class="ident">spi</span>.<span class="ident">receive</span>())<span class="question-mark">?</span>;
+    }
+
+    <span class="ident">buffer</span>
+}</pre>
+<ul>
+<li>Buffered serial interface with periodic flushing in interrupt handler</li>
+</ul>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">embedded_hal</span> <span class="kw">as</span> <span class="ident">hal</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">nb</span>;
+
+<span class="kw">use</span> <span class="ident">hal</span>::<span class="ident">prelude</span>::<span class="kw-2">*</span>;
+
+<span class="kw">fn</span> <span class="ident">flush</span>(<span class="ident">serial</span>: <span class="kw-2">&amp;</span><span class="ident">S</span>, <span class="ident">cb</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">CircularBuffer</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span>(), <span class="ident">S</span>::<span class="ident">Error</span><span class="op">&gt;</span>
+<span class="kw">where</span>
+    <span class="ident">S</span>: <span class="ident">hal</span>::<span class="ident">Serial</span>,
+{
+    <span class="kw">loop</span> {
+        <span class="kw">if</span> <span class="kw">let</span> <span class="prelude-val">Some</span>(<span class="ident">byte</span>) <span class="op">=</span> <span class="ident">cb</span>.<span class="ident">peek</span>() {
+            <span class="kw">match</span> <span class="ident">serial</span>.<span class="ident">write</span>(<span class="kw-2">*</span><span class="ident">byte</span>) {
+                <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">Other</span>(<span class="ident">e</span>)) <span class="op">=&gt;</span> <span class="kw">return</span> <span class="prelude-val">Err</span>(<span class="ident">e</span>),
+                <span class="prelude-val">Err</span>(<span class="ident">nb</span>::<span class="ident">Error</span>::<span class="ident">WouldBlock</span>) <span class="op">=&gt;</span> <span class="kw">return</span> <span class="prelude-val">Ok</span>(()),
+                <span class="prelude-val">Ok</span>(()) <span class="op">=&gt;</span> {}, <span class="comment">// keep flushing data</span>
+            }
+        }
+
+        <span class="ident">cb</span>.<span class="ident">pop</span>();
+    }
+}
+
+<span class="comment">// The stuff below could be in some other crate</span>
+
+<span class="doccomment">/// Global singleton</span>
+<span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">BufferedSerial</span>;
+
+<span class="comment">// NOTE private</span>
+<span class="kw">static</span> <span class="ident">BUFFER</span>: <span class="ident">Mutex</span><span class="op">&lt;</span><span class="ident">CircularBuffer</span><span class="op">&gt;</span> <span class="op">=</span> ..;
+<span class="kw">static</span> <span class="ident">SERIAL</span>: <span class="ident">Mutex</span><span class="op">&lt;</span><span class="kw">impl</span> <span class="ident">hal</span>::<span class="ident">Serial</span><span class="op">&gt;</span> <span class="op">=</span> ..;
+
+<span class="kw">impl</span> <span class="ident">BufferedSerial</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">write</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">byte</span>: <span class="ident">u8</span>) {
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">buffer</span> <span class="op">=</span> <span class="ident">BUFFER</span>.<span class="ident">lock</span>();
+        <span class="kw">for</span> <span class="ident">byte</span> <span class="kw">in</span> <span class="ident">byte</span> {
+            <span class="ident">buffer</span>.<span class="ident">push</span>(<span class="kw-2">*</span><span class="ident">byte</span>).<span class="ident">unwrap</span>();
+        }
+    }
+
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">write_all</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">bytes</span>: <span class="kw-2">&amp;</span>[<span class="ident">u8</span>]) {
+        <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">buffer</span> <span class="op">=</span> <span class="ident">BUFFER</span>.<span class="ident">lock</span>();
+        <span class="kw">for</span> <span class="ident">byte</span> <span class="kw">in</span> <span class="ident">bytes</span> {
+            <span class="ident">cb</span>.<span class="ident">push</span>(<span class="kw-2">*</span><span class="ident">byte</span>).<span class="ident">unwrap</span>();
+        }
+    }
+
+}
+
+<span class="kw">fn</span> <span class="ident">interrupt_handler</span>() {
+    <span class="kw">let</span> <span class="ident">serial</span> <span class="op">=</span> <span class="ident">SERIAL</span>.<span class="ident">lock</span>();
+    <span class="kw">let</span> <span class="ident">buffer</span> <span class="op">=</span> <span class="ident">BUFFER</span>.<span class="ident">lock</span>();
+
+    <span class="ident">flush</span>(<span class="kw-2">&amp;</span><span class="ident">serial</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">buffer</span>).<span class="ident">unwrap</span>();
+}</pre>
+<h1 id="a-note-on-time-units" class="section-header"><a href="#a-note-on-time-units">A note on time units</a></h1>
+<p>Implementers of this HAL are encouraged to use <em>application agnostic</em> time
+units in their implementations. Is it usually the case that the application
+will want to pick the clock frequencies of the different peripherals so
+using a unit like <code>apb1::Ticks</code> instead of <code>Seconds</code> lets the application
+perform the conversions cheaply without register / memory accesses.</p>
+<p>For example: a <code>Timer</code> implementation uses the peripheral TIM1 which is
+connected to the APB1 bus. This implementation uses the time unit
+<code>apb1::Ticks</code> where 1 tick is equal to <code>1 / apb1::FREQUENCY</code> seconds where
+<code>apb1::FREQUENCY</code> is picked by the application.</p>
+<p>Now each application can declare the <code>apb1::FREQUENCY</code> using a macro that
+expands into conversions (implementations of <a href="https://doc.rust-lang.org/core/convert/trait.From.html">the <code>From</code> trait</a>) from human
+time units like <code>Milliseconds</code> to <code>apb1::Ticks</code>.</p>
+<p>With this setup the application can use human time units with the <code>Timer</code>
+API:</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="macro">frequency</span><span class="macro">!</span>(<span class="ident">apb1</span>, <span class="number">8_000_000</span>); <span class="comment">// Hz</span>
+
+<span class="kw">let</span> <span class="ident">timer</span>: <span class="kw">impl</span> <span class="ident">Timer</span> <span class="op">=</span> ..;
+
+<span class="comment">// All these are equivalent</span>
+<span class="ident">timer</span>.<span class="ident">set_timeout</span>(<span class="ident">apb1</span>::<span class="ident">Ticks</span>(<span class="number">8_000</span>));
+<span class="ident">timer</span>.<span class="ident">set_timeout</span>(<span class="ident">Milliseconds</span>(<span class="number">1</span>));
+<span class="ident">timer</span>.<span class="ident">set_timeout</span>(<span class="number">1</span>.<span class="ident">ms</span>());</pre>
+<p>See the <a href="https://github.com/japaric/blue-pill"><code>blue-pill</code></a> crate for an example implementation of this approach.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="prelude/index.html"
+                                  title='mod embedded_hal::prelude'>prelude</a></td>
+                           <td class='docblock-short'>
+                                <p>The prelude is a collection of all the traits in this crate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="serial/index.html"
+                                  title='mod embedded_hal::serial'>serial</a></td>
+                           <td class='docblock-short'>
+                                <p>Serial interface</p>
+
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Direction.html"
+                                  title='enum embedded_hal::Direction'>Direction</a></td>
+                           <td class='docblock-short'>
+                                <p>Count direction</p>
+
+                           </td>
+                       </tr></table><h2 id='traits-1' class='section-header'><a href="#traits-1">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Capture.html"
+                                  title='trait embedded_hal::Capture'>Capture</a></td>
+                           <td class='docblock-short'>
+                                <p>Input capture</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Pwm.html"
+                                  title='trait embedded_hal::Pwm'>Pwm</a></td>
+                           <td class='docblock-short'>
+                                <p>Pulse Width Modulation</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Qei.html"
+                                  title='trait embedded_hal::Qei'>Qei</a></td>
+                           <td class='docblock-short'>
+                                <p>Quadrature encoder interface</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Spi.html"
+                                  title='trait embedded_hal::Spi'>Spi</a></td>
+                           <td class='docblock-short'>
+                                <p>Serial Peripheral Interface (full duplex master mode)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Timer.html"
+                                  title='trait embedded_hal::Timer'>Timer</a></td>
+                           <td class='docblock-short'>
+                                <p>Timer used for timeouts</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "embedded_hal";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>

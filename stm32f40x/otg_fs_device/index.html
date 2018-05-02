@@ -1,0 +1,620 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `otg_fs_device` mod in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, otg_fs_device"><title>stm32f40x::otg_fs_device - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module otg_fs_device</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'otg_fs_device', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>stm32f40x</a>::<wbr><a class="mod" href=''>otg_fs_device</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#191387-202925' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>USB on the go full speed</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepctl1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepctl1'>diepctl1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG device endpoint-1 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepctl2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepctl2'>diepctl2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG device endpoint-2 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepctl3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepctl3'>diepctl3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG device endpoint-3 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepempmsk/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepempmsk'>diepempmsk</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint FIFO empty interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepint0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepint0'>diepint0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-x interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepint1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepint1'>diepint1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepint2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepint2'>diepint2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="diepint3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::diepint3'>diepint3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dieptsiz0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dieptsiz0'>dieptsiz0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-0 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dieptsiz1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dieptsiz1'>dieptsiz1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dieptsiz2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dieptsiz2'>dieptsiz2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dieptsiz3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dieptsiz3'>dieptsiz3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepctl0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepctl0'>doepctl0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-0 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepctl1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepctl1'>doepctl1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepctl2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepctl2'>doepctl2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepctl3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepctl3'>doepctl3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepint0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepint0'>doepint0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-0 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepint1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepint1'>doepint1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepint2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepint2'>doepint2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doepint3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doepint3'>doepint3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doeptsiz0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doeptsiz0'>doeptsiz0</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-0 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doeptsiz1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doeptsiz1'>doeptsiz1</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-1 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doeptsiz2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doeptsiz2'>doeptsiz2</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-2 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="doeptsiz3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::doeptsiz3'>doeptsiz3</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-3 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dtxfsts0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dtxfsts0'>dtxfsts0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dtxfsts1/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dtxfsts1'>dtxfsts1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dtxfsts2/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dtxfsts2'>dtxfsts2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dtxfsts3/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dtxfsts3'>dtxfsts3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dvbusdis/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dvbusdis'>dvbusdis</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device VBUS discharge time register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="dvbuspulse/index.html"
+                                  title='mod stm32f40x::otg_fs_device::dvbuspulse'>dvbuspulse</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device VBUS pulsing time register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_daint/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_daint'>fs_daint</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_daintmsk/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_daintmsk'>fs_daintmsk</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_dcfg/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_dcfg'>fs_dcfg</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device configuration register (OTG_FS_DCFG)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_dctl/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_dctl'>fs_dctl</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device control register (OTG_FS_DCTL)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_diepctl0/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_diepctl0'>fs_diepctl0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_diepmsk/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_diepmsk'>fs_diepmsk</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_doepmsk/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_doepmsk'>fs_doepmsk</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs_dsts/index.html"
+                                  title='mod stm32f40x::otg_fs_device::fs_dsts'>fs_dsts</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device status register (OTG_FS_DSTS)</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPCTL1.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPCTL1'>DIEPCTL1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG device endpoint-1 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPCTL2.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPCTL2'>DIEPCTL2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG device endpoint-2 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPCTL3.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPCTL3'>DIEPCTL3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG device endpoint-3 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPEMPMSK.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPEMPMSK'>DIEPEMPMSK</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint FIFO empty interrupt mask register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPINT0.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPINT0'>DIEPINT0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-x interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPINT1.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPINT1'>DIEPINT1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPINT2.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPINT2'>DIEPINT2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPINT3.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPINT3'>DIEPINT3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPTSIZ0.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPTSIZ0'>DIEPTSIZ0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-0 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPTSIZ1.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPTSIZ1'>DIEPTSIZ1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPTSIZ2.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPTSIZ2'>DIEPTSIZ2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DIEPTSIZ3.html"
+                                  title='struct stm32f40x::otg_fs_device::DIEPTSIZ3'>DIEPTSIZ3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPCTL0.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPCTL0'>DOEPCTL0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-0 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPCTL1.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPCTL1'>DOEPCTL1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPCTL2.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPCTL2'>DOEPCTL2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPCTL3.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPCTL3'>DOEPCTL3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPINT0.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPINT0'>DOEPINT0</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-0 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPINT1.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPINT1'>DOEPINT1</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-1 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPINT2.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPINT2'>DOEPINT2</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-2 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPINT3.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPINT3'>DOEPINT3</a></td>
+                           <td class='docblock-short'>
+                                <p>device endpoint-3 interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPTSIZ0.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPTSIZ0'>DOEPTSIZ0</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-0 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPTSIZ1.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPTSIZ1'>DOEPTSIZ1</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-1 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPTSIZ2.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPTSIZ2'>DOEPTSIZ2</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-2 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DOEPTSIZ3.html"
+                                  title='struct stm32f40x::otg_fs_device::DOEPTSIZ3'>DOEPTSIZ3</a></td>
+                           <td class='docblock-short'>
+                                <p>device OUT endpoint-3 transfer size register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DTXFSTS0.html"
+                                  title='struct stm32f40x::otg_fs_device::DTXFSTS0'>DTXFSTS0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DTXFSTS1.html"
+                                  title='struct stm32f40x::otg_fs_device::DTXFSTS1'>DTXFSTS1</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DTXFSTS2.html"
+                                  title='struct stm32f40x::otg_fs_device::DTXFSTS2'>DTXFSTS2</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DTXFSTS3.html"
+                                  title='struct stm32f40x::otg_fs_device::DTXFSTS3'>DTXFSTS3</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint transmit FIFO status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DVBUSDIS.html"
+                                  title='struct stm32f40x::otg_fs_device::DVBUSDIS'>DVBUSDIS</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device VBUS discharge time register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DVBUSPULSE.html"
+                                  title='struct stm32f40x::otg_fs_device::DVBUSPULSE'>DVBUSPULSE</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device VBUS pulsing time register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DAINT.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DAINT'>FS_DAINT</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device all endpoints interrupt register (OTG_FS_DAINT)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DAINTMSK.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DAINTMSK'>FS_DAINTMSK</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS all endpoints interrupt mask register (OTG_FS_DAINTMSK)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DCFG.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DCFG'>FS_DCFG</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device configuration register (OTG_FS_DCFG)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DCTL.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DCTL'>FS_DCTL</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device control register (OTG_FS_DCTL)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DIEPCTL0.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DIEPCTL0'>FS_DIEPCTL0</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device control IN endpoint 0 control register (OTG_FS_DIEPCTL0)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DIEPMSK.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DIEPMSK'>FS_DIEPMSK</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device IN endpoint common interrupt mask register (OTG_FS_DIEPMSK)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DOEPMSK.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DOEPMSK'>FS_DOEPMSK</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device OUT endpoint common interrupt mask register (OTG_FS_DOEPMSK)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS_DSTS.html"
+                                  title='struct stm32f40x::otg_fs_device::FS_DSTS'>FS_DSTS</a></td>
+                           <td class='docblock-short'>
+                                <p>OTG_FS device status register (OTG_FS_DSTS)</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterBlock.html"
+                                  title='struct stm32f40x::otg_fs_device::RegisterBlock'>RegisterBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>Register block</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

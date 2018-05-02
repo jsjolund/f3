@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::rcc::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.cr">cr</a><a href="#structfield.pllcfgr">pllcfgr</a><a href="#structfield.cfgr">cfgr</a><a href="#structfield.cir">cir</a><a href="#structfield.ahb1rstr">ahb1rstr</a><a href="#structfield.ahb2rstr">ahb2rstr</a><a href="#structfield.ahb3rstr">ahb3rstr</a><a href="#structfield.apb1rstr">apb1rstr</a><a href="#structfield.apb2rstr">apb2rstr</a><a href="#structfield.ahb1enr">ahb1enr</a><a href="#structfield.ahb2enr">ahb2enr</a><a href="#structfield.ahb3enr">ahb3enr</a><a href="#structfield.apb1enr">apb1enr</a><a href="#structfield.apb2enr">apb2enr</a><a href="#structfield.ahb1lpenr">ahb1lpenr</a><a href="#structfield.ahb2lpenr">ahb2lpenr</a><a href="#structfield.ahb3lpenr">ahb3lpenr</a><a href="#structfield.apb1lpenr">apb1lpenr</a><a href="#structfield.apb2lpenr">apb2lpenr</a><a href="#structfield.bdcr">bdcr</a><a href="#structfield.csr">csr</a><a href="#structfield.sscgr">sscgr</a><a href="#structfield.plli2scfgr">plli2scfgr</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>rcc</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>rcc</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#34599' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub cr: <a class="struct" href="../../stm32f40x/rcc/struct.CR.html" title="struct stm32f40x::rcc::CR">CR</a>,
+    pub pllcfgr: <a class="struct" href="../../stm32f40x/rcc/struct.PLLCFGR.html" title="struct stm32f40x::rcc::PLLCFGR">PLLCFGR</a>,
+    pub cfgr: <a class="struct" href="../../stm32f40x/rcc/struct.CFGR.html" title="struct stm32f40x::rcc::CFGR">CFGR</a>,
+    pub cir: <a class="struct" href="../../stm32f40x/rcc/struct.CIR.html" title="struct stm32f40x::rcc::CIR">CIR</a>,
+    pub ahb1rstr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB1RSTR.html" title="struct stm32f40x::rcc::AHB1RSTR">AHB1RSTR</a>,
+    pub ahb2rstr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB2RSTR.html" title="struct stm32f40x::rcc::AHB2RSTR">AHB2RSTR</a>,
+    pub ahb3rstr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB3RSTR.html" title="struct stm32f40x::rcc::AHB3RSTR">AHB3RSTR</a>,
+    pub apb1rstr: <a class="struct" href="../../stm32f40x/rcc/struct.APB1RSTR.html" title="struct stm32f40x::rcc::APB1RSTR">APB1RSTR</a>,
+    pub apb2rstr: <a class="struct" href="../../stm32f40x/rcc/struct.APB2RSTR.html" title="struct stm32f40x::rcc::APB2RSTR">APB2RSTR</a>,
+    pub ahb1enr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB1ENR.html" title="struct stm32f40x::rcc::AHB1ENR">AHB1ENR</a>,
+    pub ahb2enr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB2ENR.html" title="struct stm32f40x::rcc::AHB2ENR">AHB2ENR</a>,
+    pub ahb3enr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB3ENR.html" title="struct stm32f40x::rcc::AHB3ENR">AHB3ENR</a>,
+    pub apb1enr: <a class="struct" href="../../stm32f40x/rcc/struct.APB1ENR.html" title="struct stm32f40x::rcc::APB1ENR">APB1ENR</a>,
+    pub apb2enr: <a class="struct" href="../../stm32f40x/rcc/struct.APB2ENR.html" title="struct stm32f40x::rcc::APB2ENR">APB2ENR</a>,
+    pub ahb1lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB1LPENR.html" title="struct stm32f40x::rcc::AHB1LPENR">AHB1LPENR</a>,
+    pub ahb2lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB2LPENR.html" title="struct stm32f40x::rcc::AHB2LPENR">AHB2LPENR</a>,
+    pub ahb3lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB3LPENR.html" title="struct stm32f40x::rcc::AHB3LPENR">AHB3LPENR</a>,
+    pub apb1lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.APB1LPENR.html" title="struct stm32f40x::rcc::APB1LPENR">APB1LPENR</a>,
+    pub apb2lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.APB2LPENR.html" title="struct stm32f40x::rcc::APB2LPENR">APB2LPENR</a>,
+    pub bdcr: <a class="struct" href="../../stm32f40x/rcc/struct.BDCR.html" title="struct stm32f40x::rcc::BDCR">BDCR</a>,
+    pub csr: <a class="struct" href="../../stm32f40x/rcc/struct.CSR.html" title="struct stm32f40x::rcc::CSR">CSR</a>,
+    pub sscgr: <a class="struct" href="../../stm32f40x/rcc/struct.SSCGR.html" title="struct stm32f40x::rcc::SSCGR">SSCGR</a>,
+    pub plli2scfgr: <a class="struct" href="../../stm32f40x/rcc/struct.PLLI2SCFGR.html" title="struct stm32f40x::rcc::PLLI2SCFGR">PLLI2SCFGR</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.cr" class="structfield small-section-header">
+                           <a href="#structfield.cr" class="anchor field"></a>
+                           <span id="cr.v" class='invisible'>
+                           <code>cr: <a class="struct" href="../../stm32f40x/rcc/struct.CR.html" title="struct stm32f40x::rcc::CR">CR</a></code>
+                           </span></span><div class='docblock'><p>0x00 - clock control register</p>
+</div><span id="structfield.pllcfgr" class="structfield small-section-header">
+                           <a href="#structfield.pllcfgr" class="anchor field"></a>
+                           <span id="pllcfgr.v" class='invisible'>
+                           <code>pllcfgr: <a class="struct" href="../../stm32f40x/rcc/struct.PLLCFGR.html" title="struct stm32f40x::rcc::PLLCFGR">PLLCFGR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - PLL configuration register</p>
+</div><span id="structfield.cfgr" class="structfield small-section-header">
+                           <a href="#structfield.cfgr" class="anchor field"></a>
+                           <span id="cfgr.v" class='invisible'>
+                           <code>cfgr: <a class="struct" href="../../stm32f40x/rcc/struct.CFGR.html" title="struct stm32f40x::rcc::CFGR">CFGR</a></code>
+                           </span></span><div class='docblock'><p>0x08 - clock configuration register</p>
+</div><span id="structfield.cir" class="structfield small-section-header">
+                           <a href="#structfield.cir" class="anchor field"></a>
+                           <span id="cir.v" class='invisible'>
+                           <code>cir: <a class="struct" href="../../stm32f40x/rcc/struct.CIR.html" title="struct stm32f40x::rcc::CIR">CIR</a></code>
+                           </span></span><div class='docblock'><p>0x0c - clock interrupt register</p>
+</div><span id="structfield.ahb1rstr" class="structfield small-section-header">
+                           <a href="#structfield.ahb1rstr" class="anchor field"></a>
+                           <span id="ahb1rstr.v" class='invisible'>
+                           <code>ahb1rstr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB1RSTR.html" title="struct stm32f40x::rcc::AHB1RSTR">AHB1RSTR</a></code>
+                           </span></span><div class='docblock'><p>0x10 - AHB1 peripheral reset register</p>
+</div><span id="structfield.ahb2rstr" class="structfield small-section-header">
+                           <a href="#structfield.ahb2rstr" class="anchor field"></a>
+                           <span id="ahb2rstr.v" class='invisible'>
+                           <code>ahb2rstr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB2RSTR.html" title="struct stm32f40x::rcc::AHB2RSTR">AHB2RSTR</a></code>
+                           </span></span><div class='docblock'><p>0x14 - AHB2 peripheral reset register</p>
+</div><span id="structfield.ahb3rstr" class="structfield small-section-header">
+                           <a href="#structfield.ahb3rstr" class="anchor field"></a>
+                           <span id="ahb3rstr.v" class='invisible'>
+                           <code>ahb3rstr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB3RSTR.html" title="struct stm32f40x::rcc::AHB3RSTR">AHB3RSTR</a></code>
+                           </span></span><div class='docblock'><p>0x18 - AHB3 peripheral reset register</p>
+</div><span id="structfield.apb1rstr" class="structfield small-section-header">
+                           <a href="#structfield.apb1rstr" class="anchor field"></a>
+                           <span id="apb1rstr.v" class='invisible'>
+                           <code>apb1rstr: <a class="struct" href="../../stm32f40x/rcc/struct.APB1RSTR.html" title="struct stm32f40x::rcc::APB1RSTR">APB1RSTR</a></code>
+                           </span></span><div class='docblock'><p>0x20 - APB1 peripheral reset register</p>
+</div><span id="structfield.apb2rstr" class="structfield small-section-header">
+                           <a href="#structfield.apb2rstr" class="anchor field"></a>
+                           <span id="apb2rstr.v" class='invisible'>
+                           <code>apb2rstr: <a class="struct" href="../../stm32f40x/rcc/struct.APB2RSTR.html" title="struct stm32f40x::rcc::APB2RSTR">APB2RSTR</a></code>
+                           </span></span><div class='docblock'><p>0x24 - APB2 peripheral reset register</p>
+</div><span id="structfield.ahb1enr" class="structfield small-section-header">
+                           <a href="#structfield.ahb1enr" class="anchor field"></a>
+                           <span id="ahb1enr.v" class='invisible'>
+                           <code>ahb1enr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB1ENR.html" title="struct stm32f40x::rcc::AHB1ENR">AHB1ENR</a></code>
+                           </span></span><div class='docblock'><p>0x30 - AHB1 peripheral clock register</p>
+</div><span id="structfield.ahb2enr" class="structfield small-section-header">
+                           <a href="#structfield.ahb2enr" class="anchor field"></a>
+                           <span id="ahb2enr.v" class='invisible'>
+                           <code>ahb2enr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB2ENR.html" title="struct stm32f40x::rcc::AHB2ENR">AHB2ENR</a></code>
+                           </span></span><div class='docblock'><p>0x34 - AHB2 peripheral clock enable register</p>
+</div><span id="structfield.ahb3enr" class="structfield small-section-header">
+                           <a href="#structfield.ahb3enr" class="anchor field"></a>
+                           <span id="ahb3enr.v" class='invisible'>
+                           <code>ahb3enr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB3ENR.html" title="struct stm32f40x::rcc::AHB3ENR">AHB3ENR</a></code>
+                           </span></span><div class='docblock'><p>0x38 - AHB3 peripheral clock enable register</p>
+</div><span id="structfield.apb1enr" class="structfield small-section-header">
+                           <a href="#structfield.apb1enr" class="anchor field"></a>
+                           <span id="apb1enr.v" class='invisible'>
+                           <code>apb1enr: <a class="struct" href="../../stm32f40x/rcc/struct.APB1ENR.html" title="struct stm32f40x::rcc::APB1ENR">APB1ENR</a></code>
+                           </span></span><div class='docblock'><p>0x40 - APB1 peripheral clock enable register</p>
+</div><span id="structfield.apb2enr" class="structfield small-section-header">
+                           <a href="#structfield.apb2enr" class="anchor field"></a>
+                           <span id="apb2enr.v" class='invisible'>
+                           <code>apb2enr: <a class="struct" href="../../stm32f40x/rcc/struct.APB2ENR.html" title="struct stm32f40x::rcc::APB2ENR">APB2ENR</a></code>
+                           </span></span><div class='docblock'><p>0x44 - APB2 peripheral clock enable register</p>
+</div><span id="structfield.ahb1lpenr" class="structfield small-section-header">
+                           <a href="#structfield.ahb1lpenr" class="anchor field"></a>
+                           <span id="ahb1lpenr.v" class='invisible'>
+                           <code>ahb1lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB1LPENR.html" title="struct stm32f40x::rcc::AHB1LPENR">AHB1LPENR</a></code>
+                           </span></span><div class='docblock'><p>0x50 - AHB1 peripheral clock enable in low power mode register</p>
+</div><span id="structfield.ahb2lpenr" class="structfield small-section-header">
+                           <a href="#structfield.ahb2lpenr" class="anchor field"></a>
+                           <span id="ahb2lpenr.v" class='invisible'>
+                           <code>ahb2lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB2LPENR.html" title="struct stm32f40x::rcc::AHB2LPENR">AHB2LPENR</a></code>
+                           </span></span><div class='docblock'><p>0x54 - AHB2 peripheral clock enable in low power mode register</p>
+</div><span id="structfield.ahb3lpenr" class="structfield small-section-header">
+                           <a href="#structfield.ahb3lpenr" class="anchor field"></a>
+                           <span id="ahb3lpenr.v" class='invisible'>
+                           <code>ahb3lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.AHB3LPENR.html" title="struct stm32f40x::rcc::AHB3LPENR">AHB3LPENR</a></code>
+                           </span></span><div class='docblock'><p>0x58 - AHB3 peripheral clock enable in low power mode register</p>
+</div><span id="structfield.apb1lpenr" class="structfield small-section-header">
+                           <a href="#structfield.apb1lpenr" class="anchor field"></a>
+                           <span id="apb1lpenr.v" class='invisible'>
+                           <code>apb1lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.APB1LPENR.html" title="struct stm32f40x::rcc::APB1LPENR">APB1LPENR</a></code>
+                           </span></span><div class='docblock'><p>0x60 - APB1 peripheral clock enable in low power mode register</p>
+</div><span id="structfield.apb2lpenr" class="structfield small-section-header">
+                           <a href="#structfield.apb2lpenr" class="anchor field"></a>
+                           <span id="apb2lpenr.v" class='invisible'>
+                           <code>apb2lpenr: <a class="struct" href="../../stm32f40x/rcc/struct.APB2LPENR.html" title="struct stm32f40x::rcc::APB2LPENR">APB2LPENR</a></code>
+                           </span></span><div class='docblock'><p>0x64 - APB2 peripheral clock enabled in low power mode register</p>
+</div><span id="structfield.bdcr" class="structfield small-section-header">
+                           <a href="#structfield.bdcr" class="anchor field"></a>
+                           <span id="bdcr.v" class='invisible'>
+                           <code>bdcr: <a class="struct" href="../../stm32f40x/rcc/struct.BDCR.html" title="struct stm32f40x::rcc::BDCR">BDCR</a></code>
+                           </span></span><div class='docblock'><p>0x70 - Backup domain control register</p>
+</div><span id="structfield.csr" class="structfield small-section-header">
+                           <a href="#structfield.csr" class="anchor field"></a>
+                           <span id="csr.v" class='invisible'>
+                           <code>csr: <a class="struct" href="../../stm32f40x/rcc/struct.CSR.html" title="struct stm32f40x::rcc::CSR">CSR</a></code>
+                           </span></span><div class='docblock'><p>0x74 - clock control &amp; status register</p>
+</div><span id="structfield.sscgr" class="structfield small-section-header">
+                           <a href="#structfield.sscgr" class="anchor field"></a>
+                           <span id="sscgr.v" class='invisible'>
+                           <code>sscgr: <a class="struct" href="../../stm32f40x/rcc/struct.SSCGR.html" title="struct stm32f40x::rcc::SSCGR">SSCGR</a></code>
+                           </span></span><div class='docblock'><p>0x80 - spread spectrum clock generation register</p>
+</div><span id="structfield.plli2scfgr" class="structfield small-section-header">
+                           <a href="#structfield.plli2scfgr" class="anchor field"></a>
+                           <span id="plli2scfgr.v" class='invisible'>
+                           <code>plli2scfgr: <a class="struct" href="../../stm32f40x/rcc/struct.PLLI2SCFGR.html" title="struct stm32f40x::rcc::PLLI2SCFGR">PLLI2SCFGR</a></code>
+                           </span></span><div class='docblock'><p>0x84 - PLLI2S configuration register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/rcc/struct.RegisterBlock.html" title="struct stm32f40x::rcc::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/rcc/struct.RegisterBlock.html" title="struct stm32f40x::rcc::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

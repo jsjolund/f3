@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rcc` mod in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, rcc"><title>stm32f40x::rcc - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module rcc</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'rcc', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>stm32f40x</a>::<wbr><a class="mod" href=''>rcc</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#34595-50858' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Reset and clock control</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb1enr/index.html"
+                                  title='mod stm32f40x::rcc::ahb1enr'>ahb1enr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB1 peripheral clock register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb1lpenr/index.html"
+                                  title='mod stm32f40x::rcc::ahb1lpenr'>ahb1lpenr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB1 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb1rstr/index.html"
+                                  title='mod stm32f40x::rcc::ahb1rstr'>ahb1rstr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB1 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb2enr/index.html"
+                                  title='mod stm32f40x::rcc::ahb2enr'>ahb2enr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB2 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb2lpenr/index.html"
+                                  title='mod stm32f40x::rcc::ahb2lpenr'>ahb2lpenr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB2 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb2rstr/index.html"
+                                  title='mod stm32f40x::rcc::ahb2rstr'>ahb2rstr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB2 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb3enr/index.html"
+                                  title='mod stm32f40x::rcc::ahb3enr'>ahb3enr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB3 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb3lpenr/index.html"
+                                  title='mod stm32f40x::rcc::ahb3lpenr'>ahb3lpenr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB3 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ahb3rstr/index.html"
+                                  title='mod stm32f40x::rcc::ahb3rstr'>ahb3rstr</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB3 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="apb1enr/index.html"
+                                  title='mod stm32f40x::rcc::apb1enr'>apb1enr</a></td>
+                           <td class='docblock-short'>
+                                <p>APB1 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="apb1lpenr/index.html"
+                                  title='mod stm32f40x::rcc::apb1lpenr'>apb1lpenr</a></td>
+                           <td class='docblock-short'>
+                                <p>APB1 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="apb1rstr/index.html"
+                                  title='mod stm32f40x::rcc::apb1rstr'>apb1rstr</a></td>
+                           <td class='docblock-short'>
+                                <p>APB1 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="apb2enr/index.html"
+                                  title='mod stm32f40x::rcc::apb2enr'>apb2enr</a></td>
+                           <td class='docblock-short'>
+                                <p>APB2 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="apb2lpenr/index.html"
+                                  title='mod stm32f40x::rcc::apb2lpenr'>apb2lpenr</a></td>
+                           <td class='docblock-short'>
+                                <p>APB2 peripheral clock enabled in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="apb2rstr/index.html"
+                                  title='mod stm32f40x::rcc::apb2rstr'>apb2rstr</a></td>
+                           <td class='docblock-short'>
+                                <p>APB2 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="bdcr/index.html"
+                                  title='mod stm32f40x::rcc::bdcr'>bdcr</a></td>
+                           <td class='docblock-short'>
+                                <p>Backup domain control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="cfgr/index.html"
+                                  title='mod stm32f40x::rcc::cfgr'>cfgr</a></td>
+                           <td class='docblock-short'>
+                                <p>clock configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="cir/index.html"
+                                  title='mod stm32f40x::rcc::cir'>cir</a></td>
+                           <td class='docblock-short'>
+                                <p>clock interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="cr/index.html"
+                                  title='mod stm32f40x::rcc::cr'>cr</a></td>
+                           <td class='docblock-short'>
+                                <p>clock control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="csr/index.html"
+                                  title='mod stm32f40x::rcc::csr'>csr</a></td>
+                           <td class='docblock-short'>
+                                <p>clock control &amp; status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="pllcfgr/index.html"
+                                  title='mod stm32f40x::rcc::pllcfgr'>pllcfgr</a></td>
+                           <td class='docblock-short'>
+                                <p>PLL configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="plli2scfgr/index.html"
+                                  title='mod stm32f40x::rcc::plli2scfgr'>plli2scfgr</a></td>
+                           <td class='docblock-short'>
+                                <p>PLLI2S configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="sscgr/index.html"
+                                  title='mod stm32f40x::rcc::sscgr'>sscgr</a></td>
+                           <td class='docblock-short'>
+                                <p>spread spectrum clock generation register</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB1ENR.html"
+                                  title='struct stm32f40x::rcc::AHB1ENR'>AHB1ENR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB1 peripheral clock register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB1LPENR.html"
+                                  title='struct stm32f40x::rcc::AHB1LPENR'>AHB1LPENR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB1 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB1RSTR.html"
+                                  title='struct stm32f40x::rcc::AHB1RSTR'>AHB1RSTR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB1 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB2ENR.html"
+                                  title='struct stm32f40x::rcc::AHB2ENR'>AHB2ENR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB2 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB2LPENR.html"
+                                  title='struct stm32f40x::rcc::AHB2LPENR'>AHB2LPENR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB2 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB2RSTR.html"
+                                  title='struct stm32f40x::rcc::AHB2RSTR'>AHB2RSTR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB2 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB3ENR.html"
+                                  title='struct stm32f40x::rcc::AHB3ENR'>AHB3ENR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB3 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB3LPENR.html"
+                                  title='struct stm32f40x::rcc::AHB3LPENR'>AHB3LPENR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB3 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AHB3RSTR.html"
+                                  title='struct stm32f40x::rcc::AHB3RSTR'>AHB3RSTR</a></td>
+                           <td class='docblock-short'>
+                                <p>AHB3 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.APB1ENR.html"
+                                  title='struct stm32f40x::rcc::APB1ENR'>APB1ENR</a></td>
+                           <td class='docblock-short'>
+                                <p>APB1 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.APB1LPENR.html"
+                                  title='struct stm32f40x::rcc::APB1LPENR'>APB1LPENR</a></td>
+                           <td class='docblock-short'>
+                                <p>APB1 peripheral clock enable in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.APB1RSTR.html"
+                                  title='struct stm32f40x::rcc::APB1RSTR'>APB1RSTR</a></td>
+                           <td class='docblock-short'>
+                                <p>APB1 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.APB2ENR.html"
+                                  title='struct stm32f40x::rcc::APB2ENR'>APB2ENR</a></td>
+                           <td class='docblock-short'>
+                                <p>APB2 peripheral clock enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.APB2LPENR.html"
+                                  title='struct stm32f40x::rcc::APB2LPENR'>APB2LPENR</a></td>
+                           <td class='docblock-short'>
+                                <p>APB2 peripheral clock enabled in low power mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.APB2RSTR.html"
+                                  title='struct stm32f40x::rcc::APB2RSTR'>APB2RSTR</a></td>
+                           <td class='docblock-short'>
+                                <p>APB2 peripheral reset register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BDCR.html"
+                                  title='struct stm32f40x::rcc::BDCR'>BDCR</a></td>
+                           <td class='docblock-short'>
+                                <p>Backup domain control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CFGR.html"
+                                  title='struct stm32f40x::rcc::CFGR'>CFGR</a></td>
+                           <td class='docblock-short'>
+                                <p>clock configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CIR.html"
+                                  title='struct stm32f40x::rcc::CIR'>CIR</a></td>
+                           <td class='docblock-short'>
+                                <p>clock interrupt register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CR.html"
+                                  title='struct stm32f40x::rcc::CR'>CR</a></td>
+                           <td class='docblock-short'>
+                                <p>clock control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CSR.html"
+                                  title='struct stm32f40x::rcc::CSR'>CSR</a></td>
+                           <td class='docblock-short'>
+                                <p>clock control &amp; status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PLLCFGR.html"
+                                  title='struct stm32f40x::rcc::PLLCFGR'>PLLCFGR</a></td>
+                           <td class='docblock-short'>
+                                <p>PLL configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PLLI2SCFGR.html"
+                                  title='struct stm32f40x::rcc::PLLI2SCFGR'>PLLI2SCFGR</a></td>
+                           <td class='docblock-short'>
+                                <p>PLLI2S configuration register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterBlock.html"
+                                  title='struct stm32f40x::rcc::RegisterBlock'>RegisterBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>Register block</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SSCGR.html"
+                                  title='struct stm32f40x::rcc::SSCGR'>SSCGR</a></td>
+                           <td class='docblock-short'>
+                                <p>spread spectrum clock generation register</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

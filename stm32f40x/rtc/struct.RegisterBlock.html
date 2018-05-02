@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::rtc::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.tr">tr</a><a href="#structfield.dr">dr</a><a href="#structfield.cr">cr</a><a href="#structfield.isr">isr</a><a href="#structfield.prer">prer</a><a href="#structfield.wutr">wutr</a><a href="#structfield.calibr">calibr</a><a href="#structfield.alrmar">alrmar</a><a href="#structfield.alrmbr">alrmbr</a><a href="#structfield.wpr">wpr</a><a href="#structfield.ssr">ssr</a><a href="#structfield.shiftr">shiftr</a><a href="#structfield.tstr">tstr</a><a href="#structfield.tsdr">tsdr</a><a href="#structfield.tsssr">tsssr</a><a href="#structfield.calr">calr</a><a href="#structfield.tafcr">tafcr</a><a href="#structfield.alrmassr">alrmassr</a><a href="#structfield.alrmbssr">alrmbssr</a><a href="#structfield.bkp0r">bkp0r</a><a href="#structfield.bkp1r">bkp1r</a><a href="#structfield.bkp2r">bkp2r</a><a href="#structfield.bkp3r">bkp3r</a><a href="#structfield.bkp4r">bkp4r</a><a href="#structfield.bkp5r">bkp5r</a><a href="#structfield.bkp6r">bkp6r</a><a href="#structfield.bkp7r">bkp7r</a><a href="#structfield.bkp8r">bkp8r</a><a href="#structfield.bkp9r">bkp9r</a><a href="#structfield.bkp10r">bkp10r</a><a href="#structfield.bkp11r">bkp11r</a><a href="#structfield.bkp12r">bkp12r</a><a href="#structfield.bkp13r">bkp13r</a><a href="#structfield.bkp14r">bkp14r</a><a href="#structfield.bkp15r">bkp15r</a><a href="#structfield.bkp16r">bkp16r</a><a href="#structfield.bkp17r">bkp17r</a><a href="#structfield.bkp18r">bkp18r</a><a href="#structfield.bkp19r">bkp19r</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>rtc</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>rtc</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#103065-103107' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub tr: <a class="struct" href="../../stm32f40x/rtc/struct.TR.html" title="struct stm32f40x::rtc::TR">TR</a>,
+    pub dr: <a class="struct" href="../../stm32f40x/rtc/struct.DR.html" title="struct stm32f40x::rtc::DR">DR</a>,
+    pub cr: <a class="struct" href="../../stm32f40x/rtc/struct.CR.html" title="struct stm32f40x::rtc::CR">CR</a>,
+    pub isr: <a class="struct" href="../../stm32f40x/rtc/struct.ISR.html" title="struct stm32f40x::rtc::ISR">ISR</a>,
+    pub prer: <a class="struct" href="../../stm32f40x/rtc/struct.PRER.html" title="struct stm32f40x::rtc::PRER">PRER</a>,
+    pub wutr: <a class="struct" href="../../stm32f40x/rtc/struct.WUTR.html" title="struct stm32f40x::rtc::WUTR">WUTR</a>,
+    pub calibr: <a class="struct" href="../../stm32f40x/rtc/struct.CALIBR.html" title="struct stm32f40x::rtc::CALIBR">CALIBR</a>,
+    pub alrmar: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMAR.html" title="struct stm32f40x::rtc::ALRMAR">ALRMAR</a>,
+    pub alrmbr: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMBR.html" title="struct stm32f40x::rtc::ALRMBR">ALRMBR</a>,
+    pub wpr: <a class="struct" href="../../stm32f40x/rtc/struct.WPR.html" title="struct stm32f40x::rtc::WPR">WPR</a>,
+    pub ssr: <a class="struct" href="../../stm32f40x/rtc/struct.SSR.html" title="struct stm32f40x::rtc::SSR">SSR</a>,
+    pub shiftr: <a class="struct" href="../../stm32f40x/rtc/struct.SHIFTR.html" title="struct stm32f40x::rtc::SHIFTR">SHIFTR</a>,
+    pub tstr: <a class="struct" href="../../stm32f40x/rtc/struct.TSTR.html" title="struct stm32f40x::rtc::TSTR">TSTR</a>,
+    pub tsdr: <a class="struct" href="../../stm32f40x/rtc/struct.TSDR.html" title="struct stm32f40x::rtc::TSDR">TSDR</a>,
+    pub tsssr: <a class="struct" href="../../stm32f40x/rtc/struct.TSSSR.html" title="struct stm32f40x::rtc::TSSSR">TSSSR</a>,
+    pub calr: <a class="struct" href="../../stm32f40x/rtc/struct.CALR.html" title="struct stm32f40x::rtc::CALR">CALR</a>,
+    pub tafcr: <a class="struct" href="../../stm32f40x/rtc/struct.TAFCR.html" title="struct stm32f40x::rtc::TAFCR">TAFCR</a>,
+    pub alrmassr: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMASSR.html" title="struct stm32f40x::rtc::ALRMASSR">ALRMASSR</a>,
+    pub alrmbssr: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMBSSR.html" title="struct stm32f40x::rtc::ALRMBSSR">ALRMBSSR</a>,
+    pub bkp0r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP0R.html" title="struct stm32f40x::rtc::BKP0R">BKP0R</a>,
+    pub bkp1r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP1R.html" title="struct stm32f40x::rtc::BKP1R">BKP1R</a>,
+    pub bkp2r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP2R.html" title="struct stm32f40x::rtc::BKP2R">BKP2R</a>,
+    pub bkp3r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP3R.html" title="struct stm32f40x::rtc::BKP3R">BKP3R</a>,
+    pub bkp4r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP4R.html" title="struct stm32f40x::rtc::BKP4R">BKP4R</a>,
+    pub bkp5r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP5R.html" title="struct stm32f40x::rtc::BKP5R">BKP5R</a>,
+    pub bkp6r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP6R.html" title="struct stm32f40x::rtc::BKP6R">BKP6R</a>,
+    pub bkp7r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP7R.html" title="struct stm32f40x::rtc::BKP7R">BKP7R</a>,
+    pub bkp8r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP8R.html" title="struct stm32f40x::rtc::BKP8R">BKP8R</a>,
+    pub bkp9r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP9R.html" title="struct stm32f40x::rtc::BKP9R">BKP9R</a>,
+    pub bkp10r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP10R.html" title="struct stm32f40x::rtc::BKP10R">BKP10R</a>,
+    pub bkp11r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP11R.html" title="struct stm32f40x::rtc::BKP11R">BKP11R</a>,
+    pub bkp12r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP12R.html" title="struct stm32f40x::rtc::BKP12R">BKP12R</a>,
+    pub bkp13r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP13R.html" title="struct stm32f40x::rtc::BKP13R">BKP13R</a>,
+    pub bkp14r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP14R.html" title="struct stm32f40x::rtc::BKP14R">BKP14R</a>,
+    pub bkp15r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP15R.html" title="struct stm32f40x::rtc::BKP15R">BKP15R</a>,
+    pub bkp16r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP16R.html" title="struct stm32f40x::rtc::BKP16R">BKP16R</a>,
+    pub bkp17r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP17R.html" title="struct stm32f40x::rtc::BKP17R">BKP17R</a>,
+    pub bkp18r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP18R.html" title="struct stm32f40x::rtc::BKP18R">BKP18R</a>,
+    pub bkp19r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP19R.html" title="struct stm32f40x::rtc::BKP19R">BKP19R</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.tr" class="structfield small-section-header">
+                           <a href="#structfield.tr" class="anchor field"></a>
+                           <span id="tr.v" class='invisible'>
+                           <code>tr: <a class="struct" href="../../stm32f40x/rtc/struct.TR.html" title="struct stm32f40x::rtc::TR">TR</a></code>
+                           </span></span><div class='docblock'><p>0x00 - time register</p>
+</div><span id="structfield.dr" class="structfield small-section-header">
+                           <a href="#structfield.dr" class="anchor field"></a>
+                           <span id="dr.v" class='invisible'>
+                           <code>dr: <a class="struct" href="../../stm32f40x/rtc/struct.DR.html" title="struct stm32f40x::rtc::DR">DR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - date register</p>
+</div><span id="structfield.cr" class="structfield small-section-header">
+                           <a href="#structfield.cr" class="anchor field"></a>
+                           <span id="cr.v" class='invisible'>
+                           <code>cr: <a class="struct" href="../../stm32f40x/rtc/struct.CR.html" title="struct stm32f40x::rtc::CR">CR</a></code>
+                           </span></span><div class='docblock'><p>0x08 - control register</p>
+</div><span id="structfield.isr" class="structfield small-section-header">
+                           <a href="#structfield.isr" class="anchor field"></a>
+                           <span id="isr.v" class='invisible'>
+                           <code>isr: <a class="struct" href="../../stm32f40x/rtc/struct.ISR.html" title="struct stm32f40x::rtc::ISR">ISR</a></code>
+                           </span></span><div class='docblock'><p>0x0c - initialization and status register</p>
+</div><span id="structfield.prer" class="structfield small-section-header">
+                           <a href="#structfield.prer" class="anchor field"></a>
+                           <span id="prer.v" class='invisible'>
+                           <code>prer: <a class="struct" href="../../stm32f40x/rtc/struct.PRER.html" title="struct stm32f40x::rtc::PRER">PRER</a></code>
+                           </span></span><div class='docblock'><p>0x10 - prescaler register</p>
+</div><span id="structfield.wutr" class="structfield small-section-header">
+                           <a href="#structfield.wutr" class="anchor field"></a>
+                           <span id="wutr.v" class='invisible'>
+                           <code>wutr: <a class="struct" href="../../stm32f40x/rtc/struct.WUTR.html" title="struct stm32f40x::rtc::WUTR">WUTR</a></code>
+                           </span></span><div class='docblock'><p>0x14 - wakeup timer register</p>
+</div><span id="structfield.calibr" class="structfield small-section-header">
+                           <a href="#structfield.calibr" class="anchor field"></a>
+                           <span id="calibr.v" class='invisible'>
+                           <code>calibr: <a class="struct" href="../../stm32f40x/rtc/struct.CALIBR.html" title="struct stm32f40x::rtc::CALIBR">CALIBR</a></code>
+                           </span></span><div class='docblock'><p>0x18 - calibration register</p>
+</div><span id="structfield.alrmar" class="structfield small-section-header">
+                           <a href="#structfield.alrmar" class="anchor field"></a>
+                           <span id="alrmar.v" class='invisible'>
+                           <code>alrmar: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMAR.html" title="struct stm32f40x::rtc::ALRMAR">ALRMAR</a></code>
+                           </span></span><div class='docblock'><p>0x1c - alarm A register</p>
+</div><span id="structfield.alrmbr" class="structfield small-section-header">
+                           <a href="#structfield.alrmbr" class="anchor field"></a>
+                           <span id="alrmbr.v" class='invisible'>
+                           <code>alrmbr: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMBR.html" title="struct stm32f40x::rtc::ALRMBR">ALRMBR</a></code>
+                           </span></span><div class='docblock'><p>0x20 - alarm B register</p>
+</div><span id="structfield.wpr" class="structfield small-section-header">
+                           <a href="#structfield.wpr" class="anchor field"></a>
+                           <span id="wpr.v" class='invisible'>
+                           <code>wpr: <a class="struct" href="../../stm32f40x/rtc/struct.WPR.html" title="struct stm32f40x::rtc::WPR">WPR</a></code>
+                           </span></span><div class='docblock'><p>0x24 - write protection register</p>
+</div><span id="structfield.ssr" class="structfield small-section-header">
+                           <a href="#structfield.ssr" class="anchor field"></a>
+                           <span id="ssr.v" class='invisible'>
+                           <code>ssr: <a class="struct" href="../../stm32f40x/rtc/struct.SSR.html" title="struct stm32f40x::rtc::SSR">SSR</a></code>
+                           </span></span><div class='docblock'><p>0x28 - sub second register</p>
+</div><span id="structfield.shiftr" class="structfield small-section-header">
+                           <a href="#structfield.shiftr" class="anchor field"></a>
+                           <span id="shiftr.v" class='invisible'>
+                           <code>shiftr: <a class="struct" href="../../stm32f40x/rtc/struct.SHIFTR.html" title="struct stm32f40x::rtc::SHIFTR">SHIFTR</a></code>
+                           </span></span><div class='docblock'><p>0x2c - shift control register</p>
+</div><span id="structfield.tstr" class="structfield small-section-header">
+                           <a href="#structfield.tstr" class="anchor field"></a>
+                           <span id="tstr.v" class='invisible'>
+                           <code>tstr: <a class="struct" href="../../stm32f40x/rtc/struct.TSTR.html" title="struct stm32f40x::rtc::TSTR">TSTR</a></code>
+                           </span></span><div class='docblock'><p>0x30 - time stamp time register</p>
+</div><span id="structfield.tsdr" class="structfield small-section-header">
+                           <a href="#structfield.tsdr" class="anchor field"></a>
+                           <span id="tsdr.v" class='invisible'>
+                           <code>tsdr: <a class="struct" href="../../stm32f40x/rtc/struct.TSDR.html" title="struct stm32f40x::rtc::TSDR">TSDR</a></code>
+                           </span></span><div class='docblock'><p>0x34 - time stamp date register</p>
+</div><span id="structfield.tsssr" class="structfield small-section-header">
+                           <a href="#structfield.tsssr" class="anchor field"></a>
+                           <span id="tsssr.v" class='invisible'>
+                           <code>tsssr: <a class="struct" href="../../stm32f40x/rtc/struct.TSSSR.html" title="struct stm32f40x::rtc::TSSSR">TSSSR</a></code>
+                           </span></span><div class='docblock'><p>0x38 - timestamp sub second register</p>
+</div><span id="structfield.calr" class="structfield small-section-header">
+                           <a href="#structfield.calr" class="anchor field"></a>
+                           <span id="calr.v" class='invisible'>
+                           <code>calr: <a class="struct" href="../../stm32f40x/rtc/struct.CALR.html" title="struct stm32f40x::rtc::CALR">CALR</a></code>
+                           </span></span><div class='docblock'><p>0x3c - calibration register</p>
+</div><span id="structfield.tafcr" class="structfield small-section-header">
+                           <a href="#structfield.tafcr" class="anchor field"></a>
+                           <span id="tafcr.v" class='invisible'>
+                           <code>tafcr: <a class="struct" href="../../stm32f40x/rtc/struct.TAFCR.html" title="struct stm32f40x::rtc::TAFCR">TAFCR</a></code>
+                           </span></span><div class='docblock'><p>0x40 - tamper and alternate function configuration register</p>
+</div><span id="structfield.alrmassr" class="structfield small-section-header">
+                           <a href="#structfield.alrmassr" class="anchor field"></a>
+                           <span id="alrmassr.v" class='invisible'>
+                           <code>alrmassr: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMASSR.html" title="struct stm32f40x::rtc::ALRMASSR">ALRMASSR</a></code>
+                           </span></span><div class='docblock'><p>0x44 - alarm A sub second register</p>
+</div><span id="structfield.alrmbssr" class="structfield small-section-header">
+                           <a href="#structfield.alrmbssr" class="anchor field"></a>
+                           <span id="alrmbssr.v" class='invisible'>
+                           <code>alrmbssr: <a class="struct" href="../../stm32f40x/rtc/struct.ALRMBSSR.html" title="struct stm32f40x::rtc::ALRMBSSR">ALRMBSSR</a></code>
+                           </span></span><div class='docblock'><p>0x48 - alarm B sub second register</p>
+</div><span id="structfield.bkp0r" class="structfield small-section-header">
+                           <a href="#structfield.bkp0r" class="anchor field"></a>
+                           <span id="bkp0r.v" class='invisible'>
+                           <code>bkp0r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP0R.html" title="struct stm32f40x::rtc::BKP0R">BKP0R</a></code>
+                           </span></span><div class='docblock'><p>0x50 - backup register</p>
+</div><span id="structfield.bkp1r" class="structfield small-section-header">
+                           <a href="#structfield.bkp1r" class="anchor field"></a>
+                           <span id="bkp1r.v" class='invisible'>
+                           <code>bkp1r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP1R.html" title="struct stm32f40x::rtc::BKP1R">BKP1R</a></code>
+                           </span></span><div class='docblock'><p>0x54 - backup register</p>
+</div><span id="structfield.bkp2r" class="structfield small-section-header">
+                           <a href="#structfield.bkp2r" class="anchor field"></a>
+                           <span id="bkp2r.v" class='invisible'>
+                           <code>bkp2r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP2R.html" title="struct stm32f40x::rtc::BKP2R">BKP2R</a></code>
+                           </span></span><div class='docblock'><p>0x58 - backup register</p>
+</div><span id="structfield.bkp3r" class="structfield small-section-header">
+                           <a href="#structfield.bkp3r" class="anchor field"></a>
+                           <span id="bkp3r.v" class='invisible'>
+                           <code>bkp3r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP3R.html" title="struct stm32f40x::rtc::BKP3R">BKP3R</a></code>
+                           </span></span><div class='docblock'><p>0x5c - backup register</p>
+</div><span id="structfield.bkp4r" class="structfield small-section-header">
+                           <a href="#structfield.bkp4r" class="anchor field"></a>
+                           <span id="bkp4r.v" class='invisible'>
+                           <code>bkp4r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP4R.html" title="struct stm32f40x::rtc::BKP4R">BKP4R</a></code>
+                           </span></span><div class='docblock'><p>0x60 - backup register</p>
+</div><span id="structfield.bkp5r" class="structfield small-section-header">
+                           <a href="#structfield.bkp5r" class="anchor field"></a>
+                           <span id="bkp5r.v" class='invisible'>
+                           <code>bkp5r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP5R.html" title="struct stm32f40x::rtc::BKP5R">BKP5R</a></code>
+                           </span></span><div class='docblock'><p>0x64 - backup register</p>
+</div><span id="structfield.bkp6r" class="structfield small-section-header">
+                           <a href="#structfield.bkp6r" class="anchor field"></a>
+                           <span id="bkp6r.v" class='invisible'>
+                           <code>bkp6r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP6R.html" title="struct stm32f40x::rtc::BKP6R">BKP6R</a></code>
+                           </span></span><div class='docblock'><p>0x68 - backup register</p>
+</div><span id="structfield.bkp7r" class="structfield small-section-header">
+                           <a href="#structfield.bkp7r" class="anchor field"></a>
+                           <span id="bkp7r.v" class='invisible'>
+                           <code>bkp7r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP7R.html" title="struct stm32f40x::rtc::BKP7R">BKP7R</a></code>
+                           </span></span><div class='docblock'><p>0x6c - backup register</p>
+</div><span id="structfield.bkp8r" class="structfield small-section-header">
+                           <a href="#structfield.bkp8r" class="anchor field"></a>
+                           <span id="bkp8r.v" class='invisible'>
+                           <code>bkp8r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP8R.html" title="struct stm32f40x::rtc::BKP8R">BKP8R</a></code>
+                           </span></span><div class='docblock'><p>0x70 - backup register</p>
+</div><span id="structfield.bkp9r" class="structfield small-section-header">
+                           <a href="#structfield.bkp9r" class="anchor field"></a>
+                           <span id="bkp9r.v" class='invisible'>
+                           <code>bkp9r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP9R.html" title="struct stm32f40x::rtc::BKP9R">BKP9R</a></code>
+                           </span></span><div class='docblock'><p>0x74 - backup register</p>
+</div><span id="structfield.bkp10r" class="structfield small-section-header">
+                           <a href="#structfield.bkp10r" class="anchor field"></a>
+                           <span id="bkp10r.v" class='invisible'>
+                           <code>bkp10r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP10R.html" title="struct stm32f40x::rtc::BKP10R">BKP10R</a></code>
+                           </span></span><div class='docblock'><p>0x78 - backup register</p>
+</div><span id="structfield.bkp11r" class="structfield small-section-header">
+                           <a href="#structfield.bkp11r" class="anchor field"></a>
+                           <span id="bkp11r.v" class='invisible'>
+                           <code>bkp11r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP11R.html" title="struct stm32f40x::rtc::BKP11R">BKP11R</a></code>
+                           </span></span><div class='docblock'><p>0x7c - backup register</p>
+</div><span id="structfield.bkp12r" class="structfield small-section-header">
+                           <a href="#structfield.bkp12r" class="anchor field"></a>
+                           <span id="bkp12r.v" class='invisible'>
+                           <code>bkp12r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP12R.html" title="struct stm32f40x::rtc::BKP12R">BKP12R</a></code>
+                           </span></span><div class='docblock'><p>0x80 - backup register</p>
+</div><span id="structfield.bkp13r" class="structfield small-section-header">
+                           <a href="#structfield.bkp13r" class="anchor field"></a>
+                           <span id="bkp13r.v" class='invisible'>
+                           <code>bkp13r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP13R.html" title="struct stm32f40x::rtc::BKP13R">BKP13R</a></code>
+                           </span></span><div class='docblock'><p>0x84 - backup register</p>
+</div><span id="structfield.bkp14r" class="structfield small-section-header">
+                           <a href="#structfield.bkp14r" class="anchor field"></a>
+                           <span id="bkp14r.v" class='invisible'>
+                           <code>bkp14r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP14R.html" title="struct stm32f40x::rtc::BKP14R">BKP14R</a></code>
+                           </span></span><div class='docblock'><p>0x88 - backup register</p>
+</div><span id="structfield.bkp15r" class="structfield small-section-header">
+                           <a href="#structfield.bkp15r" class="anchor field"></a>
+                           <span id="bkp15r.v" class='invisible'>
+                           <code>bkp15r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP15R.html" title="struct stm32f40x::rtc::BKP15R">BKP15R</a></code>
+                           </span></span><div class='docblock'><p>0x8c - backup register</p>
+</div><span id="structfield.bkp16r" class="structfield small-section-header">
+                           <a href="#structfield.bkp16r" class="anchor field"></a>
+                           <span id="bkp16r.v" class='invisible'>
+                           <code>bkp16r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP16R.html" title="struct stm32f40x::rtc::BKP16R">BKP16R</a></code>
+                           </span></span><div class='docblock'><p>0x90 - backup register</p>
+</div><span id="structfield.bkp17r" class="structfield small-section-header">
+                           <a href="#structfield.bkp17r" class="anchor field"></a>
+                           <span id="bkp17r.v" class='invisible'>
+                           <code>bkp17r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP17R.html" title="struct stm32f40x::rtc::BKP17R">BKP17R</a></code>
+                           </span></span><div class='docblock'><p>0x94 - backup register</p>
+</div><span id="structfield.bkp18r" class="structfield small-section-header">
+                           <a href="#structfield.bkp18r" class="anchor field"></a>
+                           <span id="bkp18r.v" class='invisible'>
+                           <code>bkp18r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP18R.html" title="struct stm32f40x::rtc::BKP18R">BKP18R</a></code>
+                           </span></span><div class='docblock'><p>0x98 - backup register</p>
+</div><span id="structfield.bkp19r" class="structfield small-section-header">
+                           <a href="#structfield.bkp19r" class="anchor field"></a>
+                           <span id="bkp19r.v" class='invisible'>
+                           <code>bkp19r: <a class="struct" href="../../stm32f40x/rtc/struct.BKP19R.html" title="struct stm32f40x::rtc::BKP19R">BKP19R</a></code>
+                           </span></span><div class='docblock'><p>0x9c - backup register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/rtc/struct.RegisterBlock.html" title="struct stm32f40x::rtc::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/rtc/struct.RegisterBlock.html" title="struct stm32f40x::rtc::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

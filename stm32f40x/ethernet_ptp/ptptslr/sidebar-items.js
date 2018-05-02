@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["R","Value read from the register"],["STPNSR","Value of the field"],["STSSR","Value of the field"]]});

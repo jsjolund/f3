@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["FNER","Value of the field"],["HSYNCR","Value of the field"],["R","Value read from the register"],["VSYNCR","Value of the field"]]});

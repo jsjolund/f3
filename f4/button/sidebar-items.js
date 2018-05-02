@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["BUTTON","Button connected to pin PC13"]],"fn":[["init","Initializes the user button with interrupt EXTI15_10"]],"struct":[["PC13","Pin PC13. There's a button connected to this pin"]]});

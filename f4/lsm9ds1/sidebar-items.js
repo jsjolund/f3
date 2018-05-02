@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["AccelSettings","Accelerometer settings"],["GyroSettings","Gyroscope settings"],["ImuSettings","Settings for lsm9ds1"],["Lsm9ds1","LSM9DS1 for SPI communication"],["MagSettings","Magnetometer settings"]]});

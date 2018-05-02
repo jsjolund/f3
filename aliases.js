@@ -1,0 +1,17 @@
+var ALIASES = {};
+ALIASES['aligned'] = {};
+ALIASES['bare_metal'] = {};
+ALIASES['cast'] = {};
+ALIASES['cortex_m'] = {};
+ALIASES['cortex_m_rt'] = {};
+ALIASES['cortex_m_semihosting'] = {};
+ALIASES['either'] = {};
+ALIASES['embedded_hal'] = {};
+ALIASES['f4'] = {};
+ALIASES['m'] = {};
+ALIASES['nb'] = {};
+ALIASES['r0'] = {};
+ALIASES['static_ref'] = {};
+ALIASES['stm32f40x'] = {};
+ALIASES['vcell'] = {};
+ALIASES['volatile_register'] = {};

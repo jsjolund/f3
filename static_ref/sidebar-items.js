@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Static","A value stored in a `static` variable"]]});

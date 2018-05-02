@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::ethernet_mac::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.maccr">maccr</a><a href="#structfield.macffr">macffr</a><a href="#structfield.machthr">machthr</a><a href="#structfield.machtlr">machtlr</a><a href="#structfield.macmiiar">macmiiar</a><a href="#structfield.macmiidr">macmiidr</a><a href="#structfield.macfcr">macfcr</a><a href="#structfield.macvlantr">macvlantr</a><a href="#structfield.macpmtcsr">macpmtcsr</a><a href="#structfield.macdbgr">macdbgr</a><a href="#structfield.macsr">macsr</a><a href="#structfield.macimr">macimr</a><a href="#structfield.maca0hr">maca0hr</a><a href="#structfield.maca0lr">maca0lr</a><a href="#structfield.maca1hr">maca1hr</a><a href="#structfield.maca1lr">maca1lr</a><a href="#structfield.maca2hr">maca2hr</a><a href="#structfield.maca2lr">maca2lr</a><a href="#structfield.maca3hr">maca3hr</a><a href="#structfield.maca3lr">maca3lr</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>ethernet_mac</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>ethernet_mac</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#153081-153119' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub maccr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACCR.html" title="struct stm32f40x::ethernet_mac::MACCR">MACCR</a>,
+    pub macffr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACFFR.html" title="struct stm32f40x::ethernet_mac::MACFFR">MACFFR</a>,
+    pub machthr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACHTHR.html" title="struct stm32f40x::ethernet_mac::MACHTHR">MACHTHR</a>,
+    pub machtlr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACHTLR.html" title="struct stm32f40x::ethernet_mac::MACHTLR">MACHTLR</a>,
+    pub macmiiar: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACMIIAR.html" title="struct stm32f40x::ethernet_mac::MACMIIAR">MACMIIAR</a>,
+    pub macmiidr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACMIIDR.html" title="struct stm32f40x::ethernet_mac::MACMIIDR">MACMIIDR</a>,
+    pub macfcr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACFCR.html" title="struct stm32f40x::ethernet_mac::MACFCR">MACFCR</a>,
+    pub macvlantr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACVLANTR.html" title="struct stm32f40x::ethernet_mac::MACVLANTR">MACVLANTR</a>,
+    pub macpmtcsr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACPMTCSR.html" title="struct stm32f40x::ethernet_mac::MACPMTCSR">MACPMTCSR</a>,
+    pub macdbgr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACDBGR.html" title="struct stm32f40x::ethernet_mac::MACDBGR">MACDBGR</a>,
+    pub macsr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACSR.html" title="struct stm32f40x::ethernet_mac::MACSR">MACSR</a>,
+    pub macimr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACIMR.html" title="struct stm32f40x::ethernet_mac::MACIMR">MACIMR</a>,
+    pub maca0hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA0HR.html" title="struct stm32f40x::ethernet_mac::MACA0HR">MACA0HR</a>,
+    pub maca0lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA0LR.html" title="struct stm32f40x::ethernet_mac::MACA0LR">MACA0LR</a>,
+    pub maca1hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA1HR.html" title="struct stm32f40x::ethernet_mac::MACA1HR">MACA1HR</a>,
+    pub maca1lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA1LR.html" title="struct stm32f40x::ethernet_mac::MACA1LR">MACA1LR</a>,
+    pub maca2hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA2HR.html" title="struct stm32f40x::ethernet_mac::MACA2HR">MACA2HR</a>,
+    pub maca2lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA2LR.html" title="struct stm32f40x::ethernet_mac::MACA2LR">MACA2LR</a>,
+    pub maca3hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA3HR.html" title="struct stm32f40x::ethernet_mac::MACA3HR">MACA3HR</a>,
+    pub maca3lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA3LR.html" title="struct stm32f40x::ethernet_mac::MACA3LR">MACA3LR</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.maccr" class="structfield small-section-header">
+                           <a href="#structfield.maccr" class="anchor field"></a>
+                           <span id="maccr.v" class='invisible'>
+                           <code>maccr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACCR.html" title="struct stm32f40x::ethernet_mac::MACCR">MACCR</a></code>
+                           </span></span><div class='docblock'><p>0x00 - Ethernet MAC configuration register</p>
+</div><span id="structfield.macffr" class="structfield small-section-header">
+                           <a href="#structfield.macffr" class="anchor field"></a>
+                           <span id="macffr.v" class='invisible'>
+                           <code>macffr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACFFR.html" title="struct stm32f40x::ethernet_mac::MACFFR">MACFFR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - Ethernet MAC frame filter register</p>
+</div><span id="structfield.machthr" class="structfield small-section-header">
+                           <a href="#structfield.machthr" class="anchor field"></a>
+                           <span id="machthr.v" class='invisible'>
+                           <code>machthr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACHTHR.html" title="struct stm32f40x::ethernet_mac::MACHTHR">MACHTHR</a></code>
+                           </span></span><div class='docblock'><p>0x08 - Ethernet MAC hash table high register</p>
+</div><span id="structfield.machtlr" class="structfield small-section-header">
+                           <a href="#structfield.machtlr" class="anchor field"></a>
+                           <span id="machtlr.v" class='invisible'>
+                           <code>machtlr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACHTLR.html" title="struct stm32f40x::ethernet_mac::MACHTLR">MACHTLR</a></code>
+                           </span></span><div class='docblock'><p>0x0c - Ethernet MAC hash table low register</p>
+</div><span id="structfield.macmiiar" class="structfield small-section-header">
+                           <a href="#structfield.macmiiar" class="anchor field"></a>
+                           <span id="macmiiar.v" class='invisible'>
+                           <code>macmiiar: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACMIIAR.html" title="struct stm32f40x::ethernet_mac::MACMIIAR">MACMIIAR</a></code>
+                           </span></span><div class='docblock'><p>0x10 - Ethernet MAC MII address register</p>
+</div><span id="structfield.macmiidr" class="structfield small-section-header">
+                           <a href="#structfield.macmiidr" class="anchor field"></a>
+                           <span id="macmiidr.v" class='invisible'>
+                           <code>macmiidr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACMIIDR.html" title="struct stm32f40x::ethernet_mac::MACMIIDR">MACMIIDR</a></code>
+                           </span></span><div class='docblock'><p>0x14 - Ethernet MAC MII data register</p>
+</div><span id="structfield.macfcr" class="structfield small-section-header">
+                           <a href="#structfield.macfcr" class="anchor field"></a>
+                           <span id="macfcr.v" class='invisible'>
+                           <code>macfcr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACFCR.html" title="struct stm32f40x::ethernet_mac::MACFCR">MACFCR</a></code>
+                           </span></span><div class='docblock'><p>0x18 - Ethernet MAC flow control register</p>
+</div><span id="structfield.macvlantr" class="structfield small-section-header">
+                           <a href="#structfield.macvlantr" class="anchor field"></a>
+                           <span id="macvlantr.v" class='invisible'>
+                           <code>macvlantr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACVLANTR.html" title="struct stm32f40x::ethernet_mac::MACVLANTR">MACVLANTR</a></code>
+                           </span></span><div class='docblock'><p>0x1c - Ethernet MAC VLAN tag register</p>
+</div><span id="structfield.macpmtcsr" class="structfield small-section-header">
+                           <a href="#structfield.macpmtcsr" class="anchor field"></a>
+                           <span id="macpmtcsr.v" class='invisible'>
+                           <code>macpmtcsr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACPMTCSR.html" title="struct stm32f40x::ethernet_mac::MACPMTCSR">MACPMTCSR</a></code>
+                           </span></span><div class='docblock'><p>0x2c - Ethernet MAC PMT control and status register</p>
+</div><span id="structfield.macdbgr" class="structfield small-section-header">
+                           <a href="#structfield.macdbgr" class="anchor field"></a>
+                           <span id="macdbgr.v" class='invisible'>
+                           <code>macdbgr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACDBGR.html" title="struct stm32f40x::ethernet_mac::MACDBGR">MACDBGR</a></code>
+                           </span></span><div class='docblock'><p>0x34 - Ethernet MAC debug register</p>
+</div><span id="structfield.macsr" class="structfield small-section-header">
+                           <a href="#structfield.macsr" class="anchor field"></a>
+                           <span id="macsr.v" class='invisible'>
+                           <code>macsr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACSR.html" title="struct stm32f40x::ethernet_mac::MACSR">MACSR</a></code>
+                           </span></span><div class='docblock'><p>0x38 - Ethernet MAC interrupt status register</p>
+</div><span id="structfield.macimr" class="structfield small-section-header">
+                           <a href="#structfield.macimr" class="anchor field"></a>
+                           <span id="macimr.v" class='invisible'>
+                           <code>macimr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACIMR.html" title="struct stm32f40x::ethernet_mac::MACIMR">MACIMR</a></code>
+                           </span></span><div class='docblock'><p>0x3c - Ethernet MAC interrupt mask register</p>
+</div><span id="structfield.maca0hr" class="structfield small-section-header">
+                           <a href="#structfield.maca0hr" class="anchor field"></a>
+                           <span id="maca0hr.v" class='invisible'>
+                           <code>maca0hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA0HR.html" title="struct stm32f40x::ethernet_mac::MACA0HR">MACA0HR</a></code>
+                           </span></span><div class='docblock'><p>0x40 - Ethernet MAC address 0 high register</p>
+</div><span id="structfield.maca0lr" class="structfield small-section-header">
+                           <a href="#structfield.maca0lr" class="anchor field"></a>
+                           <span id="maca0lr.v" class='invisible'>
+                           <code>maca0lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA0LR.html" title="struct stm32f40x::ethernet_mac::MACA0LR">MACA0LR</a></code>
+                           </span></span><div class='docblock'><p>0x44 - Ethernet MAC address 0 low register</p>
+</div><span id="structfield.maca1hr" class="structfield small-section-header">
+                           <a href="#structfield.maca1hr" class="anchor field"></a>
+                           <span id="maca1hr.v" class='invisible'>
+                           <code>maca1hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA1HR.html" title="struct stm32f40x::ethernet_mac::MACA1HR">MACA1HR</a></code>
+                           </span></span><div class='docblock'><p>0x48 - Ethernet MAC address 1 high register</p>
+</div><span id="structfield.maca1lr" class="structfield small-section-header">
+                           <a href="#structfield.maca1lr" class="anchor field"></a>
+                           <span id="maca1lr.v" class='invisible'>
+                           <code>maca1lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA1LR.html" title="struct stm32f40x::ethernet_mac::MACA1LR">MACA1LR</a></code>
+                           </span></span><div class='docblock'><p>0x4c - Ethernet MAC address1 low register</p>
+</div><span id="structfield.maca2hr" class="structfield small-section-header">
+                           <a href="#structfield.maca2hr" class="anchor field"></a>
+                           <span id="maca2hr.v" class='invisible'>
+                           <code>maca2hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA2HR.html" title="struct stm32f40x::ethernet_mac::MACA2HR">MACA2HR</a></code>
+                           </span></span><div class='docblock'><p>0x50 - Ethernet MAC address 2 high register</p>
+</div><span id="structfield.maca2lr" class="structfield small-section-header">
+                           <a href="#structfield.maca2lr" class="anchor field"></a>
+                           <span id="maca2lr.v" class='invisible'>
+                           <code>maca2lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA2LR.html" title="struct stm32f40x::ethernet_mac::MACA2LR">MACA2LR</a></code>
+                           </span></span><div class='docblock'><p>0x54 - Ethernet MAC address 2 low register</p>
+</div><span id="structfield.maca3hr" class="structfield small-section-header">
+                           <a href="#structfield.maca3hr" class="anchor field"></a>
+                           <span id="maca3hr.v" class='invisible'>
+                           <code>maca3hr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA3HR.html" title="struct stm32f40x::ethernet_mac::MACA3HR">MACA3HR</a></code>
+                           </span></span><div class='docblock'><p>0x58 - Ethernet MAC address 3 high register</p>
+</div><span id="structfield.maca3lr" class="structfield small-section-header">
+                           <a href="#structfield.maca3lr" class="anchor field"></a>
+                           <span id="maca3lr.v" class='invisible'>
+                           <code>maca3lr: <a class="struct" href="../../stm32f40x/ethernet_mac/struct.MACA3LR.html" title="struct stm32f40x::ethernet_mac::MACA3LR">MACA3LR</a></code>
+                           </span></span><div class='docblock'><p>0x5c - Ethernet MAC address 3 low register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/ethernet_mac/struct.RegisterBlock.html" title="struct stm32f40x::ethernet_mac::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/ethernet_mac/struct.RegisterBlock.html" title="struct stm32f40x::ethernet_mac::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

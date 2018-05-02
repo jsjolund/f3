@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::ethernet_dma::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.dmabmr">dmabmr</a><a href="#structfield.dmatpdr">dmatpdr</a><a href="#structfield.dmarpdr">dmarpdr</a><a href="#structfield.dmardlar">dmardlar</a><a href="#structfield.dmatdlar">dmatdlar</a><a href="#structfield.dmasr">dmasr</a><a href="#structfield.dmaomr">dmaomr</a><a href="#structfield.dmaier">dmaier</a><a href="#structfield.dmamfbocr">dmamfbocr</a><a href="#structfield.dmarswtr">dmarswtr</a><a href="#structfield.dmachtdr">dmachtdr</a><a href="#structfield.dmachrdr">dmachrdr</a><a href="#structfield.dmachtbar">dmachtbar</a><a href="#structfield.dmachrbar">dmachrbar</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>ethernet_dma</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>ethernet_dma</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#162299' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub dmabmr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMABMR.html" title="struct stm32f40x::ethernet_dma::DMABMR">DMABMR</a>,
+    pub dmatpdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMATPDR.html" title="struct stm32f40x::ethernet_dma::DMATPDR">DMATPDR</a>,
+    pub dmarpdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMARPDR.html" title="struct stm32f40x::ethernet_dma::DMARPDR">DMARPDR</a>,
+    pub dmardlar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMARDLAR.html" title="struct stm32f40x::ethernet_dma::DMARDLAR">DMARDLAR</a>,
+    pub dmatdlar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMATDLAR.html" title="struct stm32f40x::ethernet_dma::DMATDLAR">DMATDLAR</a>,
+    pub dmasr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMASR.html" title="struct stm32f40x::ethernet_dma::DMASR">DMASR</a>,
+    pub dmaomr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMAOMR.html" title="struct stm32f40x::ethernet_dma::DMAOMR">DMAOMR</a>,
+    pub dmaier: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMAIER.html" title="struct stm32f40x::ethernet_dma::DMAIER">DMAIER</a>,
+    pub dmamfbocr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMAMFBOCR.html" title="struct stm32f40x::ethernet_dma::DMAMFBOCR">DMAMFBOCR</a>,
+    pub dmarswtr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMARSWTR.html" title="struct stm32f40x::ethernet_dma::DMARSWTR">DMARSWTR</a>,
+    pub dmachtdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHTDR.html" title="struct stm32f40x::ethernet_dma::DMACHTDR">DMACHTDR</a>,
+    pub dmachrdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHRDR.html" title="struct stm32f40x::ethernet_dma::DMACHRDR">DMACHRDR</a>,
+    pub dmachtbar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHTBAR.html" title="struct stm32f40x::ethernet_dma::DMACHTBAR">DMACHTBAR</a>,
+    pub dmachrbar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHRBAR.html" title="struct stm32f40x::ethernet_dma::DMACHRBAR">DMACHRBAR</a>,
+    // some fields omitted
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.dmabmr" class="structfield small-section-header">
+                           <a href="#structfield.dmabmr" class="anchor field"></a>
+                           <span id="dmabmr.v" class='invisible'>
+                           <code>dmabmr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMABMR.html" title="struct stm32f40x::ethernet_dma::DMABMR">DMABMR</a></code>
+                           </span></span><div class='docblock'><p>0x00 - Ethernet DMA bus mode register</p>
+</div><span id="structfield.dmatpdr" class="structfield small-section-header">
+                           <a href="#structfield.dmatpdr" class="anchor field"></a>
+                           <span id="dmatpdr.v" class='invisible'>
+                           <code>dmatpdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMATPDR.html" title="struct stm32f40x::ethernet_dma::DMATPDR">DMATPDR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - Ethernet DMA transmit poll demand register</p>
+</div><span id="structfield.dmarpdr" class="structfield small-section-header">
+                           <a href="#structfield.dmarpdr" class="anchor field"></a>
+                           <span id="dmarpdr.v" class='invisible'>
+                           <code>dmarpdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMARPDR.html" title="struct stm32f40x::ethernet_dma::DMARPDR">DMARPDR</a></code>
+                           </span></span><div class='docblock'><p>0x08 - EHERNET DMA receive poll demand register</p>
+</div><span id="structfield.dmardlar" class="structfield small-section-header">
+                           <a href="#structfield.dmardlar" class="anchor field"></a>
+                           <span id="dmardlar.v" class='invisible'>
+                           <code>dmardlar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMARDLAR.html" title="struct stm32f40x::ethernet_dma::DMARDLAR">DMARDLAR</a></code>
+                           </span></span><div class='docblock'><p>0x0c - Ethernet DMA receive descriptor list address register</p>
+</div><span id="structfield.dmatdlar" class="structfield small-section-header">
+                           <a href="#structfield.dmatdlar" class="anchor field"></a>
+                           <span id="dmatdlar.v" class='invisible'>
+                           <code>dmatdlar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMATDLAR.html" title="struct stm32f40x::ethernet_dma::DMATDLAR">DMATDLAR</a></code>
+                           </span></span><div class='docblock'><p>0x10 - Ethernet DMA transmit descriptor list address register</p>
+</div><span id="structfield.dmasr" class="structfield small-section-header">
+                           <a href="#structfield.dmasr" class="anchor field"></a>
+                           <span id="dmasr.v" class='invisible'>
+                           <code>dmasr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMASR.html" title="struct stm32f40x::ethernet_dma::DMASR">DMASR</a></code>
+                           </span></span><div class='docblock'><p>0x14 - Ethernet DMA status register</p>
+</div><span id="structfield.dmaomr" class="structfield small-section-header">
+                           <a href="#structfield.dmaomr" class="anchor field"></a>
+                           <span id="dmaomr.v" class='invisible'>
+                           <code>dmaomr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMAOMR.html" title="struct stm32f40x::ethernet_dma::DMAOMR">DMAOMR</a></code>
+                           </span></span><div class='docblock'><p>0x18 - Ethernet DMA operation mode register</p>
+</div><span id="structfield.dmaier" class="structfield small-section-header">
+                           <a href="#structfield.dmaier" class="anchor field"></a>
+                           <span id="dmaier.v" class='invisible'>
+                           <code>dmaier: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMAIER.html" title="struct stm32f40x::ethernet_dma::DMAIER">DMAIER</a></code>
+                           </span></span><div class='docblock'><p>0x1c - Ethernet DMA interrupt enable register</p>
+</div><span id="structfield.dmamfbocr" class="structfield small-section-header">
+                           <a href="#structfield.dmamfbocr" class="anchor field"></a>
+                           <span id="dmamfbocr.v" class='invisible'>
+                           <code>dmamfbocr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMAMFBOCR.html" title="struct stm32f40x::ethernet_dma::DMAMFBOCR">DMAMFBOCR</a></code>
+                           </span></span><div class='docblock'><p>0x20 - Ethernet DMA missed frame and buffer overflow counter register</p>
+</div><span id="structfield.dmarswtr" class="structfield small-section-header">
+                           <a href="#structfield.dmarswtr" class="anchor field"></a>
+                           <span id="dmarswtr.v" class='invisible'>
+                           <code>dmarswtr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMARSWTR.html" title="struct stm32f40x::ethernet_dma::DMARSWTR">DMARSWTR</a></code>
+                           </span></span><div class='docblock'><p>0x24 - Ethernet DMA receive status watchdog timer register</p>
+</div><span id="structfield.dmachtdr" class="structfield small-section-header">
+                           <a href="#structfield.dmachtdr" class="anchor field"></a>
+                           <span id="dmachtdr.v" class='invisible'>
+                           <code>dmachtdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHTDR.html" title="struct stm32f40x::ethernet_dma::DMACHTDR">DMACHTDR</a></code>
+                           </span></span><div class='docblock'><p>0x48 - Ethernet DMA current host transmit descriptor register</p>
+</div><span id="structfield.dmachrdr" class="structfield small-section-header">
+                           <a href="#structfield.dmachrdr" class="anchor field"></a>
+                           <span id="dmachrdr.v" class='invisible'>
+                           <code>dmachrdr: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHRDR.html" title="struct stm32f40x::ethernet_dma::DMACHRDR">DMACHRDR</a></code>
+                           </span></span><div class='docblock'><p>0x4c - Ethernet DMA current host receive descriptor register</p>
+</div><span id="structfield.dmachtbar" class="structfield small-section-header">
+                           <a href="#structfield.dmachtbar" class="anchor field"></a>
+                           <span id="dmachtbar.v" class='invisible'>
+                           <code>dmachtbar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHTBAR.html" title="struct stm32f40x::ethernet_dma::DMACHTBAR">DMACHTBAR</a></code>
+                           </span></span><div class='docblock'><p>0x50 - Ethernet DMA current host transmit buffer address register</p>
+</div><span id="structfield.dmachrbar" class="structfield small-section-header">
+                           <a href="#structfield.dmachrbar" class="anchor field"></a>
+                           <span id="dmachrbar.v" class='invisible'>
+                           <code>dmachrbar: <a class="struct" href="../../stm32f40x/ethernet_dma/struct.DMACHRBAR.html" title="struct stm32f40x::ethernet_dma::DMACHRBAR">DMACHRBAR</a></code>
+                           </span></span><div class='docblock'><p>0x54 - Ethernet DMA current host receive buffer address register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/ethernet_dma/struct.RegisterBlock.html" title="struct stm32f40x::ethernet_dma::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/ethernet_dma/struct.RegisterBlock.html" title="struct stm32f40x::ethernet_dma::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

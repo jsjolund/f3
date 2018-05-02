@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["CAPCNTR","Value of the field"],["R","Value read from the register"],["VLINER","Value of the field"],["W","Value to write to the register"],["_CAPCNTW","Proxy"],["_VLINEW","Proxy"]]});

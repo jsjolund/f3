@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["FEUR","Value of the field"],["FSUR","Value of the field"],["LEUR","Value of the field"],["LSUR","Value of the field"],["R","Value read from the register"],["W","Value to write to the register"],["_FEUW","Proxy"],["_FSUW","Proxy"],["_LEUW","Proxy"],["_LSUW","Proxy"]]});

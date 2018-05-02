@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["cr","power control register"],["csr","power control/status register"]],"struct":[["CR","power control register"],["CSR","power control/status register"],["RegisterBlock","Register block"]]});

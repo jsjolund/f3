@@ -1,0 +1,1436 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `can1` mod in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, can1"><title>stm32f40x::can1 - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module can1</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li></ul></div><p class='location'><a href='../index.html'>stm32f40x</a></p><script>window.sidebarCurrent = {name: 'can1', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>stm32f40x</a>::<wbr><a class="mod" href=''>can1</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#203210-328298' title='goto source code'>[src]</a></span></h1><div class='docblock'><p>Controller area network</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="btr/index.html"
+                                  title='mod stm32f40x::can1::btr'>btr</a></td>
+                           <td class='docblock-short'>
+                                <p>bit timing register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="esr/index.html"
+                                  title='mod stm32f40x::can1::esr'>esr</a></td>
+                           <td class='docblock-short'>
+                                <p>interrupt enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f0r1/index.html"
+                                  title='mod stm32f40x::can1::f0r1'>f0r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 0 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f0r2/index.html"
+                                  title='mod stm32f40x::can1::f0r2'>f0r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 0 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f10r1/index.html"
+                                  title='mod stm32f40x::can1::f10r1'>f10r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 10 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f10r2/index.html"
+                                  title='mod stm32f40x::can1::f10r2'>f10r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 10 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f11r1/index.html"
+                                  title='mod stm32f40x::can1::f11r1'>f11r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 11 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f11r2/index.html"
+                                  title='mod stm32f40x::can1::f11r2'>f11r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 11 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f12r1/index.html"
+                                  title='mod stm32f40x::can1::f12r1'>f12r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 4 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f12r2/index.html"
+                                  title='mod stm32f40x::can1::f12r2'>f12r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 12 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f13r1/index.html"
+                                  title='mod stm32f40x::can1::f13r1'>f13r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 13 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f13r2/index.html"
+                                  title='mod stm32f40x::can1::f13r2'>f13r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 13 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f14r1/index.html"
+                                  title='mod stm32f40x::can1::f14r1'>f14r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 14 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f14r2/index.html"
+                                  title='mod stm32f40x::can1::f14r2'>f14r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 14 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f15r1/index.html"
+                                  title='mod stm32f40x::can1::f15r1'>f15r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 15 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f15r2/index.html"
+                                  title='mod stm32f40x::can1::f15r2'>f15r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 15 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f16r1/index.html"
+                                  title='mod stm32f40x::can1::f16r1'>f16r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 16 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f16r2/index.html"
+                                  title='mod stm32f40x::can1::f16r2'>f16r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 16 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f17r1/index.html"
+                                  title='mod stm32f40x::can1::f17r1'>f17r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 17 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f17r2/index.html"
+                                  title='mod stm32f40x::can1::f17r2'>f17r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 17 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f18r1/index.html"
+                                  title='mod stm32f40x::can1::f18r1'>f18r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 18 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f18r2/index.html"
+                                  title='mod stm32f40x::can1::f18r2'>f18r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 18 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f19r1/index.html"
+                                  title='mod stm32f40x::can1::f19r1'>f19r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 19 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f19r2/index.html"
+                                  title='mod stm32f40x::can1::f19r2'>f19r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 19 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f1r1/index.html"
+                                  title='mod stm32f40x::can1::f1r1'>f1r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 1 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f1r2/index.html"
+                                  title='mod stm32f40x::can1::f1r2'>f1r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 1 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f20r1/index.html"
+                                  title='mod stm32f40x::can1::f20r1'>f20r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 20 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f20r2/index.html"
+                                  title='mod stm32f40x::can1::f20r2'>f20r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 20 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f21r1/index.html"
+                                  title='mod stm32f40x::can1::f21r1'>f21r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 21 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f21r2/index.html"
+                                  title='mod stm32f40x::can1::f21r2'>f21r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 21 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f22r1/index.html"
+                                  title='mod stm32f40x::can1::f22r1'>f22r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 22 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f22r2/index.html"
+                                  title='mod stm32f40x::can1::f22r2'>f22r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 22 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f23r1/index.html"
+                                  title='mod stm32f40x::can1::f23r1'>f23r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 23 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f23r2/index.html"
+                                  title='mod stm32f40x::can1::f23r2'>f23r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 23 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f24r1/index.html"
+                                  title='mod stm32f40x::can1::f24r1'>f24r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 24 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f24r2/index.html"
+                                  title='mod stm32f40x::can1::f24r2'>f24r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 24 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f25r1/index.html"
+                                  title='mod stm32f40x::can1::f25r1'>f25r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 25 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f25r2/index.html"
+                                  title='mod stm32f40x::can1::f25r2'>f25r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 25 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f26r1/index.html"
+                                  title='mod stm32f40x::can1::f26r1'>f26r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 26 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f26r2/index.html"
+                                  title='mod stm32f40x::can1::f26r2'>f26r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 26 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f27r1/index.html"
+                                  title='mod stm32f40x::can1::f27r1'>f27r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 27 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f27r2/index.html"
+                                  title='mod stm32f40x::can1::f27r2'>f27r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 27 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f2r1/index.html"
+                                  title='mod stm32f40x::can1::f2r1'>f2r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 2 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f2r2/index.html"
+                                  title='mod stm32f40x::can1::f2r2'>f2r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 2 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f3r1/index.html"
+                                  title='mod stm32f40x::can1::f3r1'>f3r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 3 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f3r2/index.html"
+                                  title='mod stm32f40x::can1::f3r2'>f3r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 3 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f4r1/index.html"
+                                  title='mod stm32f40x::can1::f4r1'>f4r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 4 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f4r2/index.html"
+                                  title='mod stm32f40x::can1::f4r2'>f4r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 4 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f5r1/index.html"
+                                  title='mod stm32f40x::can1::f5r1'>f5r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 5 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f5r2/index.html"
+                                  title='mod stm32f40x::can1::f5r2'>f5r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 5 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f6r1/index.html"
+                                  title='mod stm32f40x::can1::f6r1'>f6r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 6 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f6r2/index.html"
+                                  title='mod stm32f40x::can1::f6r2'>f6r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 6 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f7r1/index.html"
+                                  title='mod stm32f40x::can1::f7r1'>f7r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 7 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f7r2/index.html"
+                                  title='mod stm32f40x::can1::f7r2'>f7r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 7 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f8r1/index.html"
+                                  title='mod stm32f40x::can1::f8r1'>f8r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 8 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f8r2/index.html"
+                                  title='mod stm32f40x::can1::f8r2'>f8r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 8 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f9r1/index.html"
+                                  title='mod stm32f40x::can1::f9r1'>f9r1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 9 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="f9r2/index.html"
+                                  title='mod stm32f40x::can1::f9r2'>f9r2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 9 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fa1r/index.html"
+                                  title='mod stm32f40x::can1::fa1r'>fa1r</a></td>
+                           <td class='docblock-short'>
+                                <p>filter activation register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ffa1r/index.html"
+                                  title='mod stm32f40x::can1::ffa1r'>ffa1r</a></td>
+                           <td class='docblock-short'>
+                                <p>filter FIFO assignment register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fm1r/index.html"
+                                  title='mod stm32f40x::can1::fm1r'>fm1r</a></td>
+                           <td class='docblock-short'>
+                                <p>filter mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fmr/index.html"
+                                  title='mod stm32f40x::can1::fmr'>fmr</a></td>
+                           <td class='docblock-short'>
+                                <p>filter master register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="fs1r/index.html"
+                                  title='mod stm32f40x::can1::fs1r'>fs1r</a></td>
+                           <td class='docblock-short'>
+                                <p>filter scale register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ier/index.html"
+                                  title='mod stm32f40x::can1::ier'>ier</a></td>
+                           <td class='docblock-short'>
+                                <p>interrupt enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="mcr/index.html"
+                                  title='mod stm32f40x::can1::mcr'>mcr</a></td>
+                           <td class='docblock-short'>
+                                <p>master control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="msr/index.html"
+                                  title='mod stm32f40x::can1::msr'>msr</a></td>
+                           <td class='docblock-short'>
+                                <p>master status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rdh0r/index.html"
+                                  title='mod stm32f40x::can1::rdh0r'>rdh0r</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rdh1r/index.html"
+                                  title='mod stm32f40x::can1::rdh1r'>rdh1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rdl0r/index.html"
+                                  title='mod stm32f40x::can1::rdl0r'>rdl0r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rdl1r/index.html"
+                                  title='mod stm32f40x::can1::rdl1r'>rdl1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rdt0r/index.html"
+                                  title='mod stm32f40x::can1::rdt0r'>rdt0r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rdt1r/index.html"
+                                  title='mod stm32f40x::can1::rdt1r'>rdt1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rf0r/index.html"
+                                  title='mod stm32f40x::can1::rf0r'>rf0r</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO 0 register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="rf1r/index.html"
+                                  title='mod stm32f40x::can1::rf1r'>rf1r</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO 1 register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ri0r/index.html"
+                                  title='mod stm32f40x::can1::ri0r'>ri0r</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ri1r/index.html"
+                                  title='mod stm32f40x::can1::ri1r'>ri1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdh0r/index.html"
+                                  title='mod stm32f40x::can1::tdh0r'>tdh0r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdh1r/index.html"
+                                  title='mod stm32f40x::can1::tdh1r'>tdh1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdh2r/index.html"
+                                  title='mod stm32f40x::can1::tdh2r'>tdh2r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdl0r/index.html"
+                                  title='mod stm32f40x::can1::tdl0r'>tdl0r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdl1r/index.html"
+                                  title='mod stm32f40x::can1::tdl1r'>tdl1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdl2r/index.html"
+                                  title='mod stm32f40x::can1::tdl2r'>tdl2r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdt0r/index.html"
+                                  title='mod stm32f40x::can1::tdt0r'>tdt0r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data length control and time stamp register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdt1r/index.html"
+                                  title='mod stm32f40x::can1::tdt1r'>tdt1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data length control and time stamp register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tdt2r/index.html"
+                                  title='mod stm32f40x::can1::tdt2r'>tdt2r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data length control and time stamp register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ti0r/index.html"
+                                  title='mod stm32f40x::can1::ti0r'>ti0r</a></td>
+                           <td class='docblock-short'>
+                                <p>TX mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ti1r/index.html"
+                                  title='mod stm32f40x::can1::ti1r'>ti1r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ti2r/index.html"
+                                  title='mod stm32f40x::can1::ti2r'>ti2r</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="tsr/index.html"
+                                  title='mod stm32f40x::can1::tsr'>tsr</a></td>
+                           <td class='docblock-short'>
+                                <p>transmit status register</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BTR.html"
+                                  title='struct stm32f40x::can1::BTR'>BTR</a></td>
+                           <td class='docblock-short'>
+                                <p>bit timing register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ESR.html"
+                                  title='struct stm32f40x::can1::ESR'>ESR</a></td>
+                           <td class='docblock-short'>
+                                <p>interrupt enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F0R1.html"
+                                  title='struct stm32f40x::can1::F0R1'>F0R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 0 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F0R2.html"
+                                  title='struct stm32f40x::can1::F0R2'>F0R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 0 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F10R1.html"
+                                  title='struct stm32f40x::can1::F10R1'>F10R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 10 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F10R2.html"
+                                  title='struct stm32f40x::can1::F10R2'>F10R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 10 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F11R1.html"
+                                  title='struct stm32f40x::can1::F11R1'>F11R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 11 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F11R2.html"
+                                  title='struct stm32f40x::can1::F11R2'>F11R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 11 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F12R1.html"
+                                  title='struct stm32f40x::can1::F12R1'>F12R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 4 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F12R2.html"
+                                  title='struct stm32f40x::can1::F12R2'>F12R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 12 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F13R1.html"
+                                  title='struct stm32f40x::can1::F13R1'>F13R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 13 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F13R2.html"
+                                  title='struct stm32f40x::can1::F13R2'>F13R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 13 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F14R1.html"
+                                  title='struct stm32f40x::can1::F14R1'>F14R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 14 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F14R2.html"
+                                  title='struct stm32f40x::can1::F14R2'>F14R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 14 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F15R1.html"
+                                  title='struct stm32f40x::can1::F15R1'>F15R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 15 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F15R2.html"
+                                  title='struct stm32f40x::can1::F15R2'>F15R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 15 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F16R1.html"
+                                  title='struct stm32f40x::can1::F16R1'>F16R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 16 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F16R2.html"
+                                  title='struct stm32f40x::can1::F16R2'>F16R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 16 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F17R1.html"
+                                  title='struct stm32f40x::can1::F17R1'>F17R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 17 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F17R2.html"
+                                  title='struct stm32f40x::can1::F17R2'>F17R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 17 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F18R1.html"
+                                  title='struct stm32f40x::can1::F18R1'>F18R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 18 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F18R2.html"
+                                  title='struct stm32f40x::can1::F18R2'>F18R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 18 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F19R1.html"
+                                  title='struct stm32f40x::can1::F19R1'>F19R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 19 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F19R2.html"
+                                  title='struct stm32f40x::can1::F19R2'>F19R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 19 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F1R1.html"
+                                  title='struct stm32f40x::can1::F1R1'>F1R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 1 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F1R2.html"
+                                  title='struct stm32f40x::can1::F1R2'>F1R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 1 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F20R1.html"
+                                  title='struct stm32f40x::can1::F20R1'>F20R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 20 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F20R2.html"
+                                  title='struct stm32f40x::can1::F20R2'>F20R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 20 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F21R1.html"
+                                  title='struct stm32f40x::can1::F21R1'>F21R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 21 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F21R2.html"
+                                  title='struct stm32f40x::can1::F21R2'>F21R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 21 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F22R1.html"
+                                  title='struct stm32f40x::can1::F22R1'>F22R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 22 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F22R2.html"
+                                  title='struct stm32f40x::can1::F22R2'>F22R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 22 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F23R1.html"
+                                  title='struct stm32f40x::can1::F23R1'>F23R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 23 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F23R2.html"
+                                  title='struct stm32f40x::can1::F23R2'>F23R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 23 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F24R1.html"
+                                  title='struct stm32f40x::can1::F24R1'>F24R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 24 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F24R2.html"
+                                  title='struct stm32f40x::can1::F24R2'>F24R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 24 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F25R1.html"
+                                  title='struct stm32f40x::can1::F25R1'>F25R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 25 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F25R2.html"
+                                  title='struct stm32f40x::can1::F25R2'>F25R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 25 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F26R1.html"
+                                  title='struct stm32f40x::can1::F26R1'>F26R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 26 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F26R2.html"
+                                  title='struct stm32f40x::can1::F26R2'>F26R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 26 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F27R1.html"
+                                  title='struct stm32f40x::can1::F27R1'>F27R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 27 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F27R2.html"
+                                  title='struct stm32f40x::can1::F27R2'>F27R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 27 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F2R1.html"
+                                  title='struct stm32f40x::can1::F2R1'>F2R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 2 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F2R2.html"
+                                  title='struct stm32f40x::can1::F2R2'>F2R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 2 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F3R1.html"
+                                  title='struct stm32f40x::can1::F3R1'>F3R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 3 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F3R2.html"
+                                  title='struct stm32f40x::can1::F3R2'>F3R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 3 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F4R1.html"
+                                  title='struct stm32f40x::can1::F4R1'>F4R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 4 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F4R2.html"
+                                  title='struct stm32f40x::can1::F4R2'>F4R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 4 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F5R1.html"
+                                  title='struct stm32f40x::can1::F5R1'>F5R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 5 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F5R2.html"
+                                  title='struct stm32f40x::can1::F5R2'>F5R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 5 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F6R1.html"
+                                  title='struct stm32f40x::can1::F6R1'>F6R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 6 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F6R2.html"
+                                  title='struct stm32f40x::can1::F6R2'>F6R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 6 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F7R1.html"
+                                  title='struct stm32f40x::can1::F7R1'>F7R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 7 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F7R2.html"
+                                  title='struct stm32f40x::can1::F7R2'>F7R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 7 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F8R1.html"
+                                  title='struct stm32f40x::can1::F8R1'>F8R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 8 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F8R2.html"
+                                  title='struct stm32f40x::can1::F8R2'>F8R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 8 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F9R1.html"
+                                  title='struct stm32f40x::can1::F9R1'>F9R1</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 9 register 1</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F9R2.html"
+                                  title='struct stm32f40x::can1::F9R2'>F9R2</a></td>
+                           <td class='docblock-short'>
+                                <p>Filter bank 9 register 2</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FA1R.html"
+                                  title='struct stm32f40x::can1::FA1R'>FA1R</a></td>
+                           <td class='docblock-short'>
+                                <p>filter activation register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FFA1R.html"
+                                  title='struct stm32f40x::can1::FFA1R'>FFA1R</a></td>
+                           <td class='docblock-short'>
+                                <p>filter FIFO assignment register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FM1R.html"
+                                  title='struct stm32f40x::can1::FM1R'>FM1R</a></td>
+                           <td class='docblock-short'>
+                                <p>filter mode register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FMR.html"
+                                  title='struct stm32f40x::can1::FMR'>FMR</a></td>
+                           <td class='docblock-short'>
+                                <p>filter master register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FS1R.html"
+                                  title='struct stm32f40x::can1::FS1R'>FS1R</a></td>
+                           <td class='docblock-short'>
+                                <p>filter scale register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IER.html"
+                                  title='struct stm32f40x::can1::IER'>IER</a></td>
+                           <td class='docblock-short'>
+                                <p>interrupt enable register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MCR.html"
+                                  title='struct stm32f40x::can1::MCR'>MCR</a></td>
+                           <td class='docblock-short'>
+                                <p>master control register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MSR.html"
+                                  title='struct stm32f40x::can1::MSR'>MSR</a></td>
+                           <td class='docblock-short'>
+                                <p>master status register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDH0R.html"
+                                  title='struct stm32f40x::can1::RDH0R'>RDH0R</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDH1R.html"
+                                  title='struct stm32f40x::can1::RDH1R'>RDH1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDL0R.html"
+                                  title='struct stm32f40x::can1::RDL0R'>RDL0R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDL1R.html"
+                                  title='struct stm32f40x::can1::RDL1R'>RDL1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDT0R.html"
+                                  title='struct stm32f40x::can1::RDT0R'>RDT0R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RDT1R.html"
+                                  title='struct stm32f40x::can1::RDT1R'>RDT1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RF0R.html"
+                                  title='struct stm32f40x::can1::RF0R'>RF0R</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO 0 register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RF1R.html"
+                                  title='struct stm32f40x::can1::RF1R'>RF1R</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO 1 register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RI0R.html"
+                                  title='struct stm32f40x::can1::RI0R'>RI0R</a></td>
+                           <td class='docblock-short'>
+                                <p>receive FIFO mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RI1R.html"
+                                  title='struct stm32f40x::can1::RI1R'>RI1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RegisterBlock.html"
+                                  title='struct stm32f40x::can1::RegisterBlock'>RegisterBlock</a></td>
+                           <td class='docblock-short'>
+                                <p>Register block</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDH0R.html"
+                                  title='struct stm32f40x::can1::TDH0R'>TDH0R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDH1R.html"
+                                  title='struct stm32f40x::can1::TDH1R'>TDH1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDH2R.html"
+                                  title='struct stm32f40x::can1::TDH2R'>TDH2R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data high register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDL0R.html"
+                                  title='struct stm32f40x::can1::TDL0R'>TDL0R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDL1R.html"
+                                  title='struct stm32f40x::can1::TDL1R'>TDL1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDL2R.html"
+                                  title='struct stm32f40x::can1::TDL2R'>TDL2R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data low register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDT0R.html"
+                                  title='struct stm32f40x::can1::TDT0R'>TDT0R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data length control and time stamp register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDT1R.html"
+                                  title='struct stm32f40x::can1::TDT1R'>TDT1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data length control and time stamp register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TDT2R.html"
+                                  title='struct stm32f40x::can1::TDT2R'>TDT2R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox data length control and time stamp register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TI0R.html"
+                                  title='struct stm32f40x::can1::TI0R'>TI0R</a></td>
+                           <td class='docblock-short'>
+                                <p>TX mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TI1R.html"
+                                  title='struct stm32f40x::can1::TI1R'>TI1R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TI2R.html"
+                                  title='struct stm32f40x::can1::TI2R'>TI2R</a></td>
+                           <td class='docblock-short'>
+                                <p>mailbox identifier register</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TSR.html"
+                                  title='struct stm32f40x::can1::TSR'>TSR</a></td>
+                           <td class='docblock-short'>
+                                <p>transmit status register</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

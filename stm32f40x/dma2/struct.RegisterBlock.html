@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `RegisterBlock` struct in crate `stm32f40x`."><meta name="keywords" content="rust, rustlang, rust-lang, RegisterBlock"><title>stm32f40x::dma2::RegisterBlock - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc struct"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Struct RegisterBlock</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#fields">Fields</a><div class="sidebar-links"><a href="#structfield.lisr">lisr</a><a href="#structfield.hisr">hisr</a><a href="#structfield.lifcr">lifcr</a><a href="#structfield.hifcr">hifcr</a><a href="#structfield.s0cr">s0cr</a><a href="#structfield.s0ndtr">s0ndtr</a><a href="#structfield.s0par">s0par</a><a href="#structfield.s0m0ar">s0m0ar</a><a href="#structfield.s0m1ar">s0m1ar</a><a href="#structfield.s0fcr">s0fcr</a><a href="#structfield.s1cr">s1cr</a><a href="#structfield.s1ndtr">s1ndtr</a><a href="#structfield.s1par">s1par</a><a href="#structfield.s1m0ar">s1m0ar</a><a href="#structfield.s1m1ar">s1m1ar</a><a href="#structfield.s1fcr">s1fcr</a><a href="#structfield.s2cr">s2cr</a><a href="#structfield.s2ndtr">s2ndtr</a><a href="#structfield.s2par">s2par</a><a href="#structfield.s2m0ar">s2m0ar</a><a href="#structfield.s2m1ar">s2m1ar</a><a href="#structfield.s2fcr">s2fcr</a><a href="#structfield.s3cr">s3cr</a><a href="#structfield.s3ndtr">s3ndtr</a><a href="#structfield.s3par">s3par</a><a href="#structfield.s3m0ar">s3m0ar</a><a href="#structfield.s3m1ar">s3m1ar</a><a href="#structfield.s3fcr">s3fcr</a><a href="#structfield.s4cr">s4cr</a><a href="#structfield.s4ndtr">s4ndtr</a><a href="#structfield.s4par">s4par</a><a href="#structfield.s4m0ar">s4m0ar</a><a href="#structfield.s4m1ar">s4m1ar</a><a href="#structfield.s4fcr">s4fcr</a><a href="#structfield.s5cr">s5cr</a><a href="#structfield.s5ndtr">s5ndtr</a><a href="#structfield.s5par">s5par</a><a href="#structfield.s5m0ar">s5m0ar</a><a href="#structfield.s5m1ar">s5m1ar</a><a href="#structfield.s5fcr">s5fcr</a><a href="#structfield.s6cr">s6cr</a><a href="#structfield.s6ndtr">s6ndtr</a><a href="#structfield.s6par">s6par</a><a href="#structfield.s6m0ar">s6m0ar</a><a href="#structfield.s6m1ar">s6m1ar</a><a href="#structfield.s6fcr">s6fcr</a><a href="#structfield.s7cr">s7cr</a><a href="#structfield.s7ndtr">s7ndtr</a><a href="#structfield.s7par">s7par</a><a href="#structfield.s7m0ar">s7m0ar</a><a href="#structfield.s7m1ar">s7m1ar</a><a href="#structfield.s7fcr">s7fcr</a></div><a class="sidebar-title" href="#synthetic-implementations">Auto Trait Implementations</a><div class="sidebar-links"><a href="#impl-Send">Send</a><a href="#impl-Sync">!Sync</a></div></div><p class='location'><a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>dma2</a></p><script>window.sidebarCurrent = {name: 'RegisterBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>stm32f40x</a>::<wbr><a href='index.html'>dma2</a>::<wbr><a class="struct" href=''>RegisterBlock</a></span><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/stm32f40x/lib.rs.html#16293-16346' title='goto source code'>[src]</a></span></h1><div class="docblock type-decl"><pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct RegisterBlock {
+    pub lisr: <a class="struct" href="../../stm32f40x/dma2/struct.LISR.html" title="struct stm32f40x::dma2::LISR">LISR</a>,
+    pub hisr: <a class="struct" href="../../stm32f40x/dma2/struct.HISR.html" title="struct stm32f40x::dma2::HISR">HISR</a>,
+    pub lifcr: <a class="struct" href="../../stm32f40x/dma2/struct.LIFCR.html" title="struct stm32f40x::dma2::LIFCR">LIFCR</a>,
+    pub hifcr: <a class="struct" href="../../stm32f40x/dma2/struct.HIFCR.html" title="struct stm32f40x::dma2::HIFCR">HIFCR</a>,
+    pub s0cr: <a class="struct" href="../../stm32f40x/dma2/struct.S0CR.html" title="struct stm32f40x::dma2::S0CR">S0CR</a>,
+    pub s0ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S0NDTR.html" title="struct stm32f40x::dma2::S0NDTR">S0NDTR</a>,
+    pub s0par: <a class="struct" href="../../stm32f40x/dma2/struct.S0PAR.html" title="struct stm32f40x::dma2::S0PAR">S0PAR</a>,
+    pub s0m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S0M0AR.html" title="struct stm32f40x::dma2::S0M0AR">S0M0AR</a>,
+    pub s0m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S0M1AR.html" title="struct stm32f40x::dma2::S0M1AR">S0M1AR</a>,
+    pub s0fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S0FCR.html" title="struct stm32f40x::dma2::S0FCR">S0FCR</a>,
+    pub s1cr: <a class="struct" href="../../stm32f40x/dma2/struct.S1CR.html" title="struct stm32f40x::dma2::S1CR">S1CR</a>,
+    pub s1ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S1NDTR.html" title="struct stm32f40x::dma2::S1NDTR">S1NDTR</a>,
+    pub s1par: <a class="struct" href="../../stm32f40x/dma2/struct.S1PAR.html" title="struct stm32f40x::dma2::S1PAR">S1PAR</a>,
+    pub s1m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S1M0AR.html" title="struct stm32f40x::dma2::S1M0AR">S1M0AR</a>,
+    pub s1m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S1M1AR.html" title="struct stm32f40x::dma2::S1M1AR">S1M1AR</a>,
+    pub s1fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S1FCR.html" title="struct stm32f40x::dma2::S1FCR">S1FCR</a>,
+    pub s2cr: <a class="struct" href="../../stm32f40x/dma2/struct.S2CR.html" title="struct stm32f40x::dma2::S2CR">S2CR</a>,
+    pub s2ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S2NDTR.html" title="struct stm32f40x::dma2::S2NDTR">S2NDTR</a>,
+    pub s2par: <a class="struct" href="../../stm32f40x/dma2/struct.S2PAR.html" title="struct stm32f40x::dma2::S2PAR">S2PAR</a>,
+    pub s2m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S2M0AR.html" title="struct stm32f40x::dma2::S2M0AR">S2M0AR</a>,
+    pub s2m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S2M1AR.html" title="struct stm32f40x::dma2::S2M1AR">S2M1AR</a>,
+    pub s2fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S2FCR.html" title="struct stm32f40x::dma2::S2FCR">S2FCR</a>,
+    pub s3cr: <a class="struct" href="../../stm32f40x/dma2/struct.S3CR.html" title="struct stm32f40x::dma2::S3CR">S3CR</a>,
+    pub s3ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S3NDTR.html" title="struct stm32f40x::dma2::S3NDTR">S3NDTR</a>,
+    pub s3par: <a class="struct" href="../../stm32f40x/dma2/struct.S3PAR.html" title="struct stm32f40x::dma2::S3PAR">S3PAR</a>,
+    pub s3m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S3M0AR.html" title="struct stm32f40x::dma2::S3M0AR">S3M0AR</a>,
+    pub s3m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S3M1AR.html" title="struct stm32f40x::dma2::S3M1AR">S3M1AR</a>,
+    pub s3fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S3FCR.html" title="struct stm32f40x::dma2::S3FCR">S3FCR</a>,
+    pub s4cr: <a class="struct" href="../../stm32f40x/dma2/struct.S4CR.html" title="struct stm32f40x::dma2::S4CR">S4CR</a>,
+    pub s4ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S4NDTR.html" title="struct stm32f40x::dma2::S4NDTR">S4NDTR</a>,
+    pub s4par: <a class="struct" href="../../stm32f40x/dma2/struct.S4PAR.html" title="struct stm32f40x::dma2::S4PAR">S4PAR</a>,
+    pub s4m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S4M0AR.html" title="struct stm32f40x::dma2::S4M0AR">S4M0AR</a>,
+    pub s4m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S4M1AR.html" title="struct stm32f40x::dma2::S4M1AR">S4M1AR</a>,
+    pub s4fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S4FCR.html" title="struct stm32f40x::dma2::S4FCR">S4FCR</a>,
+    pub s5cr: <a class="struct" href="../../stm32f40x/dma2/struct.S5CR.html" title="struct stm32f40x::dma2::S5CR">S5CR</a>,
+    pub s5ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S5NDTR.html" title="struct stm32f40x::dma2::S5NDTR">S5NDTR</a>,
+    pub s5par: <a class="struct" href="../../stm32f40x/dma2/struct.S5PAR.html" title="struct stm32f40x::dma2::S5PAR">S5PAR</a>,
+    pub s5m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S5M0AR.html" title="struct stm32f40x::dma2::S5M0AR">S5M0AR</a>,
+    pub s5m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S5M1AR.html" title="struct stm32f40x::dma2::S5M1AR">S5M1AR</a>,
+    pub s5fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S5FCR.html" title="struct stm32f40x::dma2::S5FCR">S5FCR</a>,
+    pub s6cr: <a class="struct" href="../../stm32f40x/dma2/struct.S6CR.html" title="struct stm32f40x::dma2::S6CR">S6CR</a>,
+    pub s6ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S6NDTR.html" title="struct stm32f40x::dma2::S6NDTR">S6NDTR</a>,
+    pub s6par: <a class="struct" href="../../stm32f40x/dma2/struct.S6PAR.html" title="struct stm32f40x::dma2::S6PAR">S6PAR</a>,
+    pub s6m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S6M0AR.html" title="struct stm32f40x::dma2::S6M0AR">S6M0AR</a>,
+    pub s6m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S6M1AR.html" title="struct stm32f40x::dma2::S6M1AR">S6M1AR</a>,
+    pub s6fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S6FCR.html" title="struct stm32f40x::dma2::S6FCR">S6FCR</a>,
+    pub s7cr: <a class="struct" href="../../stm32f40x/dma2/struct.S7CR.html" title="struct stm32f40x::dma2::S7CR">S7CR</a>,
+    pub s7ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S7NDTR.html" title="struct stm32f40x::dma2::S7NDTR">S7NDTR</a>,
+    pub s7par: <a class="struct" href="../../stm32f40x/dma2/struct.S7PAR.html" title="struct stm32f40x::dma2::S7PAR">S7PAR</a>,
+    pub s7m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S7M0AR.html" title="struct stm32f40x::dma2::S7M0AR">S7M0AR</a>,
+    pub s7m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S7M1AR.html" title="struct stm32f40x::dma2::S7M1AR">S7M1AR</a>,
+    pub s7fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S7FCR.html" title="struct stm32f40x::dma2::S7FCR">S7FCR</a>,
+}</pre></div><div class='docblock'><p>Register block</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.lisr" class="structfield small-section-header">
+                           <a href="#structfield.lisr" class="anchor field"></a>
+                           <span id="lisr.v" class='invisible'>
+                           <code>lisr: <a class="struct" href="../../stm32f40x/dma2/struct.LISR.html" title="struct stm32f40x::dma2::LISR">LISR</a></code>
+                           </span></span><div class='docblock'><p>0x00 - low interrupt status register</p>
+</div><span id="structfield.hisr" class="structfield small-section-header">
+                           <a href="#structfield.hisr" class="anchor field"></a>
+                           <span id="hisr.v" class='invisible'>
+                           <code>hisr: <a class="struct" href="../../stm32f40x/dma2/struct.HISR.html" title="struct stm32f40x::dma2::HISR">HISR</a></code>
+                           </span></span><div class='docblock'><p>0x04 - high interrupt status register</p>
+</div><span id="structfield.lifcr" class="structfield small-section-header">
+                           <a href="#structfield.lifcr" class="anchor field"></a>
+                           <span id="lifcr.v" class='invisible'>
+                           <code>lifcr: <a class="struct" href="../../stm32f40x/dma2/struct.LIFCR.html" title="struct stm32f40x::dma2::LIFCR">LIFCR</a></code>
+                           </span></span><div class='docblock'><p>0x08 - low interrupt flag clear register</p>
+</div><span id="structfield.hifcr" class="structfield small-section-header">
+                           <a href="#structfield.hifcr" class="anchor field"></a>
+                           <span id="hifcr.v" class='invisible'>
+                           <code>hifcr: <a class="struct" href="../../stm32f40x/dma2/struct.HIFCR.html" title="struct stm32f40x::dma2::HIFCR">HIFCR</a></code>
+                           </span></span><div class='docblock'><p>0x0c - high interrupt flag clear register</p>
+</div><span id="structfield.s0cr" class="structfield small-section-header">
+                           <a href="#structfield.s0cr" class="anchor field"></a>
+                           <span id="s0cr.v" class='invisible'>
+                           <code>s0cr: <a class="struct" href="../../stm32f40x/dma2/struct.S0CR.html" title="struct stm32f40x::dma2::S0CR">S0CR</a></code>
+                           </span></span><div class='docblock'><p>0x10 - stream x configuration register</p>
+</div><span id="structfield.s0ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s0ndtr" class="anchor field"></a>
+                           <span id="s0ndtr.v" class='invisible'>
+                           <code>s0ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S0NDTR.html" title="struct stm32f40x::dma2::S0NDTR">S0NDTR</a></code>
+                           </span></span><div class='docblock'><p>0x14 - stream x number of data register</p>
+</div><span id="structfield.s0par" class="structfield small-section-header">
+                           <a href="#structfield.s0par" class="anchor field"></a>
+                           <span id="s0par.v" class='invisible'>
+                           <code>s0par: <a class="struct" href="../../stm32f40x/dma2/struct.S0PAR.html" title="struct stm32f40x::dma2::S0PAR">S0PAR</a></code>
+                           </span></span><div class='docblock'><p>0x18 - stream x peripheral address register</p>
+</div><span id="structfield.s0m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s0m0ar" class="anchor field"></a>
+                           <span id="s0m0ar.v" class='invisible'>
+                           <code>s0m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S0M0AR.html" title="struct stm32f40x::dma2::S0M0AR">S0M0AR</a></code>
+                           </span></span><div class='docblock'><p>0x1c - stream x memory 0 address register</p>
+</div><span id="structfield.s0m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s0m1ar" class="anchor field"></a>
+                           <span id="s0m1ar.v" class='invisible'>
+                           <code>s0m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S0M1AR.html" title="struct stm32f40x::dma2::S0M1AR">S0M1AR</a></code>
+                           </span></span><div class='docblock'><p>0x20 - stream x memory 1 address register</p>
+</div><span id="structfield.s0fcr" class="structfield small-section-header">
+                           <a href="#structfield.s0fcr" class="anchor field"></a>
+                           <span id="s0fcr.v" class='invisible'>
+                           <code>s0fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S0FCR.html" title="struct stm32f40x::dma2::S0FCR">S0FCR</a></code>
+                           </span></span><div class='docblock'><p>0x24 - stream x FIFO control register</p>
+</div><span id="structfield.s1cr" class="structfield small-section-header">
+                           <a href="#structfield.s1cr" class="anchor field"></a>
+                           <span id="s1cr.v" class='invisible'>
+                           <code>s1cr: <a class="struct" href="../../stm32f40x/dma2/struct.S1CR.html" title="struct stm32f40x::dma2::S1CR">S1CR</a></code>
+                           </span></span><div class='docblock'><p>0x28 - stream x configuration register</p>
+</div><span id="structfield.s1ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s1ndtr" class="anchor field"></a>
+                           <span id="s1ndtr.v" class='invisible'>
+                           <code>s1ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S1NDTR.html" title="struct stm32f40x::dma2::S1NDTR">S1NDTR</a></code>
+                           </span></span><div class='docblock'><p>0x2c - stream x number of data register</p>
+</div><span id="structfield.s1par" class="structfield small-section-header">
+                           <a href="#structfield.s1par" class="anchor field"></a>
+                           <span id="s1par.v" class='invisible'>
+                           <code>s1par: <a class="struct" href="../../stm32f40x/dma2/struct.S1PAR.html" title="struct stm32f40x::dma2::S1PAR">S1PAR</a></code>
+                           </span></span><div class='docblock'><p>0x30 - stream x peripheral address register</p>
+</div><span id="structfield.s1m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s1m0ar" class="anchor field"></a>
+                           <span id="s1m0ar.v" class='invisible'>
+                           <code>s1m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S1M0AR.html" title="struct stm32f40x::dma2::S1M0AR">S1M0AR</a></code>
+                           </span></span><div class='docblock'><p>0x34 - stream x memory 0 address register</p>
+</div><span id="structfield.s1m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s1m1ar" class="anchor field"></a>
+                           <span id="s1m1ar.v" class='invisible'>
+                           <code>s1m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S1M1AR.html" title="struct stm32f40x::dma2::S1M1AR">S1M1AR</a></code>
+                           </span></span><div class='docblock'><p>0x38 - stream x memory 1 address register</p>
+</div><span id="structfield.s1fcr" class="structfield small-section-header">
+                           <a href="#structfield.s1fcr" class="anchor field"></a>
+                           <span id="s1fcr.v" class='invisible'>
+                           <code>s1fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S1FCR.html" title="struct stm32f40x::dma2::S1FCR">S1FCR</a></code>
+                           </span></span><div class='docblock'><p>0x3c - stream x FIFO control register</p>
+</div><span id="structfield.s2cr" class="structfield small-section-header">
+                           <a href="#structfield.s2cr" class="anchor field"></a>
+                           <span id="s2cr.v" class='invisible'>
+                           <code>s2cr: <a class="struct" href="../../stm32f40x/dma2/struct.S2CR.html" title="struct stm32f40x::dma2::S2CR">S2CR</a></code>
+                           </span></span><div class='docblock'><p>0x40 - stream x configuration register</p>
+</div><span id="structfield.s2ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s2ndtr" class="anchor field"></a>
+                           <span id="s2ndtr.v" class='invisible'>
+                           <code>s2ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S2NDTR.html" title="struct stm32f40x::dma2::S2NDTR">S2NDTR</a></code>
+                           </span></span><div class='docblock'><p>0x44 - stream x number of data register</p>
+</div><span id="structfield.s2par" class="structfield small-section-header">
+                           <a href="#structfield.s2par" class="anchor field"></a>
+                           <span id="s2par.v" class='invisible'>
+                           <code>s2par: <a class="struct" href="../../stm32f40x/dma2/struct.S2PAR.html" title="struct stm32f40x::dma2::S2PAR">S2PAR</a></code>
+                           </span></span><div class='docblock'><p>0x48 - stream x peripheral address register</p>
+</div><span id="structfield.s2m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s2m0ar" class="anchor field"></a>
+                           <span id="s2m0ar.v" class='invisible'>
+                           <code>s2m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S2M0AR.html" title="struct stm32f40x::dma2::S2M0AR">S2M0AR</a></code>
+                           </span></span><div class='docblock'><p>0x4c - stream x memory 0 address register</p>
+</div><span id="structfield.s2m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s2m1ar" class="anchor field"></a>
+                           <span id="s2m1ar.v" class='invisible'>
+                           <code>s2m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S2M1AR.html" title="struct stm32f40x::dma2::S2M1AR">S2M1AR</a></code>
+                           </span></span><div class='docblock'><p>0x50 - stream x memory 1 address register</p>
+</div><span id="structfield.s2fcr" class="structfield small-section-header">
+                           <a href="#structfield.s2fcr" class="anchor field"></a>
+                           <span id="s2fcr.v" class='invisible'>
+                           <code>s2fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S2FCR.html" title="struct stm32f40x::dma2::S2FCR">S2FCR</a></code>
+                           </span></span><div class='docblock'><p>0x54 - stream x FIFO control register</p>
+</div><span id="structfield.s3cr" class="structfield small-section-header">
+                           <a href="#structfield.s3cr" class="anchor field"></a>
+                           <span id="s3cr.v" class='invisible'>
+                           <code>s3cr: <a class="struct" href="../../stm32f40x/dma2/struct.S3CR.html" title="struct stm32f40x::dma2::S3CR">S3CR</a></code>
+                           </span></span><div class='docblock'><p>0x58 - stream x configuration register</p>
+</div><span id="structfield.s3ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s3ndtr" class="anchor field"></a>
+                           <span id="s3ndtr.v" class='invisible'>
+                           <code>s3ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S3NDTR.html" title="struct stm32f40x::dma2::S3NDTR">S3NDTR</a></code>
+                           </span></span><div class='docblock'><p>0x5c - stream x number of data register</p>
+</div><span id="structfield.s3par" class="structfield small-section-header">
+                           <a href="#structfield.s3par" class="anchor field"></a>
+                           <span id="s3par.v" class='invisible'>
+                           <code>s3par: <a class="struct" href="../../stm32f40x/dma2/struct.S3PAR.html" title="struct stm32f40x::dma2::S3PAR">S3PAR</a></code>
+                           </span></span><div class='docblock'><p>0x60 - stream x peripheral address register</p>
+</div><span id="structfield.s3m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s3m0ar" class="anchor field"></a>
+                           <span id="s3m0ar.v" class='invisible'>
+                           <code>s3m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S3M0AR.html" title="struct stm32f40x::dma2::S3M0AR">S3M0AR</a></code>
+                           </span></span><div class='docblock'><p>0x64 - stream x memory 0 address register</p>
+</div><span id="structfield.s3m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s3m1ar" class="anchor field"></a>
+                           <span id="s3m1ar.v" class='invisible'>
+                           <code>s3m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S3M1AR.html" title="struct stm32f40x::dma2::S3M1AR">S3M1AR</a></code>
+                           </span></span><div class='docblock'><p>0x68 - stream x memory 1 address register</p>
+</div><span id="structfield.s3fcr" class="structfield small-section-header">
+                           <a href="#structfield.s3fcr" class="anchor field"></a>
+                           <span id="s3fcr.v" class='invisible'>
+                           <code>s3fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S3FCR.html" title="struct stm32f40x::dma2::S3FCR">S3FCR</a></code>
+                           </span></span><div class='docblock'><p>0x6c - stream x FIFO control register</p>
+</div><span id="structfield.s4cr" class="structfield small-section-header">
+                           <a href="#structfield.s4cr" class="anchor field"></a>
+                           <span id="s4cr.v" class='invisible'>
+                           <code>s4cr: <a class="struct" href="../../stm32f40x/dma2/struct.S4CR.html" title="struct stm32f40x::dma2::S4CR">S4CR</a></code>
+                           </span></span><div class='docblock'><p>0x70 - stream x configuration register</p>
+</div><span id="structfield.s4ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s4ndtr" class="anchor field"></a>
+                           <span id="s4ndtr.v" class='invisible'>
+                           <code>s4ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S4NDTR.html" title="struct stm32f40x::dma2::S4NDTR">S4NDTR</a></code>
+                           </span></span><div class='docblock'><p>0x74 - stream x number of data register</p>
+</div><span id="structfield.s4par" class="structfield small-section-header">
+                           <a href="#structfield.s4par" class="anchor field"></a>
+                           <span id="s4par.v" class='invisible'>
+                           <code>s4par: <a class="struct" href="../../stm32f40x/dma2/struct.S4PAR.html" title="struct stm32f40x::dma2::S4PAR">S4PAR</a></code>
+                           </span></span><div class='docblock'><p>0x78 - stream x peripheral address register</p>
+</div><span id="structfield.s4m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s4m0ar" class="anchor field"></a>
+                           <span id="s4m0ar.v" class='invisible'>
+                           <code>s4m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S4M0AR.html" title="struct stm32f40x::dma2::S4M0AR">S4M0AR</a></code>
+                           </span></span><div class='docblock'><p>0x7c - stream x memory 0 address register</p>
+</div><span id="structfield.s4m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s4m1ar" class="anchor field"></a>
+                           <span id="s4m1ar.v" class='invisible'>
+                           <code>s4m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S4M1AR.html" title="struct stm32f40x::dma2::S4M1AR">S4M1AR</a></code>
+                           </span></span><div class='docblock'><p>0x80 - stream x memory 1 address register</p>
+</div><span id="structfield.s4fcr" class="structfield small-section-header">
+                           <a href="#structfield.s4fcr" class="anchor field"></a>
+                           <span id="s4fcr.v" class='invisible'>
+                           <code>s4fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S4FCR.html" title="struct stm32f40x::dma2::S4FCR">S4FCR</a></code>
+                           </span></span><div class='docblock'><p>0x84 - stream x FIFO control register</p>
+</div><span id="structfield.s5cr" class="structfield small-section-header">
+                           <a href="#structfield.s5cr" class="anchor field"></a>
+                           <span id="s5cr.v" class='invisible'>
+                           <code>s5cr: <a class="struct" href="../../stm32f40x/dma2/struct.S5CR.html" title="struct stm32f40x::dma2::S5CR">S5CR</a></code>
+                           </span></span><div class='docblock'><p>0x88 - stream x configuration register</p>
+</div><span id="structfield.s5ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s5ndtr" class="anchor field"></a>
+                           <span id="s5ndtr.v" class='invisible'>
+                           <code>s5ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S5NDTR.html" title="struct stm32f40x::dma2::S5NDTR">S5NDTR</a></code>
+                           </span></span><div class='docblock'><p>0x8c - stream x number of data register</p>
+</div><span id="structfield.s5par" class="structfield small-section-header">
+                           <a href="#structfield.s5par" class="anchor field"></a>
+                           <span id="s5par.v" class='invisible'>
+                           <code>s5par: <a class="struct" href="../../stm32f40x/dma2/struct.S5PAR.html" title="struct stm32f40x::dma2::S5PAR">S5PAR</a></code>
+                           </span></span><div class='docblock'><p>0x90 - stream x peripheral address register</p>
+</div><span id="structfield.s5m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s5m0ar" class="anchor field"></a>
+                           <span id="s5m0ar.v" class='invisible'>
+                           <code>s5m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S5M0AR.html" title="struct stm32f40x::dma2::S5M0AR">S5M0AR</a></code>
+                           </span></span><div class='docblock'><p>0x94 - stream x memory 0 address register</p>
+</div><span id="structfield.s5m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s5m1ar" class="anchor field"></a>
+                           <span id="s5m1ar.v" class='invisible'>
+                           <code>s5m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S5M1AR.html" title="struct stm32f40x::dma2::S5M1AR">S5M1AR</a></code>
+                           </span></span><div class='docblock'><p>0x98 - stream x memory 1 address register</p>
+</div><span id="structfield.s5fcr" class="structfield small-section-header">
+                           <a href="#structfield.s5fcr" class="anchor field"></a>
+                           <span id="s5fcr.v" class='invisible'>
+                           <code>s5fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S5FCR.html" title="struct stm32f40x::dma2::S5FCR">S5FCR</a></code>
+                           </span></span><div class='docblock'><p>0x9c - stream x FIFO control register</p>
+</div><span id="structfield.s6cr" class="structfield small-section-header">
+                           <a href="#structfield.s6cr" class="anchor field"></a>
+                           <span id="s6cr.v" class='invisible'>
+                           <code>s6cr: <a class="struct" href="../../stm32f40x/dma2/struct.S6CR.html" title="struct stm32f40x::dma2::S6CR">S6CR</a></code>
+                           </span></span><div class='docblock'><p>0xa0 - stream x configuration register</p>
+</div><span id="structfield.s6ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s6ndtr" class="anchor field"></a>
+                           <span id="s6ndtr.v" class='invisible'>
+                           <code>s6ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S6NDTR.html" title="struct stm32f40x::dma2::S6NDTR">S6NDTR</a></code>
+                           </span></span><div class='docblock'><p>0xa4 - stream x number of data register</p>
+</div><span id="structfield.s6par" class="structfield small-section-header">
+                           <a href="#structfield.s6par" class="anchor field"></a>
+                           <span id="s6par.v" class='invisible'>
+                           <code>s6par: <a class="struct" href="../../stm32f40x/dma2/struct.S6PAR.html" title="struct stm32f40x::dma2::S6PAR">S6PAR</a></code>
+                           </span></span><div class='docblock'><p>0xa8 - stream x peripheral address register</p>
+</div><span id="structfield.s6m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s6m0ar" class="anchor field"></a>
+                           <span id="s6m0ar.v" class='invisible'>
+                           <code>s6m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S6M0AR.html" title="struct stm32f40x::dma2::S6M0AR">S6M0AR</a></code>
+                           </span></span><div class='docblock'><p>0xac - stream x memory 0 address register</p>
+</div><span id="structfield.s6m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s6m1ar" class="anchor field"></a>
+                           <span id="s6m1ar.v" class='invisible'>
+                           <code>s6m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S6M1AR.html" title="struct stm32f40x::dma2::S6M1AR">S6M1AR</a></code>
+                           </span></span><div class='docblock'><p>0xb0 - stream x memory 1 address register</p>
+</div><span id="structfield.s6fcr" class="structfield small-section-header">
+                           <a href="#structfield.s6fcr" class="anchor field"></a>
+                           <span id="s6fcr.v" class='invisible'>
+                           <code>s6fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S6FCR.html" title="struct stm32f40x::dma2::S6FCR">S6FCR</a></code>
+                           </span></span><div class='docblock'><p>0xb4 - stream x FIFO control register</p>
+</div><span id="structfield.s7cr" class="structfield small-section-header">
+                           <a href="#structfield.s7cr" class="anchor field"></a>
+                           <span id="s7cr.v" class='invisible'>
+                           <code>s7cr: <a class="struct" href="../../stm32f40x/dma2/struct.S7CR.html" title="struct stm32f40x::dma2::S7CR">S7CR</a></code>
+                           </span></span><div class='docblock'><p>0xb8 - stream x configuration register</p>
+</div><span id="structfield.s7ndtr" class="structfield small-section-header">
+                           <a href="#structfield.s7ndtr" class="anchor field"></a>
+                           <span id="s7ndtr.v" class='invisible'>
+                           <code>s7ndtr: <a class="struct" href="../../stm32f40x/dma2/struct.S7NDTR.html" title="struct stm32f40x::dma2::S7NDTR">S7NDTR</a></code>
+                           </span></span><div class='docblock'><p>0xbc - stream x number of data register</p>
+</div><span id="structfield.s7par" class="structfield small-section-header">
+                           <a href="#structfield.s7par" class="anchor field"></a>
+                           <span id="s7par.v" class='invisible'>
+                           <code>s7par: <a class="struct" href="../../stm32f40x/dma2/struct.S7PAR.html" title="struct stm32f40x::dma2::S7PAR">S7PAR</a></code>
+                           </span></span><div class='docblock'><p>0xc0 - stream x peripheral address register</p>
+</div><span id="structfield.s7m0ar" class="structfield small-section-header">
+                           <a href="#structfield.s7m0ar" class="anchor field"></a>
+                           <span id="s7m0ar.v" class='invisible'>
+                           <code>s7m0ar: <a class="struct" href="../../stm32f40x/dma2/struct.S7M0AR.html" title="struct stm32f40x::dma2::S7M0AR">S7M0AR</a></code>
+                           </span></span><div class='docblock'><p>0xc4 - stream x memory 0 address register</p>
+</div><span id="structfield.s7m1ar" class="structfield small-section-header">
+                           <a href="#structfield.s7m1ar" class="anchor field"></a>
+                           <span id="s7m1ar.v" class='invisible'>
+                           <code>s7m1ar: <a class="struct" href="../../stm32f40x/dma2/struct.S7M1AR.html" title="struct stm32f40x::dma2::S7M1AR">S7M1AR</a></code>
+                           </span></span><div class='docblock'><p>0xc8 - stream x memory 1 address register</p>
+</div><span id="structfield.s7fcr" class="structfield small-section-header">
+                           <a href="#structfield.s7fcr" class="anchor field"></a>
+                           <span id="s7fcr.v" class='invisible'>
+                           <code>s7fcr: <a class="struct" href="../../stm32f40x/dma2/struct.S7FCR.html" title="struct stm32f40x::dma2::S7FCR">S7FCR</a></code>
+                           </span></span><div class='docblock'><p>0xcc - stream x FIFO control register</p>
+</div>
+                <h2 id='synthetic-implementations' class='small-section-header'>
+                  Auto Trait Implementations<a href='#synthetic-implementations' class='anchor'></a>
+                </h2>
+                <div id='synthetic-implementations-list'>
+            <h3 id='impl-Send' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> for <a class="struct" href="../../stm32f40x/dma2/struct.RegisterBlock.html" title="struct stm32f40x::dma2::RegisterBlock">RegisterBlock</a></code><a href='#impl-Send' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div><h3 id='impl-Sync' class='impl'><span class='in-band'><table class='table-display'><tbody><tr><td><code>impl !<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> for <a class="struct" href="../../stm32f40x/dma2/struct.RegisterBlock.html" title="struct stm32f40x::dma2::RegisterBlock">RegisterBlock</a></code><a href='#impl-Sync' class='anchor'></a></span></td><td><span class='out-of-band'></span></td></tr></tbody></table></h3><div class='impl-items'></div></div></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "stm32f40x";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["DEG_TO_RAD","Convert degrees to radians by multiplying with this number"],["RAD_TO_DEG","Convert radians to degrees by multiplying with this number"]],"fn":[["fast_inv_sqrt","Fast inverse square-root See: http://en.wikipedia.org/wiki/Fast_inverse_square_root"]],"struct":[["Quaternion","Generic 4D vector"],["Vector3","Generic 3D vector"]]});
